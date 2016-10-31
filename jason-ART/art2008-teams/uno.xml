@@ -1,0 +1,4 @@
+<agentConfig typename="simple">
+   <classFile>art2008-teams/Uno/testbed/participants/Uno2008.class</classFile>
+   <parameters>false</parameters>
+</agentConfig>

@@ -1,0 +1,4 @@
+<agentConfig typename="CheatingAgent">
+  <classFile>bin/testbed/participants/LazyAgent.class</classFile>
+  <parameters>false</parameters>
+</agentConfig>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<project name   ="JasonART"
+         basedir="."
+         default="run">
+
+	<property name="nbruns"      value="10" />
+	<property name="output-runs" value="experiments/experiment17" />
+	<property name="game-config" value="experiments/experiment17/game-config.xml" />
+	
+	<property name="my-team"     value="ForTrust" />
+
+	<property name="build.dir" value="${basedir}/bin" />
+
+    <property name="jasonJar"  value="${basedir}/lib/jason.jar"/>
+    <property name="artHome"   value="."/>
+
+    <path id="art.classpath">
+        <pathelement location="${artHome}/lib/art-2.0.1.jar"/>
+        <pathelement location="${artHome}/lib/commons-beanutils.jar"/>
+        <pathelement location="${artHome}/lib/jcommon.jar"/>
+        <pathelement location="${artHome}/lib/commons-collections-3.2.jar"/>
+        <pathelement location="${artHome}/lib/commons-logging.jar" />
+        <pathelement location="${artHome}/lib/jdom.jar"/>
+        <pathelement location="${artHome}/lib/commons-digester.jar"/>
+    </path>
+
+    <path id="project.classpath">
+    	<path refid="art.classpath" />
+        <pathelement location="${basedir}" />
+        <pathelement location="${build.dir}" />
+        <pathelement location="${jasonJar}" />
+    </path>
+
+    <target name="init">
+        <mkdir dir="${build.dir}" />
+    	<mkdir dir="result"/>
+    </target>
+
+    <target name="compile" depends="init">
+        <javac srcdir="${basedir}/src" destdir="${build.dir}" debug="true" optimize="true" >
+            <classpath refid="project.classpath"/>
+        </javac>
+    </target>
+    
+    <target name="jar-demo" depends="compile">
+        <delete file="${build.dir}/JasonDemo.jar" />
+    	<copy file="${jasonJar}" tofile="${build.dir}/JasonDemo.jar" />
+    	<jar update="yes" jarfile="${build.dir}/JasonDemo.jar" >
+            <fileset dir="${basedir}">
+                <include name="**/*.asl" />
+                <include name="**/*.mas2j" />
+            </fileset>
+            <fileset dir="${build.dir}">
+                <include name="**/*.class" />
+            </fileset>
+    		<manifest>
+	 		    <attribute name="Main-Class" value="testbed.participants.JasonDemo"/>
+		    </manifest>
+    	</jar>
+    </target>
+
+    <target name="jar-fortrust" depends="compile">
+        <delete file="${build.dir}/ForTrust.jar" />
+    	<copy file="${jasonJar}" tofile="${build.dir}/ForTrust.jar" />
+    	<jar update="yes" jarfile="${build.dir}/ForTrust.jar" >
+            <fileset dir="${basedir}">
+                <include name="**/*.asl" />
+                <include name="**/*.mas2j" />
+            </fileset>
+            <fileset dir="${build.dir}">
+                <include name="**/*.class" />
+            </fileset>
+    		<manifest>
+	 		    <attribute name="Main-Class" value="testbed.participants.ForTrust"/>
+		    </manifest>
+    	</jar>
+    </target>
+
+	<target name="run" depends="jar-fortrust" >
+        <echo message="Running SIM" />
+        <delete failonerror="no" includeEmptyDirs="true" verbose="false">
+            <fileset dir="${basedir}" includes="status-*/**/*"/>
+            <fileset dir="${basedir}" includes="result/**/*"/>
+        </delete>
+		
+        <java classname="testbed.sim.Sim" failonerror="true" fork="yes" dir="${basedir}" >
+            <classpath refid="art.classpath"/>
+            <arg line="-verbose 1 ${game-config} "/> <!-- -smallLog -->
+            <jvmarg line="-Xmx750M"/>    
+        </java>
+    </target>
+	
+	
+	
+	<target name="runs" depends="init">
+        <delete file="build.number"/>
+		<mkdir dir="${output-runs}" />
+		<antcall target="run-step"/>
+		<!-- antcall target="show-graph"/ -->
+    </target>
+	<target name="run-step" depends="init">
+		<buildnumber/>
+        <echo message="Running SIM ${build.number}/${nbruns}" />
+		<condition property="increment.stop">
+		     <equals arg1="${nbruns}" arg2="${build.number}"/>
+		</condition>
+		<antcall target="run" />
+
+		<!-- move result files to the output run directory -->
+		<mkdir dir="${output-runs}/result-${build.number}" />
+		<move todir="${output-runs}/result-${build.number}">
+			<fileset dir="${basedir}/result" includes="*" />
+		</move>
+ 	    
+		<antcall target="endruns"/>
+		<antcall target="continueruns"/>		
+    </target>
+	<target name="continueruns" unless="increment.stop">
+	   <ant antfile="build.xml" target="run-step" inheritAll="no"/>
+    </target>
+    <target name="endruns" if="increment.stop">
+	   <delete file="build.number"/>
+	</target>
+	
+	<target name="make-graphs">
+		<echo message="Preparing data" />
+		<java classname="results.util.MergeResultsBank">
+			<arg line="${output-runs}"/>
+			<classpath path="${basedir}/bin" />
+		</java>
+		<java classname="results.util.MergeResultsPartners">
+			<arg line="${output-runs}  ${my-team}"/>
+			<classpath path="${basedir}/bin" />
+		</java>
+		
+		<echo message="Running gnuplot" />
+		<exec executable="gnuplot" >
+			<arg line="${output-runs}/bank.gnuplot"/>	
+		</exec>
+		<exec executable="gnuplot" >
+			<arg line="${output-runs}/partners.gnuplot"/>	
+		</exec>
+
+		<exec executable="epstopdf" >
+			<arg line="${output-runs}/bank-a.eps"/>	
+		</exec>
+		<exec executable="epstopdf" >
+			<arg line="${output-runs}/bank-b.eps"/>	
+		</exec>
+		<exec executable="epstopdf" >
+			<arg line="${output-runs}/partners.eps"/>	
+		</exec>
+		<!--exec executable="xpdf">
+			<arg line="-z page -fullscreen ${output-runs}/bank-a.pdf" />
+		</exec-->
+    </target>
+
+    <target name="gui" >
+        <echo message="Running SIM-GUI" />
+        <java classname="testbed.gui.gmi.GameMonitorInterface" failonerror="true" fork="yes" dir="${basedir}" >
+            <classpath refid="art.classpath"/>
+        	<classpath path="${basedir}/lib/mysql-connector-java-3.1.8-bin.jar" />
+        	<classpath path="${basedir}/lib/jfreechart.jar" />
+            <arg line="game-config.xml "/>
+            <jvmarg line="-Xmx750M"/>    
+        </java>
+    </target>
+
+    <target name="clean" >
+        <delete failonerror="no" includeEmptyDirs="true" verbose="true">
+            <fileset dir="${basedir}/bin" includes="**/*.class"/>
+        </delete>
+   	    <delete file="build.number"/>
+    </target>
+	
+	<target name="dump-html" >
+		<!--xslt style="${basedir}/lib/xml/agInspection.xsl"
+			destdir="${basedir}/status-JasonAgent_1"
+			basedir="${basedir}/status-JasonAgent_1"
+			includes="*.xml" /-->
+		<xslt style="${basedir}/lib/xml/agInspection.xsl"
+			destdir="${basedir}/status-ForTrust"
+			basedir="${basedir}/status-ForTrust"
+			includes="*.xml" />
+		<!-- xslt style="${basedir}/lib/xml/ag2tex.xsl"
+			destdir="${basedir}"
+			basedir="${basedir}/status-ForTrust"
+			includes="00024.xml" /-->
+	</target>
+</project>

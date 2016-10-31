@@ -1,0 +1,4 @@
+<agentConfig typename="simple">
+   <classFile>art2008-teams/FordPrefect/testbed/participants/FordPrefect.class</classFile>
+   <parameters>false</parameters>
+</agentConfig>
