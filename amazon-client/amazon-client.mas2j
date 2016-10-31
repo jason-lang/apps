@@ -1,0 +1,9 @@
+/*
+    MAS that access the Amazon WebService
+    
+    See more information in the readme.txt file
+*/
+
+MAS ws {
+   agents: ag1 [verbose=0];
+}

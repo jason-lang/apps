@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/jomi/bin/axis-1_2_1/lib/axis.jar"/>
+	<classpathentry kind="lib" path="/Users/jomi/bin/axis-1_2_1/lib/jaxrpc.jar"/>
+	<classpathentry kind="lib" path="/Users/jomi/bin/junit3.8.1/junit.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Jason"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

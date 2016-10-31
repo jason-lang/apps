@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+     Amazon WS client using Axis
+
+     by Jomi
+-->
+
+<project basedir="." default="wsdl2java" name="Amazon-Client">
+
+    <import file="bin/build.xml" /> <!-- add generated build file -->
+    
+    <property name="axis.home"  value="." />
+
+    <path id="all.classpath">
+       <fileset dir="${axis.home}/lib">
+         <include name="**/*.jar" />
+       </fileset>
+       <path refid="project.classpath" />
+    </path>
+
+    <taskdef resource="axis-tasks.properties" classpathref="all.classpath" />
+
+    <target name="wsdl2java" depends="init">
+      <mkdir dir="src/java" /> 
+      <axis-wsdl2java
+           output="src/java"
+           testcase="true"
+           verbose="true"
+           url="AmazonWebServices.wsdl" >
+           <mapping
+                namespace="http://axis.apache.org/ns/interop"
+                package="amazon" />
+      </axis-wsdl2java>
+    </target>
+
+</project>
