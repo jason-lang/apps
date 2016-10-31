@@ -1,0 +1,63 @@
+/* Jason Team for the
+ * Multi-Agent Programming Contest 2008
+ * (http://cig.in.tu-clausthal.de/AgentContest)
+ * 
+ * Configuration for contest simulator running local
+ *
+ */
+
+MAS jason_cowboys {
+    infrastructure: Centralised
+    
+    agents:
+        orgManager [osfile="src/team-os.xml",gui=yes] 
+              agentArchClass jmoise.OrgManager;
+              
+        gaucho1 gaucho.asl
+              [verbose=1, gui=yes, write_status=yes, ac_sim_back_dir="./massim-server/backup",
+               host="localhost", port=12300, username=participant1, password="1"] 
+              agentArchClass arch.ACArchitecture
+              agentClass     agent.SelectEvent 
+              beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)",
+                                                 "target(_,_)", "group_leader(key,_)", //"cow(key,_,_)",
+                                                 "group_area(key, _)");
+        gaucho2 gaucho.asl
+              [verbose=1,host="localhost", port=12300, username=participant2, password="2"] 
+              agentArchClass arch.ACArchitecture
+              agentClass     agent.SelectEvent 
+              beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)",
+                                                 "target(_,_)", "group_leader(key,_)", //"cow(key,_,_)",
+                                                 "group_area(key, _)");
+        gaucho3 gaucho.asl
+              [verbose=1,host="localhost", port=12300, username=participant3, password="3"] 
+              agentArchClass arch.ACArchitecture
+              agentClass     agent.SelectEvent 
+              beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)",
+                                                 "target(_,_)", "group_leader(key,_)", //"cow(key,_,_)",
+                                                 "group_area(key, _)");
+        gaucho4 gaucho.asl
+              [verbose=1,host="localhost", port=12300, username=participant4, password="4"] 
+              agentArchClass arch.ACArchitecture
+              agentClass     agent.SelectEvent 
+              beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)",
+                                                 "target(_,_)", "group_leader(key,_)", //"cow(key,_,_)",
+                                                 "group_area(key, _)");
+        gaucho5 gaucho.asl
+              [verbose=1,host="localhost", port=12300, username=participant5, password="5"] 
+              agentArchClass arch.ACArchitecture
+              agentClass     agent.SelectEvent 
+              beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)",
+                                                 "target(_,_)", "group_leader(key,_)", //"cow(key,_,_)",
+                                                 "group_area(key, _)");
+        gaucho6 gaucho.asl
+              [verbose=1,host="localhost", port=12300, username=participant6, password="6"] 
+              agentArchClass arch.ACArchitecture
+              agentClass     agent.SelectEvent 
+              beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)",
+                                                 "target(_,_)", "group_leader(key,_)", //"cow(key,_,_)",
+                                                 "group_area(key, _)");
+
+    directives: maintenance_goal = agent.OrgMaintenanceGoal;
+    
+    aslSourcePath: "src/asl";
+}

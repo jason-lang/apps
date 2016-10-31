@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet href="http://moise.sourceforge.net/xml/os.xsl" type="text/xsl" ?>
+
+<organisational-specification 
+
+    id="jason-cowboys"
+    os-version="0.7"
+  
+    xmlns='http://moise.sourceforge.net/os'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://moise.sourceforge.net/os
+                        http://moise.sourceforge.net/xml/os.xsd' >
+    
+    <structural-specification>
+        <properties>
+            <property id="check-players-in-remove-group"   value="false" />
+            <property id="check-sub-group-in-remove-group" value="false" />
+            <property id="check-missions-in-remove-role"   value="false" />
+        </properties>
+
+        <role-definitions>
+            <role id="cowboy" />
+            <role id="leader">   <extends role="cowboy"/> </role>
+            <role id="explorer"> <extends role="leader"/> </role>
+            <role id="herder">   <extends role="leader"/> </role>
+            <role id="scouter">  <extends role="cowboy"/> </role>
+            <role id="herdboy">  <extends role="cowboy"/> </role>
+            <role id="gatekeeper1">  <extends role="cowboy"/> </role>
+            <role id="gatekeeper2">  <extends role="cowboy"/> </role>
+        </role-definitions>
+
+        <group-specification id="team">
+            
+            <links>
+                <link from="cowboy" to="cowboy" type="communication"
+                      scope="inter-group" extends-sub-groups="true" bi-dir="false"/>
+                <link from="leader" to="cowboy" type="authority"
+                      scope="intra-group" extends-sub-groups="true" bi-dir="false"/>
+            </links>
+
+            <sub-groups>
+                
+                <group-specification id="exploration_grp" min="0" max="5" >
+                    <roles>
+                        <role id="explorer" min="1" max="1"/>
+                        <role id="scouter"  min="0" max="1"/>
+                        <role id="gatekeeper1" min="0" max="1"/>
+                        <role id="gatekeeper2" min="0" max="1"/>
+                    </roles>
+                </group-specification>
+
+                <group-specification id="herding_grp" min="0" max="10" >
+                    <roles>
+                        <role id="herder"  min="1" max="1"/>
+                        <role id="herdboy" min="0" max="10"/>
+                        <role id="gatekeeper1" min="0" max="1"/>
+                        <role id="gatekeeper2" min="0" max="1"/>
+                    </roles>
+                </group-specification>
+
+            </sub-groups>
+
+            <formation-constraints>
+                <compatibility from="explorer" to="herder" 
+                               scope="intra-group" extends-sub-groups="true" 
+                               bi-dir="true"/>
+                <compatibility from="scouter" to="herder" 
+                               scope="intra-group" extends-sub-groups="true" 
+                               bi-dir="true"/>
+            </formation-constraints>
+        </group-specification>
+    </structural-specification>
+
+
+
+    <functional-specification>
+        <properties>
+            <property id="check-players-in-remove-responsible-group"   value="false" />
+            <property id="check-players-in-remove-scheme"              value="false" />
+            <property id="only-owner-can-remove-scheme"                value="false" />
+            <property id="check-goals-in-remove-mission"               value="false" />
+            <property id="check-formation-in-responsible-group"        value="false" />
+        </properties>
+    
+        <scheme id="explore_sch" >
+            <goal id="find_cows" >
+              <plan operator="parallel">
+                <goal id="init_scheme">
+                   <plan operator="sequence">
+                     <goal id="find_scouter"        ds="find a scouter to help in the exploration" />
+                     <goal id="change_to_herding"   ds="verify if necessary to create the herding group" type="maintenance"/>
+                   </plan>
+                </goal>
+                <goal id="change_to_herding"   ds="verify if necessary to create the herding group" type="maintenance"/>
+                <goal id="goto_near_unvisited" ds="go to the near unvisited location inside the area of the group" type="maintenance"/>
+                <goal id="start_pass_fence"    ds="verify if necessary to create the pass_fence_scheme" type="maintenance"/>
+                <goal id="share_seen_cows"     ds="share seen cows with other agents in the scheme" type="maintenance"/>
+                <goal id="follow_leader"       ds="follow the leader of the scheme/group" type="maintenance"/>
+              </plan>
+            </goal>
+            
+            <mission id="explore" min="1" >
+                <goal id="find_scouter" />
+                <goal id="goto_near_unvisited" />
+                <!--goal id="share_seen_cows" /-->
+                <goal id="change_to_herding" />
+                <goal id="start_pass_fence" />
+            </mission>
+            <mission id="scout" min="0" max="1">
+                <goal id="follow_leader" />
+                <!--goal id="share_seen_cows" /-->
+            </mission>
+        </scheme>
+        
+        <scheme id="herd_sch" >
+            <goal id="herd_cows" >
+              <plan operator="parallel">
+                <goal id="recruit"             ds="recruit more herdboys depending on the size of the cows cluster" type="maintenance"/>
+                <goal id="release_boys"        ds="if the group has too many herdboys, release some" type="maintenance"/>
+                <goal id="define_formation"    ds="compute the ideal location of each member of the group and share this information with them" type="maintenance"/>
+                <goal id="be_in_formation"     ds="go to the place allocated to the agent in the formation" type="maintenance"/>
+                <goal id="share_seen_cows"     ds="share seen cows with other agents in the scheme" type="maintenance"/>
+                <goal id="change_to_exploring" ds="verify if it is necessary to finish the herding group and create the exploring group" type="maintenance"/>
+                <goal id="start_open_corral"   ds="verify if it is necessary to start the start_open_corral scheme" type="maintenance"/>
+                <goal id="start_pass_fence"    ds="verify if necessary to create the pass_fence_scheme" type="maintenance"/>
+              </plan>
+            </goal>
+            
+            <mission id="herd" min="1">
+                <goal id="recruit" />
+                <goal id="release_boys" />
+                <goal id="define_formation" />
+                <goal id="be_in_formation" />
+                <!--goal id="share_seen_cows" /-->
+                <goal id="change_to_exploring" />
+                <goal id="start_open_corral" />
+                <goal id="start_pass_fence" />
+            </mission>
+            <mission id="help_herder" >
+                <goal id="be_in_formation" />
+                <!--goal id="share_seen_cows" /-->
+            </mission>
+        </scheme>
+
+        <scheme id="open_corral" >
+            <goal id="herd_cows" >
+              <plan operator="parallel">
+                <goal id="goto_switch1" >
+                    <argument id="X" />
+                    <argument id="Y" />
+                </goal>
+                <goal id="end_open_corral" >
+                    <argument id="Boss"/>
+                </goal>
+              </plan>
+            </goal>
+            
+            <mission id="porter1" min="1" max="1">
+                <goal id="goto_switch1" />
+                <goal id="end_open_corral" />
+            </mission>
+        </scheme>
+
+        <scheme id="pass_fence_sch" >
+            <goal id="pass_fence" >
+              <argument id="X" />
+              <argument id="Y" />
+              <argument id="NextScheme" />
+              <argument id="Direction" />
+              <plan operator="parallel">
+                <goal id="keep_switch1" >
+                   <plan operator="sequence" >
+                     <goal id="goto_switch1" >
+                        <argument id="X" />
+                        <argument id="Y" />
+                     </goal>
+                     <goal id="wait_gatekeeper2" />
+                     <goal id="cross_fence" />
+                   </plan>
+                </goal>
+                <goal id="keep_switch2" >
+                   <plan operator="sequence" >
+                     <goal id="goto_switch2" >
+                        <argument id="X" />
+                        <argument id="Y" />
+                     </goal>
+                     <goal id="wait_others_pass" >
+                        <argument id="Others" value="[]"/>
+                     </goal>
+                   </plan>
+                </goal>
+              </plan>
+            </goal>
+            
+            <mission id="porter1" min="1" max="1">
+                <goal id="goto_switch1" />
+                <goal id="wait_gatekeeper2" />
+                <goal id="cross_fence" />
+            </mission>
+            <mission id="porter2" min="1" max="1">
+                <goal id="goto_switch2" />
+                <goal id="wait_others_pass" />
+            </mission>            
+        </scheme>
+
+    </functional-specification>
+
+    <normative-specification>
+        <norm id="n1"  type="obligation" role="explorer" mission="explore" />
+        <norm id="n2"  type="obligation" role="scouter"  mission="scout" />
+        <norm id="n3"  type="obligation" role="herder"   mission="herd" />
+        <norm id="n4"  type="obligation" role="herdboy"  mission="help_herder" />
+        <norm id="n5"  type="obligation" role="gatekeeper1"  mission="porter1" />
+        <norm id="n6"  type="obligation" role="gatekeeper2"  mission="porter2" />
+    </normative-specification>
+</organisational-specification>
+

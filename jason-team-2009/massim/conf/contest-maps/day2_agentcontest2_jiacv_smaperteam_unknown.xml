@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE conf SYSTEM "config.dtd">
+
+<!-- launch-sync-type = timer or key -->
+<conf backuppath="backup" launch-sync-type="key" reportpath="./" time-to-launch="2000" tournamentmode="0" tournamentname="GridSimulation">
+<simulation-server backlog="10" port="12300"/>
+<visualization flashport="1099" flashserver="" flashservice="WebServer-SPSInterface"/>
+<match>
+&sim1;
+&sim2;
+&sim3;
+</match>
+<accounts>
+<actionclassmap name="Grid">
+<actionclass class="massim.competition2009.simulation.GridSimulationAgentAction" id="action"/>
+<actionclass class="massim.framework.InvalidAction" id="invalid"/>
+</actionclassmap>
+&jiacv;
+&smaperteam;
+&unknown;
+</accounts>
+</conf>

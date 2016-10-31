@@ -1,0 +1,15 @@
+name		size	fences	cows	obs:
+test-e1.xml	80 x 80	no	no	80x80 from the organization
+test-e2.xml	100x100	no	no	100x100 from the organization
+test-e3.xml	100x100	yes	yes	...
+test-e4.xml	100x 80	no	yes	...
+test-e5.xml	90 x 90	no	no	a bunch of obstacles
+test-e6.xml	80 x 80	no	yes	80x80 from the organization
+test-e7.xml 	80 x 80 yes	no	a map with some fences
+test-e8.xml	80 x 80 yes	no	another map with fences
+test-e9.xml	40 x 40 yes	no	fences + cows
+test-e10.xml	30 x 30 yes 	yes	fences + cows
+test-e11.xml	50 x 50 yes	yes	fences + cows
+test-e12.xml	70 x 70 no	yes	A map from the organization map1 - first day of competition
+test-e13.xml	81 x 81	yes	yes	A map from the organization map2 - first day of competition
+test-e14.xml	120x 60	yes	yes	A map from the organization map3 - first day of competition

@@ -1,0 +1,7 @@
+June 9th 2009
+
+Fixed two bugs:
+
+1. We switched off the SVG-renderer by adapting the server-configuration-files. It causes performance issues on some machines. Use the monitor for visualizing the simulations instead.
+
+2. We haved fixed the bug that caused missing Sim-Start-message in some situations.

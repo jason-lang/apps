@@ -1,0 +1,46 @@
+/* Jason Team for the
+ * Multi-Agent Programming Contest 2008
+ * (http://cig.in.tu-clausthal.de/AgentContest)
+ * 
+ * Configuration for contest simulator running local
+ *
+ */
+
+MAS dummies {
+    infrastructure: Centralised
+    
+    agents:
+        dummy1 dummy.asl
+              [verbose=1, gui=no, write_status=no, ac_sim_back_dir="",
+               host="localhost", port=12300, username=botagent1, password="1"] 
+              agentArchClass arch.ACArchitecture
+              agentClass     agent.SelectEvent 
+              beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)", "target(_,_)");
+        dummy2 dummy.asl
+              [host="localhost", port=12300, username=botagent2, password="2"] 
+              agentArchClass arch.ACArchitecture
+              agentClass     agent.SelectEvent 
+              beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)", "target(_,_)");
+        dummy3 dummy.asl
+              [host="localhost", port=12300, username=botagent3, password="3"] 
+              agentArchClass arch.ACArchitecture
+              agentClass     agent.SelectEvent 
+              beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)", "target(_,_)");
+        dummy4 dummy.asl
+              [host="localhost", port=12300, username=botagent4, password="4"] 
+              agentArchClass arch.ACArchitecture
+              agentClass     agent.SelectEvent 
+              beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)", "target(_,_)");
+        dummy5 dummy.asl
+              [host="localhost", port=12300, username=botagent5, password="5"] 
+              agentArchClass arch.ACArchitecture
+              agentClass     agent.SelectEvent 
+              beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)", "target(_,_)");
+        dummy6 dummy.asl
+              [host="localhost", port=12300, username=botagent6, password="6"] 
+              agentArchClass arch.ACArchitecture
+              agentClass     agent.SelectEvent 
+              beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)", "target(_,_)");
+
+    aslSourcePath: "src/asl";
+}

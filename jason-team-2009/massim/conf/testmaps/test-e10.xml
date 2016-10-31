@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!-- launch-sync-type = timer or key -->
+<conf backuppath="backup" launch-sync-type="key" reportpath="." time-to-launch="10000" tournamentmode="0" tournamentname="GridSimulation">
+<simulation-server backlog="10" port="12300"/>
+<visualization flashport="1099" flashserver="" flashservice="WebServer-SPSInterface"/>
+<match>
+
+<simulation configurationclass="GridSimulationConfigurationHandCrafted" file-simulationlog="./log" id="test10" rmiobserver="" rmixmlobserver="GridSimulationRMIXMLDocumentObserver" rmixmlobsserverhost="localhost" rmixmlobsserverport="1097" simulationclass="GridSimulation" visualisationobserver="GridSimulationVisualizationObserver" xmlobserver="" xmlobserverpath="." xmlstatisticsobserver="">
+
+
+<configuration xmlns:meta="http://www.tu-clausthal.de/" agentSpeed="1" agentWeight="-200" cowAttractedWeight="10" cowPrivateField="3" cowScareWeight="-7" cowSight="5" cowSpeed="3" emptyWeight="3" epsilon="0.2" htaccess="1" lineOfSight="8" maxNumberOfSteps="1000" numberOfAgents="20" numberOfCows="40" numberOfFences="2" numberOfObstacles="181" obstacleWeight="-4" sizex="30" sizey="30" weight="0.3">
+<array item0="1" item1="3" item10="5" item11="10" item12="15" item13="19" item14="24" item15="2" item16="27" item17="6" item18="15" item19="22" item2="1" item3="2" item4="1" item5="2" item6="1" item7="2" item8="1" item9="2" meta:length="20" meta:name="agentPositionX"/>
+<array item0="8" item1="8" item10="19" item11="19" item12="19" item13="19" item14="19" item15="24" item16="24" item17="27" item18="27" item19="27" item2="9" item3="9" item4="10" item5="10" item6="11" item7="11" item8="12" item9="12" meta:length="20" meta:name="agentPositionY"/>
+<array item0="27" item1="28" meta:length="2" meta:name="stable1X"/>
+<array item0="1" item1="6" meta:length="2" meta:name="stable1Y"/>
+<array item0="1" item1="15" meta:length="2" meta:name="stable2X"/>
+<array item0="1" item1="6" meta:length="2" meta:name="stable2Y"/>
+<array item0="0" item1="1" item10="10" item100="11" item101="12" item102="13" item103="14" item104="15" item105="27" item106="28" item107="29" item108="0" item109="1" item11="11" item110="2" item111="3" item112="4" item113="5" item114="6" item115="7" item116="8" item117="9" item118="10" item119="11" item12="12" item120="12" item121="13" item122="14" item123="15" item124="27" item125="28" item126="29" item127="0" item128="29" item129="0" item13="13" item130="29" item131="0" item132="29" item133="0" item134="29" item135="0" item136="29" item137="0" item138="29" item139="0" item14="14" item140="29" item141="0" item142="29" item143="0" item144="29" item145="0" item146="29" item147="0" item148="29" item149="0" item15="15" item150="29" item151="0" item152="1" item153="2" item154="3" item155="4" item156="5" item157="6" item158="7" item159="8" item16="16" item160="9" item161="10" item162="11" item163="12" item164="13" item165="14" item166="15" item167="16" item168="17" item169="18" item17="17" item170="19" item171="20" item172="21" item173="22" item174="23" item175="24" item176="25" item177="26" item178="27" item179="28" item18="18" item180="29" item19="19" item2="2" item20="20" item21="21" item22="22" item23="23" item24="24" item25="25" item26="26" item27="27" item28="28" item29="29" item3="3" item30="0" item31="29" item32="0" item33="29" item34="0" item35="29" item36="0" item37="29" item38="0" item39="29" item4="4" item40="0" item41="29" item42="0" item43="1" item44="2" item45="3" item46="4" item47="5" item48="6" item49="7" item5="5" item50="8" item51="9" item52="10" item53="11" item54="12" item55="13" item56="14" item57="15" item58="27" item59="28" item6="6" item60="29" item61="0" item62="15" item63="27" item64="29" item65="0" item66="15" item67="27" item68="29" item69="0" item7="7" item70="15" item71="27" item72="29" item73="0" item74="15" item75="27" item76="29" item77="0" item78="15" item79="27" item8="8" item80="29" item81="0" item82="15" item83="27" item84="29" item85="0" item86="15" item87="27" item88="29" item89="0" item9="9" item90="1" item91="2" item92="3" item93="4" item94="5" item95="6" item96="7" item97="8" item98="9" item99="10" meta:length="181" meta:name="obstaclePositionX"/>
+<array item0="0" item1="0" item10="0" item100="15" item101="15" item102="15" item103="15" item104="15" item105="15" item106="15" item107="15" item108="16" item109="16" item11="0" item110="16" item111="16" item112="16" item113="16" item114="16" item115="16" item116="16" item117="16" item118="16" item119="16" item12="0" item120="16" item121="16" item122="16" item123="16" item124="16" item125="16" item126="16" item127="17" item128="17" item129="18" item13="0" item130="18" item131="19" item132="19" item133="20" item134="20" item135="21" item136="21" item137="22" item138="22" item139="23" item14="0" item140="23" item141="24" item142="24" item143="25" item144="25" item145="26" item146="26" item147="27" item148="27" item149="28" item15="0" item150="28" item151="29" item152="29" item153="29" item154="29" item155="29" item156="29" item157="29" item158="29" item159="29" item16="0" item160="29" item161="29" item162="29" item163="29" item164="29" item165="29" item166="29" item167="29" item168="29" item169="29" item17="0" item170="29" item171="29" item172="29" item173="29" item174="29" item175="29" item176="29" item177="29" item178="29" item179="29" item18="0" item180="29" item19="0" item2="0" item20="0" item21="0" item22="0" item23="0" item24="0" item25="0" item26="0" item27="0" item28="0" item29="0" item3="0" item30="1" item31="1" item32="2" item33="2" item34="3" item35="3" item36="4" item37="4" item38="5" item39="5" item4="0" item40="6" item41="6" item42="7" item43="7" item44="7" item45="7" item46="7" item47="7" item48="7" item49="7" item5="0" item50="7" item51="7" item52="7" item53="7" item54="7" item55="7" item56="7" item57="7" item58="7" item59="7" item6="0" item60="7" item61="8" item62="8" item63="8" item64="8" item65="9" item66="9" item67="9" item68="9" item69="10" item7="0" item70="10" item71="10" item72="10" item73="11" item74="11" item75="11" item76="11" item77="12" item78="12" item79="12" item8="0" item80="12" item81="13" item82="13" item83="13" item84="13" item85="14" item86="14" item87="14" item88="14" item89="15" item9="0" item90="15" item91="15" item92="15" item93="15" item94="15" item95="15" item96="15" item97="15" item98="15" item99="15" meta:length="181" meta:name="obstaclePositionY"/>
+<array item0="10" item1="11" item10="10" item11="11" item12="12" item13="13" item14="14" item15="15" item16="16" item17="17" item18="18" item19="19" item2="12" item20="10" item21="11" item22="12" item23="13" item24="14" item25="15" item26="16" item27="17" item28="18" item29="19" item3="13" item30="10" item31="11" item32="12" item33="13" item34="14" item35="15" item36="16" item37="17" item38="18" item39="19" item4="14" item5="15" item6="16" item7="17" item8="18" item9="19" meta:length="40" meta:name="cowPositionX"/>
+<array item0="21" item1="21" item10="22" item11="22" item12="22" item13="22" item14="22" item15="22" item16="22" item17="22" item18="22" item19="22" item2="21" item20="23" item21="23" item22="23" item23="23" item24="23" item25="23" item26="23" item27="23" item28="23" item29="23" item3="21" item30="24" item31="24" item32="24" item33="24" item34="24" item35="24" item36="24" item37="24" item38="24" item39="24" item4="21" item5="21" item6="21" item7="21" item8="21" item9="21" meta:length="40" meta:name="cowPositionY"/>
+<array item0="16" item1="26" meta:length="2" meta:name="switchX"/>
+<array item0="7" item1="16" meta:length="2" meta:name="switchY"/>
+<array item0="10" item1="10" meta:length="2" meta:name="fenceLength"/>
+<array item0="right" item1="left" meta:length="2" meta:name="fenceDirections"/>
+</configuration>
+<agents>
+
+<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="red">
+<configuration/>
+</agent>
+<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="red">
+<configuration/>
+</agent>
+<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="red">
+<configuration/>
+</agent>
+<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="red">
+<configuration/>
+</agent>
+<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="red">
+<configuration/>
+</agent>
+<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="red">
+<configuration/>
+</agent>
+<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="red">
+<configuration/>
+</agent>
+<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="red">
+<configuration/>
+</agent>
+<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="red">
+<configuration/>
+</agent>
+<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="red">
+<configuration/>
+</agent>
+<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="blue">
+<configuration/>
+</agent>
+<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="blue">
+<configuration/>
+</agent>
+<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="blue">
+<configuration/>
+</agent>
+<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="blue">
+<configuration/>
+</agent>
+<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="blue">
+<configuration/>
+</agent>
+<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="blue">
+<configuration/>
+</agent>
+<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="blue">
+<configuration/>
+</agent>
+<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="blue">
+<configuration/>
+</agent>
+<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="blue">
+<configuration/>
+</agent>
+<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="blue">
+<configuration/>
+</agent>
+</agents>
+</simulation>
+</match>
+<accounts>
+<actionclassmap name="Grid">
+<actionclass class="GridSimulationAgentAction" id="action"/>
+<actionclass class="massim.InvalidAction" id="invalid"/>
+</actionclassmap>
+
+<account actionclassmap="Grid" auxtimeout="5" defaultactionclass="GridSimulationAgentAction" maxpacketlength="65536" password="1" team="A" timeout="8" username="a1"/>
+<account actionclassmap="Grid" auxtimeout="5" defaultactionclass="GridSimulationAgentAction" maxpacketlength="65536" password="1" team="A" timeout="8" username="a2"/>
+<account actionclassmap="Grid" auxtimeout="5" defaultactionclass="GridSimulationAgentAction" maxpacketlength="65536" password="1" team="A" timeout="8" username="a3"/>
+<account actionclassmap="Grid" auxtimeout="5" defaultactionclass="GridSimulationAgentAction" maxpacketlength="65536" password="1" team="A" timeout="8" username="a4"/>
+<account actionclassmap="Grid" auxtimeout="5" defaultactionclass="GridSimulationAgentAction" maxpacketlength="65536" password="1" team="A" timeout="8" username="a5"/>
+<account actionclassmap="Grid" auxtimeout="5" defaultactionclass="GridSimulationAgentAction" maxpacketlength="65536" password="1" team="A" timeout="8" username="a6"/>
+<account actionclassmap="Grid" auxtimeout="5" defaultactionclass="GridSimulationAgentAction" maxpacketlength="65536" password="1" team="A" timeout="8" username="a7"/>
+<account actionclassmap="Grid" auxtimeout="5" defaultactionclass="GridSimulationAgentAction" maxpacketlength="65536" password="1" team="A" timeout="8" username="a8"/>
+<account actionclassmap="Grid" auxtimeout="5" defaultactionclass="GridSimulationAgentAction" maxpacketlength="65536" password="1" team="A" timeout="8" username="a9"/>
+<account actionclassmap="Grid" auxtimeout="5" defaultactionclass="GridSimulationAgentAction" maxpacketlength="65536" password="1" team="A" timeout="8" username="a10"/>
+<account actionclassmap="Grid" auxtimeout="500" defaultactionclass="GridSimulationAgentAction" maxpacketlength="65536" password="1" team="B" timeout="1000" username="b1"/>
+<account actionclassmap="Grid" auxtimeout="500" defaultactionclass="GridSimulationAgentAction" maxpacketlength="65536" password="1" team="B" timeout="1000" username="b2"/>
+<account actionclassmap="Grid" auxtimeout="500" defaultactionclass="GridSimulationAgentAction" maxpacketlength="65536" password="1" team="B" timeout="1000" username="b3"/>
+<account actionclassmap="Grid" auxtimeout="500" defaultactionclass="GridSimulationAgentAction" maxpacketlength="65536" password="1" team="B" timeout="1000" username="b4"/>
+<account actionclassmap="Grid" auxtimeout="500" defaultactionclass="GridSimulationAgentAction" maxpacketlength="65536" password="1" team="B" timeout="1000" username="b5"/>
+<account actionclassmap="Grid" auxtimeout="500" defaultactionclass="GridSimulationAgentAction" maxpacketlength="65536" password="1" team="B" timeout="1000" username="b6"/>
+<account actionclassmap="Grid" auxtimeout="500" defaultactionclass="GridSimulationAgentAction" maxpacketlength="65536" password="1" team="B" timeout="1000" username="b7"/>
+<account actionclassmap="Grid" auxtimeout="500" defaultactionclass="GridSimulationAgentAction" maxpacketlength="65536" password="1" team="B" timeout="1000" username="b8"/>
+<account actionclassmap="Grid" auxtimeout="500" defaultactionclass="GridSimulationAgentAction" maxpacketlength="65536" password="1" team="B" timeout="1000" username="b9"/>
+<account actionclassmap="Grid" auxtimeout="500" defaultactionclass="GridSimulationAgentAction" maxpacketlength="65536" password="1" team="B" timeout="1000" username="b10"/>
+</accounts>
+</conf>

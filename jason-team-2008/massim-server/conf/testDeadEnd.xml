@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<conf tournamentname="GridSimulation" tournamentmode="0"
+    launch-sync-type="key" time-to-launch="10000" reportpath="."
+    backuppath="backup">
+    <network-agent port="12300" backlog="10" />
+    <match>
+        <simulation id="Test herding behavior with a deadend"
+            simulationclass="massim.simulation.GridSimulation"
+            configurationclass="massim.simulation.GridSimulationConfigurationHandCrafted"
+            rmiobserver="massim.simulation.GridSimulationRMIObserver"
+            xmlobserver="massim.simulation.GridSimulationXMLObserver"
+            rmixmlobserver="massim.simulation.GridSimulationRMIXMLDocumentObserver"
+            xmlobserverpath="."
+            xmlstatisticsobserver="massim.simulation.GridSimulationXMLStatisticsObserver"
+            file-simulationlog="./log" visualisationobserver="">
+
+
+            <!--               visualisationobserver="massim.simulation.GridSimulationVisualizationObserver"  -->
+
+            <configuration xmlns:meta="http://www.tu-clausthal.de/"
+                sizex="70" sizey="70" maxNumberOfSteps="700" numberOfAgents="12"
+                numberOfObstacles="34" numberOfCows="36" cowSpeed="1"
+                agentSpeed="1" lineOfSight="17" fearRange="4" attractionRange="5"
+                cowWeight="5" agentWeight="-200" emptyWeight="1" obstacleWeight="-1"
+                htaccess="1">
+
+                <array item0="35" item1="69" item2="50" item3="34"
+                    item4="20" item5="18" item6="1" item7="1" item8="2" item9="2"
+                    item10="3" item11="3" meta:length="12"
+                    meta:name="agentPositionY" />
+                <array item0="6" item1="69" item2="44" item3="46"
+                    item4="44" item5="46" item6="69" item7="68" item8="69" item9="68"
+                    item10="69" item11="68" meta:length="12"
+                    meta:name="agentPositionX" />
+
+                <array item0="30" item1="30" item2="30" item3="30" item4="30" item5="30" 
+                    item6="31" item7="31" item8="31" item9="31" item10="31" item11="31"
+                    item12="32" item13="32" item14="32" item15="32" item16="32" item17="32"
+                    item18="33" item19="33" item20="33" item21="33" item22="33" item23="33"
+                    item24="34" item25="34" item26="34" item27="34" item28="34" item29="34"
+                    item30="35" item31="35" item32="35" item33="35" item34="35" item35="35"
+                    meta:length="36"
+                    meta:name="cowPositionY" />
+                    
+                <array item0="30" item1="31" item2="32" item3="33" item4="34" item5="35" 
+                    item6="30" item7="31" item8="32" item9="33" item10="34" item11="35"
+                    item12="30" item13="31" item14="32" item15="33" item16="34" item17="35"
+                    item18="30" item19="31" item20="32" item21="33" item22="34" item23="35"
+                    item24="30" item25="31" item26="32" item27="33" item28="34" item29="35"
+                    item30="30" item31="31" item32="32" item33="33" item34="34" item35="35"
+                    meta:length="36"
+                    meta:name="cowPositionX" />
+                    
+                <array item0="29" item1="38" meta:length="2"
+                    meta:name="stable1X" />
+                <array item0="59" item1="69" meta:length="2"
+                    meta:name="stable1Y" />
+                <array item0="55" item1="69" meta:length="2"
+                    meta:name="stable2X" />
+                <array item0="0" item1="14" meta:length="2"
+                    meta:name="stable2Y" />
+
+                <array item0="37" item1="37" item2="37" item3="37" item4="37" item5="37" item6="37" item7="37" item8="37" item9="37"
+                    item30="36" item31="36"
+                    item10="35" item11="35"
+                    item12="34" item13="34"
+                    item14="33" item15="33" 
+                    item16="32" item17="32"
+                    item18="31" item19="31"
+                    item20="30" item21="30"
+                    item22="29" item23="29"
+                    item24="28" item25="28"
+                    item26="27" item27="27"
+                    item28="26" item29="26"
+                    item32="25" item33="25"
+                    meta:length="34" meta:name="obstaclePositionY" />
+
+                <array item0="28" item1="29" item2="30" item3="31" item4="32" item5="33" item6="34" item7="35" item8="36" item9="37"
+                    item10="28" item11="37"
+                    item12="28" item13="37"
+                    item14="28" item15="37" 
+                    item16="28" item17="37"
+                    item18="28" item19="37"
+                    item20="28" item21="37"
+                    item22="28" item23="37"
+                    item24="28" item25="37"
+                    item26="28" item27="37"
+                    item28="28" item29="37"
+                    item30="28" item31="37"
+                    item32="28" item33="37"
+                    meta:length="34"
+                    meta:name="obstaclePositionX" />
+            </configuration>
+
+            <agents>
+                <agent
+                    agentclass="massim.simulation.GridSimulationAgent"
+                    agentcreationclass="massim.simulation.GridSimulationAgentParameter"
+                    team="blue">
+                    <configuration />
+                </agent>
+                <agent
+                    agentclass="massim.simulation.GridSimulationAgent"
+                    agentcreationclass="massim.simulation.GridSimulationAgentParameter"
+                    team="blue">
+                    <configuration />
+                </agent>
+                <agent
+                    agentclass="massim.simulation.GridSimulationAgent"
+                    agentcreationclass="massim.simulation.GridSimulationAgentParameter"
+                    team="blue">
+                    <configuration />
+                </agent>
+                <agent
+                    agentclass="massim.simulation.GridSimulationAgent"
+                    agentcreationclass="massim.simulation.GridSimulationAgentParameter"
+                    team="blue">
+                    <configuration />
+                </agent>
+                <agent
+                    agentclass="massim.simulation.GridSimulationAgent"
+                    agentcreationclass="massim.simulation.GridSimulationAgentParameter"
+                    team="blue">
+                    <configuration />
+                </agent>
+                <agent
+                    agentclass="massim.simulation.GridSimulationAgent"
+                    agentcreationclass="massim.simulation.GridSimulationAgentParameter"
+                    team="blue">
+                    <configuration />
+                </agent>
+                <agent
+                    agentclass="massim.simulation.GridSimulationAgent"
+                    agentcreationclass="massim.simulation.GridSimulationAgentParameter"
+                    team="red">
+                    <configuration />
+                </agent>
+                <agent
+                    agentclass="massim.simulation.GridSimulationAgent"
+                    agentcreationclass="massim.simulation.GridSimulationAgentParameter"
+                    team="red">
+                    <configuration />
+                </agent>
+                <agent
+                    agentclass="massim.simulation.GridSimulationAgent"
+                    agentcreationclass="massim.simulation.GridSimulationAgentParameter"
+                    team="red">
+                    <configuration />
+                </agent>
+                <agent
+                    agentclass="massim.simulation.GridSimulationAgent"
+                    agentcreationclass="massim.simulation.GridSimulationAgentParameter"
+                    team="red">
+                    <configuration />
+                </agent>
+                <agent
+                    agentclass="massim.simulation.GridSimulationAgent"
+                    agentcreationclass="massim.simulation.GridSimulationAgentParameter"
+                    team="red">
+                    <configuration />
+                </agent>
+                <agent
+                    agentclass="massim.simulation.GridSimulationAgent"
+                    agentcreationclass="massim.simulation.GridSimulationAgentParameter"
+                    team="red">
+                    <configuration />
+                </agent>
+            </agents>
+        </simulation>
+
+    </match>
+
+    <accounts>
+        <actionclassmap name="Grid">
+            <actionclass id="action"
+                class="massim.simulation.GridSimulationAgentAction" />
+            <actionclass id="invalid" class="massim.InvalidAction" />
+        </actionclassmap>
+
+        <account actionclassmap="Grid"
+            defaultactionclass="massim.simulation.GridSimulationAgentAction"
+            timeout="8000" auxtimeout="500" maxpacketlength="65536"
+            username="botagent1" password="1" team="bot" />
+        <account actionclassmap="Grid"
+            defaultactionclass="massim.simulation.GridSimulationAgentAction"
+            timeout="8000" auxtimeout="500" maxpacketlength="65536"
+            username="botagent2" password="2" team="bot" />
+        <account actionclassmap="Grid"
+            defaultactionclass="massim.simulation.GridSimulationAgentAction"
+            timeout="8000" auxtimeout="500" maxpacketlength="65536"
+            username="botagent3" password="3" team="bot" />
+        <account actionclassmap="Grid"
+            defaultactionclass="massim.simulation.GridSimulationAgentAction"
+            timeout="8000" auxtimeout="500" maxpacketlength="65536"
+            username="botagent4" password="4" team="bot" />
+        <account actionclassmap="Grid"
+            defaultactionclass="massim.simulation.GridSimulationAgentAction"
+            timeout="8000" auxtimeout="500" maxpacketlength="65536"
+            username="botagent5" password="5" team="bot" />
+        <account actionclassmap="Grid"
+            defaultactionclass="massim.simulation.GridSimulationAgentAction"
+            timeout="8000" auxtimeout="500" maxpacketlength="65536"
+            username="botagent6" password="6" team="bot" />
+
+        <account actionclassmap="Grid"
+            defaultactionclass="massim.simulation.GridSimulationAgentAction"
+            timeout="8000" auxtimeout="500" maxpacketlength="65536"
+            username="participant1" password="1" team="participant" />
+        <account actionclassmap="Grid"
+            defaultactionclass="massim.simulation.GridSimulationAgentAction"
+            timeout="8000" auxtimeout="500" maxpacketlength="65536"
+            username="participant2" password="2" team="participant" />
+        <account actionclassmap="Grid"
+            defaultactionclass="massim.simulation.GridSimulationAgentAction"
+            timeout="8000" auxtimeout="500" maxpacketlength="65536"
+            username="participant3" password="3" team="participant" />
+        <account actionclassmap="Grid"
+            defaultactionclass="massim.simulation.GridSimulationAgentAction"
+            timeout="8000" auxtimeout="500" maxpacketlength="65536"
+            username="participant4" password="4" team="participant" />
+        <account actionclassmap="Grid"
+            defaultactionclass="massim.simulation.GridSimulationAgentAction"
+            timeout="8000" auxtimeout="500" maxpacketlength="65536"
+            username="participant5" password="5" team="participant" />
+        <account actionclassmap="Grid"
+            defaultactionclass="massim.simulation.GridSimulationAgentAction"
+            timeout="8000" auxtimeout="500" maxpacketlength="65536"
+            username="participant6" password="6" team="participant" />
+
+    </accounts>
+</conf>

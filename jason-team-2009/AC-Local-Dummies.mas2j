@@ -1,0 +1,33 @@
+/* Jason Team for the
+ * Multi-Agent Programming Contest 2009
+ * (http://www.multiagentcontest.org)
+ * 
+ * Configuration for contest simulator running local
+ *
+ */
+
+MAS dummies {
+    infrastructure: Centralised
+    
+    agents:
+        // parameters
+        //    - teamid (string): used to compose the names of teammates
+        //    - #nid: will be replaced by the number of the agent 
+        //    - gui (boolean): whether to show the GUI view of the agent
+        //    - write_status (boolean): update the file 'world-status.txt' with a summary of the team
+        //    - ac_sim_back_dir: the directory where massim stores the backup of the env state (used to show GUI)
+        dummy dummy.asl
+              [teamid="dummy", host="localhost", port=12300, username="a#nid", password="1"] 
+              agentArchClass arch.ACArchitecture
+              agentClass     agent.SelectEvent 
+              beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)", "target(_,_)")
+              #9;
+        dummy10 dummy.asl // another agent entry to set special monitoring parameters (gui, status, ...)
+              [teamid="dummy", verbose=1, //gui=yes, write_status=yes, ac_sim_back_dir="",
+               host="localhost", port=12300, username="a#nid", password="1"] 
+              agentArchClass arch.ACArchitecture
+              agentClass     agent.SelectEvent 
+              beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)", "target(_,_)");
+              
+    aslSourcePath: "src/asl";
+}

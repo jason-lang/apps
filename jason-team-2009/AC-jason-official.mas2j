@@ -1,0 +1,47 @@
+/* Jason Team for the
+ * Multi-Agent Programming Contest 2009
+ * (http://www.multiagentcontest.org)
+ *
+ * Configuration for CONTEST simulator
+ *
+ */
+
+MAS roman_farmers {
+    infrastructure: Centralised
+    
+    agents:
+        orgManager [osfile="src/team-os.xml",gui=yes] // this agent have to be started first 
+              agentArchClass jmoise.OrgManager;
+              
+        // parameters
+        //    - teamid (string): used to compose the names of teammates
+        //    - #nid: will be replaced by the number of the agent 
+        //    - gui (boolean): whether to show the GUI view of the agent
+        //    - write_status (boolean): update the file 'world-status.txt' with a summary of the team and stores the mind of the agents in mind-ag directory
+        //    - dump_ags_mind (boolean): whether to store the agents' mind in mind-ag directory
+        //    - ac_sim_back_dir: the directory where massim stores the backup of the env state (used to show GUI)
+        gaucho gaucho.asl
+              [teamid="gaucho", verbose=1,
+               host="agentcontest1.in.tu-clausthal.de", port=12300, username="romanfarmers#nid", password="VH12CT78"]
+               //host="localhost", port=12300, username="b#nid", password="1"] 
+              agentArchClass arch.ACArchitecture
+              agentClass     agent.SelectEvent 
+              beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)",
+                                                 "target(_,_)", "group_leader(key,_)", //"cow(key,_,_)",
+                                                 "group_area(key, _)")
+              #9;
+                                                  
+        gaucho10 gaucho.asl
+              [teamid="gaucho", verbose=1, gui=no, write_status=yes, dump_ags_mind=no,
+               host="agentcontest1.in.tu-clausthal.de", port=12300, username="romanfarmers#nid", password="VH12CT78"]
+               //host="localhost", port=12300, username="b#nid", password="1"] 
+              agentArchClass arch.ACArchitecture
+              agentClass     agent.SelectEvent 
+              beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)",
+                                                 "target(_,_)", "group_leader(key,_)", //"cow(key,_,_)",
+                                                 "group_area(key, _)");
+                                                 
+    directives: maintenance_goal = agent.OrgMaintenanceGoal;
+    
+    aslSourcePath: "src/asl";
+}

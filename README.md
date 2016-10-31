@@ -1,2 +1,2 @@
 # Jason Applications
-some applications and test for Jason (not well documented)
+some applications and test for Jason

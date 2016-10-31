@@ -1,0 +1,16 @@
+  <!ENTITY demosim1 SYSTEM "demosim1.xml">
+  <!ENTITY demosim2 SYSTEM "demosim2.xml">
+  <!ENTITY demosim3 SYSTEM "demosim3.xml">
+  <!ENTITY demosim4 SYSTEM "demosim4.xml">
+  <!ENTITY sim1 SYSTEM "simulation1.xml">
+  <!ENTITY sim2 SYSTEM "simulation2.xml">
+  <!ENTITY sim3 SYSTEM "simulation3.xml">
+  <!ENTITY unknown SYSTEM "unknown.xml">
+  <!ENTITY jiacv SYSTEM "jiacv.xml">
+  <!ENTITY aston SYSTEM "aston.xml">
+  <!ENTITY smaperteam SYSTEM "smaperteam.xml">
+  <!ENTITY romanfarmers SYSTEM "romanfarmers.xml">
+  <!ENTITY afable SYSTEM "afable.xml">
+  <!ENTITY microjiac SYSTEM "microjiac.xml">
+  <!ENTITY jadexathaw SYSTEM "jadexathaw.xml">
+  <!ENTITY jasondtu SYSTEM "jasondtu.xml">

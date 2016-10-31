@@ -1,0 +1,61 @@
+###############################################################
+# Multi-Agent Programming Contest 2008                        #
+#                                                             # 
+# Support package MASSim server                               #
+#   README file for the MASSim server package                 #
+#                                                             #
+# For the details on the contest, check the Contest website:  #
+#   http://cig.in.tu-clausthal.de/agentcontest2008/           #
+#                                                             #
+# Organizers:                                                 #
+#    J. Dix, M. Dastani, P. Novak, T.M. Behrens               #
+###############################################################
+
+1. Prerequisites.
+
+You only need the sun-java5 / sun-java6 (jre and jdk) installed to run the server.
+
+2. Installing and running.
+
+·Unpack the file anywhere:
+	tar xzvf massim-Server-version.tag.gz -C output_dir
+
+·Switch to the new directory:
+	cd output_dir/massim-Server
+
+·Run the script provided in the package:
+	./startServer
+
+3. Options.
+
+You can edit the startServer script for changing the ip where the rmi registry
+ will be run (variable name), or the location of configuration file:
+
+4. Configuration files
+4.1 Server configuration
+
+The serverconfig.xml file is located inside the conf directory. There you can
+specify all the parameters refered to the simulation: from the number of agents
+to the map style.
+
+The first relevant element is the configuration one. It contains attributes like
+the grid's size, number of elements (agents, gold items, obstacles) inside the
+grid and some probability parameters.
+
+If no more is specified a random map will be created using the parameters provided.
+
+There is also the capability of creating your map, placing all the elements in their
+position.
+
+The easiest way is read the second simulation config from the serverconfig.xml fіle
+and understand the array elements.
+
+4.2 Visualization configuration
+The visualconfig.xml file is also located inside the conf directory. There you can 
+specify parameters refered to the visualization (or svg output files). It allows you
+change the colors and sizes of the elements.
+
+5. Questions, problems, suggestions, ...
+
+please, ask to the Agent Contest 2008 mail-list agentcontest2008-general [at] in.tu-clausthal.de 
+and for more fast communication: jens.dehnert [at] tu-clausthal.de or slawomir.deren [at] tu-clausthal.de

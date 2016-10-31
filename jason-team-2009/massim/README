@@ -1,0 +1,87 @@
+###############################################################
+# Multi-Agent Programming Contest 2009                        #
+#                                                             #
+# Support package MASSim                                      #
+#   README file for the massim package                        #
+#                                                             #
+# For the details on the contest, check the Contest website:  #
+#   http://multiagentcontest.org/2009                         #
+#                                                             #
+# Organizers:                                                 #
+#    J. Dix, M. Dastani, M. Köster, T.M. Behrens, P. Novak    #
+###############################################################
+
+
+1. Prerequisites
+
+You only need the sun-java6 (jre and jdk) installed to run the server, the
+agents and the servermonitor.
+
+2. Installing
+
+·Unpack the file anywhere:
+	tar xvfj massim-*.tar.bz2
+
+·Switch to the new directory:
+	cd massim/
+
+3. Running
+
+·Server:
+	·Run the script provided in the package:
+		./startSimulation2009.sh
+
+	·There are two other maps which can be invoked by:
+		./startSimulation2009.sh conf/serverconfig90x90_20agents.xml
+		./startSimulation2009.sh conf/serverconfig100x100_20agents.xml
+
+	·When all agents are connected you can press >>ENTER<< to start the
+	 simulation.
+
+	·To abort the simulation you can press >>CRTL+C<<. Then, the demo agents
+         quit as well. 
+
+·Demo agents:
+        ·Run the script provided in the package:
+                ./startAgents2009.sh
+
+	·You have to specify the ip adress or hostname (usally localhost) of the
+	 server and the number of agents (usally 20) you want to execute.
+
+·Servermonitor:
+        ·Run the script provided in the package:
+                ./startCowMonitor2009.sh
+	
+	·You can set the ip adress and the rmi port in the following way:
+		./startCowMonitor2009.sh localhost 1097
+
+	·Note: Only if a simulation is running (i.e., you pressed >>ENTER<< in
+	       the simulation shell) the 2D-window of the monitor appears.
+
+
+4. Configuration files
+
+·Server configuration
+
+	The serverconfig*.xml files are located inside the conf directory. There
+        you can specify all the parameters refered to the simulation: from the number of
+	agents to the map style.
+
+	The first relevant element is the configuration one. It contains attributes like
+	the grid's size, number of elements (agents, gold items, obstacles) inside the
+	grid and some probability parameters.
+
+	There is the capability of creating your map, placing all the elements
+	in their position. We also have an experimental (i.e., possible unstable)
+	graphical editor which can be asked for.
+
+·Visualization configuration
+
+	The visualconfig.xml file is also located inside the conf directory.
+        There you can specify parameters refered to the visualization (or svg output files).
+	It allows you change the colors and sizes of the elements.
+
+5. Questions, problems, suggestions
+
+Please, contact one of the people on this webpage:
+http://multiagentcontest.org/contact

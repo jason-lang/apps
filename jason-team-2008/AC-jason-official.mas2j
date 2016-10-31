@@ -1,0 +1,63 @@
+/* Jason Team for the
+ * Multi-Agent Programming Contest 2008
+ * (http://cig.in.tu-clausthal.de/AgentContest)
+ * 
+ * Configuration for contest simulator running local
+ *
+ */
+
+MAS jason_cowboys {
+    infrastructure: Centralised
+    
+    agents:
+        orgManager [osfile="src/team-os.xml",gui=yes] 
+              agentArchClass jmoise.OrgManager;
+              
+        gaucho1 gaucho.asl
+              [verbose=1, gui=yes, write_status=yes, //ac_sim_back_dir="./massim-server/backup",
+               host="agentcontest1.in.tu-clausthal.de", port=12300, username="Jason0", password="Pq600pXo"] 
+              agentArchClass arch.ACArchitecture
+              agentClass     agent.SelectEvent 
+              beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)",
+                                                 "target(_,_)", "group_leader(key,_)", //"cow(key,_,_)",
+                                                 "group_area(key, _)");
+        gaucho2 gaucho.asl
+              [verbose=1,host="agentcontest1.in.tu-clausthal.de", port=12300, username="Jason1", password="EjFlDB7U"] 
+              agentArchClass arch.ACArchitecture
+              agentClass     agent.SelectEvent 
+              beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)",
+                                                 "target(_,_)", "group_leader(key,_)", //"cow(key,_,_)",
+                                                 "group_area(key, _)");
+        gaucho3 gaucho.asl
+              [verbose=1,gui=no,host="agentcontest1.in.tu-clausthal.de", port=12300, username="Jason2", password="Jt9VNkUN"] 
+              agentArchClass arch.ACArchitecture
+              agentClass     agent.SelectEvent 
+              beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)",
+                                                 "target(_,_)", "group_leader(key,_)", //"cow(key,_,_)",
+                                                 "group_area(key, _)");
+        gaucho4 gaucho.asl
+              [verbose=1,host="agentcontest1.in.tu-clausthal.de", port=12300, username="Jason3", password="IzToicMA"] 
+              agentArchClass arch.ACArchitecture
+              agentClass     agent.SelectEvent 
+              beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)",
+                                                 "target(_,_)", "group_leader(key,_)", //"cow(key,_,_)",
+                                                 "group_area(key, _)");
+        gaucho5 gaucho.asl
+              [verbose=1,gui=no,host="agentcontest1.in.tu-clausthal.de", port=12300, username="Jason4", password="7dIx5Ioh"] 
+              agentArchClass arch.ACArchitecture
+              agentClass     agent.SelectEvent 
+              beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)",
+                                                 "target(_,_)", "group_leader(key,_)", //"cow(key,_,_)",
+                                                 "group_area(key, _)");
+        gaucho6 gaucho.asl
+              [verbose=1,host="agentcontest1.in.tu-clausthal.de", port=12300, username="Jason5", password="kd1u9HLi"] 
+              agentArchClass arch.ACArchitecture
+              agentClass     agent.SelectEvent 
+              beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)",
+                                                 "target(_,_)", "group_leader(key,_)", //"cow(key,_,_)",
+                                                 "group_area(key, _)");
+
+    directives: maintenance_goal = agent.OrgMaintenanceGoal;
+    
+    aslSourcePath: "src/asl";
+}

@@ -1,0 +1,64 @@
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                    XXXXXXXXX                                    |
+|                                  XXX       XXX                                  |
+|                 X              XXX           XXX                                |
+|                 XX           XXX               XXX           XX                 |
+|                  XXX       XXX                   XXX       XXX                  |
+|                   XXXX   XXX                       XXX   XXXX                   |
+|                     XXXXXX                           XXXXXX                     |
+|                         X                             X                         |
+|        XXXXXX           X                             X     c     XXXXXX        |
+|        X    XXXXX      XX                             XX  c   XXXXX    X        |
+|        X        XXXXXXXX                               XXXXXXXX        XX       |
+|       X                   ------               XXXXXX                   X       |
+|       X                   ------               XXXXXX             c     X       |
+|       X                   ------               XXXXXX                   X       |
+|       X                   ------               XXXXXX                   X       |
+|       XX                  ------               XXXXXX  1  4            XX       |
+|        XX                 ------               XXXXXX   E cE          XX        |
+|         XX           XXX  ------               XXXXXX  XXX   3       XX         |
+|          XX            X  ------               XXXXXX  X            XX          |
+|                        X                               X                        |
+|                        X                               X    c                   |
+|                        X                               X      E                 |
+|                        X                               X                        |
+|                        X                               X                        |
+|                       XX                               XX                       |
+|                       X                                 X                       |
+|                       X                                 X                       |
+|                       X                                 X                       |
+|                       X                                 X                       |
+|                       X                                 X                       |
+|                      XX                                 XX                      |
+|                     XX                                   XX                     |
+|                     X                                     X                     |
+|                    XX                                     XX                    |
+|                    X                                  2    X                    |
+|                   XX      X                         X      XX                   |
+|                   X       X                         X       X                   |
+|                  XX       XX                       XX       XX                  |
+|                  X        XX                      XXX        X                  |
+|                  X                              XXXX         X                  |
+|                  X                              XXX          X                  |
+|                  X                               XX          X                  |
+|                  XX                                         XX                  |
+|                   X     X                             X     X                   |
+|                   X                                         X                   |
+|                   XXX                              XXX    XXX                   |
+|                                                    X                            |
+|                                                 XXXX                            |
+|                                        XXXXXXXXXX       X                       |
+|                                                 X       XX5                     |
+|                                                XX                               |
+|                                          XXXX XX           6                    |
+|                                            XXXX                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |

@@ -1,0 +1,82 @@
+<simulation configurationclass="massim.competition2009.simulation.GridSimulationConfigurationHandCrafted" file-simulationlog="./log" id="demosim3" rmiobserver="massim.competition2009.simulation.GridSimulationRMIObservers" rmixmlobserver="massim.competition2009.simulation.GridSimulationRMIXMLDocumentObserver" rmixmlobserverweb="massim.competition2009.simulation.GridSimulationRMIXMLDocumentObserverWebInterface" rmixmlobsserverhost="localhost" rmixmlobsserverport="1099" simulationclass="massim.competition2009.simulation.GridSimulation" visualisationobserver="massim.competition2009.simulation.GridSimulationVisualizationObserver" xmlobserver="massim.competition2009.simulation.GridSimulationXMLObserver" xmlobserverpath="./" xmlstatisticsobserver="massim.competition2009.simulation.GridSimulationXMLStatisticsObserver">
+
+<configuration xmlns:meta="http://www.tu-clausthal.de/" agentSpeed="1" agentWeight="-200" cowAttractedWeight="10" cowPrivateField="3" cowScareWeight="-7" cowSight="5" cowSpeed="3" emptyWeight="3" epsilon="0.2" htaccess="1" lineOfSight="8" maxNumberOfSteps="1000" numberOfAgents="20" numberOfCows="131" numberOfFences="0" numberOfObstacles="163" obstacleWeight="-4" sizex="100" sizey="100" weight="0.3">
+<array item0="61" item1="61" item10="59" item11="59" item12="11" item13="10" item14="11" item15="89" item16="90" item17="89" item18="31" item19="31" item2="13" item3="14" item4="13" item5="87" item6="86" item7="87" item8="33" item9="33" meta:length="20" meta:name="agentPositionX"/>
+<array item0="11" item1="13" item10="11" item11="13" item12="22" item13="23" item14="24" item15="59" item16="60" item17="61" item18="84" item19="86" item2="22" item3="23" item4="24" item5="59" item6="60" item7="61" item8="84" item9="86" meta:length="20" meta:name="agentPositionY"/>
+<array item0="25" item1="48" meta:length="2" meta:name="stable1X"/>
+<array item0="25" item1="48" meta:length="2" meta:name="stable1Y"/>
+<array item0="50" item1="73" meta:length="2" meta:name="stable2X"/>
+<array item0="50" item1="73" meta:length="2" meta:name="stable2Y"/>
+<array item0="24" item1="25" item10="34" item100="68" item101="69" item102="70" item103="71" item104="72" item105="73" item106="74" item107="49" item108="74" item109="49" item11="35" item110="74" item111="49" item112="74" item113="74" item114="74" item115="74" item116="74" item117="74" item118="74" item119="74" item12="36" item120="74" item121="74" item122="74" item123="74" item124="74" item125="74" item126="74" item127="74" item128="74" item129="74" item13="37" item130="74" item131="49" item132="74" item133="49" item134="74" item135="49" item136="74" item137="49" item138="50" item139="51" item14="38" item140="52" item141="53" item142="54" item143="55" item144="56" item145="57" item146="58" item147="59" item148="60" item149="61" item15="39" item150="62" item151="63" item152="64" item153="65" item154="66" item155="67" item156="68" item157="69" item158="70" item159="71" item16="40" item160="72" item161="73" item162="74" item17="41" item18="42" item19="43" item2="26" item20="44" item21="45" item22="46" item23="47" item24="48" item25="49" item26="24" item27="49" item28="24" item29="49" item3="27" item30="24" item31="49" item32="24" item33="24" item34="24" item35="24" item36="24" item37="24" item38="24" item39="24" item4="28" item40="24" item41="24" item42="24" item43="24" item44="24" item45="24" item46="24" item47="24" item48="24" item49="24" item5="29" item50="24" item51="49" item52="24" item53="49" item54="24" item55="49" item56="24" item57="25" item58="26" item59="27" item6="30" item60="28" item61="29" item62="30" item63="31" item64="32" item65="33" item66="34" item67="35" item68="36" item69="37" item7="31" item70="38" item71="39" item72="40" item73="41" item74="42" item75="43" item76="44" item77="45" item78="46" item79="47" item8="32" item80="48" item81="49" item82="50" item83="51" item84="52" item85="53" item86="54" item87="55" item88="56" item89="57" item9="33" item90="58" item91="59" item92="60" item93="61" item94="62" item95="63" item96="64" item97="65" item98="66" item99="67" meta:length="163" meta:name="obstaclePositionX"/>
+<array item0="24" item1="24" item10="24" item100="49" item101="49" item102="49" item103="49" item104="49" item105="49" item106="49" item107="50" item108="50" item109="51" item11="24" item110="51" item111="52" item112="52" item113="53" item114="54" item115="55" item116="56" item117="57" item118="58" item119="59" item12="24" item120="60" item121="61" item122="62" item123="63" item124="64" item125="65" item126="66" item127="67" item128="68" item129="69" item13="24" item130="70" item131="71" item132="71" item133="72" item134="72" item135="73" item136="73" item137="74" item138="74" item139="74" item14="24" item140="74" item141="74" item142="74" item143="74" item144="74" item145="74" item146="74" item147="74" item148="74" item149="74" item15="24" item150="74" item151="74" item152="74" item153="74" item154="74" item155="74" item156="74" item157="74" item158="74" item159="74" item16="24" item160="74" item161="74" item162="74" item17="24" item18="24" item19="24" item2="24" item20="24" item21="24" item22="24" item23="24" item24="24" item25="24" item26="25" item27="25" item28="26" item29="26" item3="24" item30="27" item31="27" item32="28" item33="29" item34="30" item35="31" item36="32" item37="33" item38="34" item39="35" item4="24" item40="36" item41="37" item42="38" item43="39" item44="40" item45="41" item46="42" item47="43" item48="44" item49="45" item5="24" item50="46" item51="46" item52="47" item53="47" item54="48" item55="48" item56="49" item57="49" item58="49" item59="49" item6="24" item60="49" item61="49" item62="49" item63="49" item64="49" item65="49" item66="49" item67="49" item68="49" item69="49" item7="24" item70="49" item71="49" item72="49" item73="49" item74="49" item75="49" item76="49" item77="49" item78="49" item79="49" item8="24" item80="49" item81="49" item82="49" item83="49" item84="49" item85="49" item86="49" item87="49" item88="49" item89="49" item9="24" item90="49" item91="49" item92="49" item93="49" item94="49" item95="49" item96="49" item97="49" item98="49" item99="49" meta:length="163" meta:name="obstaclePositionY"/>
+<array item0="7" item1="86" item10="90" item100="95" item101="14" item102="81" item103="62" item104="88" item105="55" item106="17" item107="16" item108="17" item109="22" item11="81" item110="49" item111="91" item112="9" item113="39" item114="67" item115="61" item116="73" item117="85" item118="31" item119="58" item12="37" item120="77" item121="14" item122="40" item123="53" item124="3" item125="91" item126="20" item127="24" item128="80" item129="59" item13="96" item130="66" item14="11" item15="21" item16="22" item17="31" item18="54" item19="88" item2="41" item20="96" item21="6" item22="17" item23="67" item24="49" item25="95" item26="39" item27="23" item28="34" item29="36" item3="95" item30="37" item31="4" item32="9" item33="36" item34="37" item35="81" item36="91" item37="12" item38="30" item39="76" item4="62" item40="87" item41="88" item42="4" item43="37" item44="64" item45="83" item46="9" item47="77" item48="96" item49="96" item5="12" item50="5" item51="70" item52="96" item53="82" item54="86" item55="91" item56="3" item57="6" item58="85" item59="76" item6="29" item60="86" item61="86" item62="83" item63="3" item64="8" item65="74" item66="90" item67="71" item68="8" item69="92" item7="50" item70="82" item71="84" item72="84" item73="95" item74="8" item75="79" item76="17" item77="28" item78="10" item79="96" item8="70" item80="12" item81="93" item82="12" item83="23" item84="8" item85="68" item86="8" item87="86" item88="60" item89="4" item9="77" item90="60" item91="18" item92="60" item93="11" item94="36" item95="63" item96="63" item97="74" item98="5" item99="14" meta:length="131" meta:name="cowPositionX"/>
+<array item0="2" item1="2" item10="5" item100="85" item101="86" item102="86" item103="87" item104="87" item105="88" item106="89" item107="90" item108="90" item109="90" item11="6" item110="90" item111="90" item112="91" item113="91" item114="91" item115="92" item116="92" item117="92" item118="93" item119="93" item12="7" item120="93" item121="94" item122="95" item123="96" item124="97" item125="97" item126="98" item127="98" item128="98" item129="99" item13="8" item130="99" item14="9" item15="9" item16="9" item17="9" item18="9" item19="9" item2="3" item20="9" item21="10" item22="10" item23="10" item24="11" item25="11" item26="12" item27="13" item28="13" item29="13" item3="3" item30="13" item31="14" item32="14" item33="14" item34="14" item35="14" item36="14" item37="16" item38="16" item39="16" item4="4" item40="17" item41="17" item42="19" item43="20" item44="20" item45="20" item46="21" item47="21" item48="21" item49="22" item5="5" item50="23" item51="23" item52="23" item53="24" item54="25" item55="25" item56="27" item57="28" item58="29" item59="30" item6="5" item60="30" item61="31" item62="32" item63="33" item64="33" item65="35" item66="35" item67="42" item68="44" item69="50" item7="5" item70="51" item71="52" item72="53" item73="55" item74="57" item75="57" item76="61" item77="62" item78="64" item79="64" item8="5" item80="74" item81="74" item82="75" item83="77" item84="78" item85="78" item86="79" item87="79" item88="80" item89="81" item9="5" item90="81" item91="82" item92="82" item93="83" item94="83" item95="83" item96="84" item97="84" item98="85" item99="85" meta:length="131" meta:name="cowPositionY"/>
+<array meta:length="0" meta:name="switchX"/>
+<array meta:length="0" meta:name="switchY"/>
+<array meta:length="0" meta:name="fenceLength"/>
+<array meta:length="0" meta:name="fenceDirections"/>
+</configuration>
+<agents>
+
+<agent agentclass="massim.competition2009.simulation.GridSimulationAgent" agentcreationclass="massim.competition2009.simulation.GridSimulationAgentParameter" team="red">
+<configuration/>
+</agent>
+<agent agentclass="massim.competition2009.simulation.GridSimulationAgent" agentcreationclass="massim.competition2009.simulation.GridSimulationAgentParameter" team="red">
+<configuration/>
+</agent>
+<agent agentclass="massim.competition2009.simulation.GridSimulationAgent" agentcreationclass="massim.competition2009.simulation.GridSimulationAgentParameter" team="red">
+<configuration/>
+</agent>
+<agent agentclass="massim.competition2009.simulation.GridSimulationAgent" agentcreationclass="massim.competition2009.simulation.GridSimulationAgentParameter" team="red">
+<configuration/>
+</agent>
+<agent agentclass="massim.competition2009.simulation.GridSimulationAgent" agentcreationclass="massim.competition2009.simulation.GridSimulationAgentParameter" team="red">
+<configuration/>
+</agent>
+<agent agentclass="massim.competition2009.simulation.GridSimulationAgent" agentcreationclass="massim.competition2009.simulation.GridSimulationAgentParameter" team="red">
+<configuration/>
+</agent>
+<agent agentclass="massim.competition2009.simulation.GridSimulationAgent" agentcreationclass="massim.competition2009.simulation.GridSimulationAgentParameter" team="red">
+<configuration/>
+</agent>
+<agent agentclass="massim.competition2009.simulation.GridSimulationAgent" agentcreationclass="massim.competition2009.simulation.GridSimulationAgentParameter" team="red">
+<configuration/>
+</agent>
+<agent agentclass="massim.competition2009.simulation.GridSimulationAgent" agentcreationclass="massim.competition2009.simulation.GridSimulationAgentParameter" team="red">
+<configuration/>
+</agent>
+<agent agentclass="massim.competition2009.simulation.GridSimulationAgent" agentcreationclass="massim.competition2009.simulation.GridSimulationAgentParameter" team="red">
+<configuration/>
+</agent>
+<agent agentclass="massim.competition2009.simulation.GridSimulationAgent" agentcreationclass="massim.competition2009.simulation.GridSimulationAgentParameter" team="blue">
+<configuration/>
+</agent>
+<agent agentclass="massim.competition2009.simulation.GridSimulationAgent" agentcreationclass="massim.competition2009.simulation.GridSimulationAgentParameter" team="blue">
+<configuration/>
+</agent>
+<agent agentclass="massim.competition2009.simulation.GridSimulationAgent" agentcreationclass="massim.competition2009.simulation.GridSimulationAgentParameter" team="blue">
+<configuration/>
+</agent>
+<agent agentclass="massim.competition2009.simulation.GridSimulationAgent" agentcreationclass="massim.competition2009.simulation.GridSimulationAgentParameter" team="blue">
+<configuration/>
+</agent>
+<agent agentclass="massim.competition2009.simulation.GridSimulationAgent" agentcreationclass="massim.competition2009.simulation.GridSimulationAgentParameter" team="blue">
+<configuration/>
+</agent>
+<agent agentclass="massim.competition2009.simulation.GridSimulationAgent" agentcreationclass="massim.competition2009.simulation.GridSimulationAgentParameter" team="blue">
+<configuration/>
+</agent>
+<agent agentclass="massim.competition2009.simulation.GridSimulationAgent" agentcreationclass="massim.competition2009.simulation.GridSimulationAgentParameter" team="blue">
+<configuration/>
+</agent>
+<agent agentclass="massim.competition2009.simulation.GridSimulationAgent" agentcreationclass="massim.competition2009.simulation.GridSimulationAgentParameter" team="blue">
+<configuration/>
+</agent>
+<agent agentclass="massim.competition2009.simulation.GridSimulationAgent" agentcreationclass="massim.competition2009.simulation.GridSimulationAgentParameter" team="blue">
+<configuration/>
+</agent>
+<agent agentclass="massim.competition2009.simulation.GridSimulationAgent" agentcreationclass="massim.competition2009.simulation.GridSimulationAgentParameter" team="blue">
+<configuration/>
+</agent>
+</agents>
+</simulation>

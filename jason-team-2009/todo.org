@@ -1,0 +1,147 @@
+* 2010 team
+
+- [ ] see matches
+- [ ] use 2009 team, and others available, as opponents
+- [ ] distributed running (run agents in different machines). Just to
+      test this feature
+- [ ] see team's description of other teams (CLIMA proc)
+
+** Main points (general)
+   - debug tools 
+     - GUI, mostra goals/roles dos agentes, o caminho que fizeram, o cluster atual,
+     - traces by agents (better than grep, shows decisions, goals, history, relations, place in org, ...)
+     - organisational trace (org-dump)
+   - artifacts (?)/moise artifacts (the new version of moise)
+   - groups dynamic
+   - Jason modules 
+   - Jason sintactical warnings (warn about a !goal without a plan,
+     test goal without a beliefs, ....)
+
+** Cenario
+- [ ] duplicate cows in BB and better handling of cows
+      - not only perception, cows, even seen a long time ago are still 'known'
+      - only one place for a cow
+
+** Estrategias
+- [ ] estrategias de ataco/roubo/vinganca
+- [ ] retaliation strategy
+
+** Grupos
+- [ ] um sistema de exploração que divide dinamicamente o cenario
+
+- [ ] grupos de exploracao devem ser maiores (2 gr de 3 e um gr de 4)
+      - com formacao tb.
+      . evitaria problemas de perder parceiro e nao conseguir passar fence
+      . o leader podia continuar indo pro target evitando loops
+      . accommodate agents that can
+        not find a partner in the same area (due to the fences)
+
+** parametros
+- [ ] uma implementação que otimiza a razão vacas/agentes e que pode
+      considerar a união de dois grupos para posteriormente liberar
+      outro agentes para levar mais vacas
+
+** Otimizacoes
+- [ ] background: general view of cows (model), background computation
+      of possible clusters and their utility eventually size of the
+      team, allocation, ...
+- [ ] se a formacao do cluster eh muito horizontal (e nao oval) a
+      formacao meia-lua pra tocar nao eh muito boa (? sera)
+
+** A*
+- [ ] Filtro de largura do caminho para o A*
+- [ ] increase cost of passing in a switch-lock place (to avoid to go
+      there and cause conflict for who needs to go and also to not
+      lead cows to that)
+
+** Details
+- [ ] do we still need SelectEvent class?
+- [ ] remove unused classes
+- [ ] use indexed BB from Jason dist
+- [ ] ver logs onde teve mudanca de cenario, se deu tudo ok
+- [ ] um sistema de reset que outros usuarios possam usar
+- [ ] Profiling 
+- [ ] constants as functions without args
+
+* 2009 team
+
+- [ ] some times, the formation is to far from the cluster (could be fault perception of cows, but also formation problem)
+
+- [ ] ver bug Jason Porter2=XXX no pass_fence.asl
+- [ ] problema aparente no IF do jason
+- [ ] usar .length do Jason (qdo arrumado)
+
+- [ ] remover de percepcao vacas que estao em outra area? (mas so com closed fence, nao open)
+
+- [X] impedir ags de entrar no curral
+
+- [X] hasFence usa binario CLOSE+OPEN
+
+- [X] debug why ags are not released from herding small clusters
+- [X] ver se crencas pass_fence_scheme(sch_189_pass_fence_sch,75,57,gaucho2) sao removidas da BB
+
+
+- [X] new open curral strategy
+      * if distance(cow near to corral, corral center) - (corral.length/2) <= 5
+        open_corral
+      * if distance(cow near to corral, corral center) - (corral.length/2) >= 8
+        close_corral
+- [X] try herdboy in a group I can reach
+- [X] cross_fence pra quem estava em scheme de herding, eh voltar a fazer herding
+      - remove_mission, commit
+- [X] use cluster to detect intersections
+- [X] pass-fence for herding
+- [X] a decent plan for !release_boys
+- [X] melhor criteria para criar pass_fence/open_corral (nao ser 'estar a 15 passos)
+- [X] arrumar scouter location, tem que ser na mesma area (cons. fence) que o leader
+- [X] backup de distancias entre lugares
+    - usado em varios lugares, especialmente cluster
+    - qdo tem um obstaculo, reseta
+    - fazer um rotina de verificacao de erros na backup
+      pra achar bugs (no comeco verificar 100% no final 10%)
+- [X] evitar que dois grupos compitam para abrir cerca
+   (se ja tem um scheme com mesmo switch e direcao, se junta ao grupo como member)
+   (ter duas listas, quem quer estar do lado A e quem do lado B, terminar so qdo todos os
+    ags estao do lado que queriam)
+    -> entra como member, pass, depois de passar, larga o scheme e vai fazer outra coisa
+    -> o teste de fim, exige nao ter mais member
+- [X] usar path_lenght para saber o switch place mais prox
+- [X] all-passed, considerar que estao do lado do GP2
+- [X] computes 5 areas
+- [X] procurar switch se nao foi visto ainda (ideia, considerar fence obstaculo de tentar passar)
+- [X] salvar fence no arq de backup
+- [X] jmoise: goals que mudam os arqumentos se duplicam na BB
+- [X] find scouter: need to be someone free of fence
+- [X] path with fences has higher cost
+- [X] identify bug in GUI (why cows disappears?)
+- [X] strategy to open/close fences
+- [X] 'hide' cows in corral for our agents
+- [X] include perception of fence/switch
+
+** use current version of moise+
+** use current version of jmoise+
+** update of architecture to the new simulator
+** implement open fence
+** communication link is intra-group
+** leaders group
+** merging scheme
+* 2008 team
+** team formations (moise+ representation of the team)
+** Structure (we have something from the proposal)
+** Functioning (we have noting, but I not sure we need...)
+** computation of ideal locations of an agent to maintain a formation (can we use maintainance goal pattern?)
+** herding strategy
+** exploration strategy
+** protocols
+** faster simulator
+** DONE new scenarios
+** DONE Vectors (operations)
+   CLOSED: [2008-04-20 Sun 22:23]
+** DONE develop a team of dummies to play against
+   CLOSED: [2008-04-20 Sun 22:23]
+** what is a dummy strategy?
+** DONE A* (update previous to new directions)
+   CLOSED: [2008-03-16 Sun 15:29]
+** DONE integration with new simulator
+   CLOSED: [2008-03-16 Sun 15:28]
+   add perceptions to the agents
