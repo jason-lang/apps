@@ -1,0 +1,22 @@
+/*
+    Example of Jason EIS integration
+
+	In this example one agent acts on two entities (robot1 and robot2)
+	
+    -- created on September 08, 2009
+*/
+
+MAS demo1ag {
+   infrastructure: Centralised
+
+   // Environment initialisation
+   environment: jason.eis.EISAdapter(
+                       "lib/eiscarriage-0.3.jar", // jar file containing the environment implementation 
+                       agent_entity(robot,robot1), agent_entity(robot,robot2) // agent x entities relation  
+                )
+
+   agents:
+       robot;
+
+   aslSourcePath: "src/asl"; 
+}

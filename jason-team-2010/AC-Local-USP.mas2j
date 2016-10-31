@@ -1,0 +1,21 @@
+/*
+    Jason Project
+
+    -- created on Agosto 18, 2010
+*/
+
+MAS roman_farmers {
+   infrastructure: Centralised
+
+   agents:
+       orgManager [gui=yes, osfile="src/team-os.xml"] agentArchClass jmoise.OrgManager;
+       usp [port=12300, username="b#nid", teamid="usp", host="localhost", 
+       write_status=yes, verbose=1, dump_ags_mind=yes, password="1"]
+        agentArchClass arch.ACArchitecture agentClass agent.SelectEvent
+         beliefBaseClass agent.UniqueBelsBB("gsize(_,_)","steps(_)","ally_pos(key,_,_)","corral(_,_,_,_)","target(_,_)","group_leader(key,_)","group_area(key, _)") #20;
+   //    usp;
+      // explorationUSP;
+
+   directives: maintenance_goal=agent.OrgMaintenanceGoal; 
+   aslSourcePath: "src/asl"; 
+}

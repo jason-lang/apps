@@ -1,0 +1,268 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{html}
+\usepackage{hthtml}
+
+
+\begin{document}
+
+\title{Jason and EIS integration \\\small{(release 0.3)}}
+%\author{Jomi F. H\"ubner}
+\maketitle
+
+\begin{abstract}
+  This document describes (i) how to use environments developed as
+  defined by the Environment Interface Standard
+  (\htlink{EIS}{http://cig.in.tu-clausthal.de/eis}) in
+  \htlink{Jason}{http://jason.sf.net} projects; and (ii) how Jason
+  environment can be adapted to be used as EIS environment.
+\end{abstract}
+
+\tableofcontents
+
+
+\section*{Using EIS environments in Jason}
+
+Jason projects can use EIS environments by means of  the
+EISAdapter. EISAdapter is a Jason environment, i.e. it follows all
+requirements of an environment for Jason projects, that delegates
+perception and action to an EIS environment. It basically maps agents
+actions to EIS actions and gives EIS perception back to Jason agents.
+
+
+\subsection*{Jason Project Definition}
+
+EIS has the concept of \emph{entities} which are associated to agents
+that can then control those entities.  Since Jason does not have this
+concept, we propose two solutions:
+\begin{itemize}
+\item The relation agent-entity is very simple: each agent has exactly
+  one entity and their names are the same. In this case, the Jason
+  designer does not need to specify the relation.
+\item The designer defines all the relations in the project.
+\end{itemize}
+
+The Carriage example is used in the sequence to illustrate the two
+solutions (see EIS documentation for more details about this
+environment). 
+
+Using the first solution, the Jason project for the Carriage environment is:
+\begin{verbatim}
+MAS demo2ag {
+   infrastructure: Centralised
+
+   environment: jason.eis.EISAdapter(
+                       "lib/eis-0.2-carriage.jar" // jar file containing the 
+                                                  // environment implementation
+                )
+
+   agents:
+       robot1;
+       robot2;
+}
+\end{verbatim}
+Notice that the environment class is
+\texttt{jason.eis.EISAdapter}. This class loads the EIS environment
+provided in the jar file and delegates action/perception to
+it. Regarding entities, each agent will control an entity that has the
+same name as it, i.e. agent robot1 controls entity robot1 and agent
+robot2 controls entity robot2.
+
+Using the second solution, the Jason project for the Carriage environment is:
+\begin{verbatim}
+MAS demo1ag {
+   infrastructure: Centralised
+
+   environment: jason.eis.EISAdapter(
+                      "lib/eis-0.2-carriage.jar" // jar file containing the 
+                                                 // environment implementation
+                      agent_entity(robot,robot1), 
+                      agent_entity(robot,robot2) // agent x entities relation  
+                )
+
+   agents:
+       robot; 
+}
+\end{verbatim}
+In this case, the entities associated to each agent are explicitly
+defined by pairs <agent>, <entity>. In the above example, agent robot
+will control both entities of the environment.
+
+If parameters in the form ``id = value'' need to be used, the map
+structure have to be used, for instance:
+\begin{verbatim}
+MAS wumpus {
+
+    infrastructure: Centralised
+
+    environment: jason.eis.EISAdapter(
+                         "lib/wumpusenv.jar",    // EIS environment
+                         agent_entity(ag,agent), // entities
+                         map(file,"maps/wumpus.kt5.wld")) // initialisation parameters	
+    agents:
+        ag;
+}
+\end{verbatim}
+
+\subsection*{Agent programming}
+
+The agents are programmed as usual. When the agent needs to handle
+entities, two solutions are implemented.
+
+\begin{description}
+\item[perception] every perception given by the EIS environment is
+  annotated with the entity that has produced the perception. E.g.,
+  the perception in the Carriage example is:
+\begin{verbatim}
+carriagePos(2)[entity(robot2),source(percept)]
+\end{verbatim}
+
+\item[action] actions are sent to all entities by default, e.g.:
+\begin{verbatim}
+... push; ...
+\end{verbatim}
+
+  When the programmer wants to define a target entity he/she has to
+  use a special action \texttt{ae} with to arguments: the action and
+  the entity (as string). E.g.:
+\begin{verbatim}
+ae(push,"robot1")
+\end{verbatim}
+\end{description}
+
+As examples, it follows the code of the three agents used in the two
+projects cited in the previous section.
+
+\subsection*{Code of robot1.asl in project demo2ag}
+\begin{verbatim}
+!start.       // initial goal
+
++!start       // plan to achieve the goal 
+  <- push;    // act on its entity
+     !!start. // continue doing the same
+\end{verbatim}
+Notice that actions are used as usual in Jason.
+
+
+\subsection*{Code of robot2.asl in project demo2ag}
+\begin{verbatim}
+!start.                          // initial goal
+
++!start 
+  <- wait; 
+     push; 
+     !!start.
+
++step(X) : carriagePos(C) 
+  <- .print("Step ",X,", carriage at ",C).
+\end{verbatim}
+
+\subsection*{Code of robot.asl in project demo1ag}
+\begin{verbatim}
+!start1.  // this agent has two intentions, one for each entity
+!start2.
+
+
++!start1 <- ae(push,"robot1"); !!start1.                    // act on entity robot1
++!start2 <- ae(wait,"robot2"); ae(push,"robot2"); !!start2. // act on entity robot2
+
++step(X) : carriagePos(C) 
+  <- .print("Step ",X,", carriage at ",C).
+\end{verbatim}
+
+\subsection*{How to create a project with Jason-EIS integration}
+\begin{enumerate}
+\item Copy eis.jar, eis-jason.jar and the environment .jar files to the lib directory of your project.
+\item Define the environment of Jason project as described in the second section of this document.
+\end{itemize}
+
+
+\section*{EISifying Jason environments}
+
+Jason Environments (those defined to be included in Jason Projects)
+can be used as an EIS environment quite easily. Only entities have to
+be defined, since they do not belong to the Jason concept of environment. 
+
+The domestic-robot example is used to illustrate the process. All the
+code and more details are included in the JasonEIS 0.3
+(\url{../examples/domestic-robot/doc/eis-doc.txt}).
+
+\begin{center}
+\begin{rawhtml}
+  <IMG WIDTH="800" SRC="../examples/domestic-robot/doc/overview.png" />
+\end{rawhtml}  
+\end{center}
+
+The following steps describes how to ``export'' a Jason Environment to EIS:
+\begin{enumerate}
+\item Create a new class that extends the Jason Adapter for EIS
+  environment. In its constructor instantiate the Jason Environment
+  class and define the entities:
+\begin{verbatim}
+public class EISHouseEnv extends JasonAdapter {
+
+    public EISHouseEnv() {
+        jasonEnv = new HouseEnv(); // create the instance of Jason Environment
+        try {
+            addEntity("robot");
+            addEntity("owner");
+            addEntity("supermarket");
+        } catch (EntityException e) {
+            e.printStackTrace();
+        }
+    }
+       
+}
+\end{verbatim}
+  The JasonAdapter class will be in charge to map perception and
+  action between Jason and EIS. It also maps the INIT command to the
+  init method in Jason environments and the KILL command to the stop
+  method. (The other commands are ignored since they do not have
+  counter part in Jason.)
+
+%   Note that Jason Environments suppose that the init method is always
+%   called; while EIS defines INIT command as optional. The above
+%   solution guarantees that init will be called, but it can be called
+%   twice (in the constructor and by the INIT command). With that
+%   solution the Jason environment have to be prepared to have its init
+%   method called twice.
+
+
+\item Create a jar file that includes your new class, the Jason
+  classes, and the Jason-EIS classes. For instance (from build.xml of
+  domestic-robot):
+\begin{verbatim}
+  <target name="jar" depends="compile">
+        <delete file="${ant.project.name}.jar" />
+        <copy file="${jasonJar}" tofile="${ant.project.name}.jar" />
+        <jar update="yes" jarfile="${ant.project.name}.jar" >
+            <fileset dir="${build.dir}">
+                <include name="**/*.class" />
+            </fileset>
+            <fileset dir="${jason-eis-dir}/bin/classes">
+                <include name="jason/**/*.class" />
+            </fileset>
+            <manifest>
+                 <attribute name="Main-Class" value="EISHouseEnv"/>
+            </manifest>
+        </jar>      
+    </target>
+\end{verbatim}
+\end{enumerate}
+
+
+
+\section*{Data Translation}
+
+Data types in EIS and Jason are different, they are so translated as
+defined in the following table.
+
+\begin{tabular}{cc}
+  \emph{Type in EIS} & \emph{Type in Jason} \\ \hline
+  Identifier & Term \\
+  Numeral  & NumberTerm \\
+  ParameterList & ListTerm \\
+  Function & Literal
+\end{tabular}
+
+\end{enumerate}

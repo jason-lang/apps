@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project basedir="." default="usage" name="Jason EIS integration">
+
+    <property environment="env" />
+
+    <property name="jar-file"   value="${basedir}/lib/eis-jason.jar" />
+	
+    <property name="version"    value="0" />
+    <property name="release"    value="3" />
+    <property name="dist-dir"   value="${env.HOME}/tmp/x/EIS-Jason-${version}.${release}" />
+    <property name="dist-file"  value="${env.HOME}/EIS-Jason-${version}.${release}" />
+
+    <target name="init" >
+    	<mkdir dir="bin"/>
+        <mkdir dir="bin/classes"/>
+    </target>
+
+    <path id="project.classpath">
+        <pathelement location="${basedir}/lib/jason.jar" />
+        <pathelement location="${basedir}/lib/eis-0.3.jar" />
+    </path>	
+
+	   
+	<target name="usage">
+	        <echo>
+	TARGETS:
+	    compile -- compiles the source files
+	    jar     -- generates eis-jason.jar
+	    clean   -- cleans the project
+        dist    -- creates distribution file (.zip)
+	    run1    -- runs demo1 (see Carriage-1agent.mas2j)
+	    run2    -- runs demo2 (see Carriage-2agents.mas2j)
+	        </echo>
+    </target>
+	
+    <target name="compile" depends="init">
+    	<javac srcdir="src/java" destdir="${basedir}/bin/classes" debug="true" deprecation="true" optimize="true" nowarn="true" source="1.5" target="1.5"> 
+            <classpath refid="project.classpath" />
+    	</javac>
+    </target>
+
+    <target name="jar" depends="init, compile">
+        <jar jarfile="${jar-file}" >
+            <fileset dir="${basedir}/bin/classes">
+                <include name="jason/eis/*.class" />
+            </fileset>
+        </jar>
+    </target>
+
+    <target name="run1" depends="jar">
+        <echo message="Running project Carriage with 1 agent" />
+        <java classname="jason.infra.centralised.RunCentralisedMAS" failonerror="true" fork="yes" dir="${basedir}" >
+            <classpath refid="project.classpath" />
+        	<classpath location="lib/eis-jason.jar" />
+            <arg line="Carriage-1agent.mas2j"/>
+            <jvmarg line="-Xmx500M -Xss8M"/>    
+        </java>
+    </target>
+
+    <target name="run2" depends="jar">
+        <echo message="Running project Carriage with 2 agents" />
+        <java classname="jason.infra.centralised.RunCentralisedMAS" failonerror="true" fork="yes" dir="${basedir}" >
+            <classpath refid="project.classpath" />
+            <classpath location="lib/eis-jason.jar" />
+            <arg line="Carriage-2agents.mas2j"/>
+            <jvmarg line="-Xmx500M -Xss8M"/>    
+        </java>
+     </target>
+		 
+    <target name="dist" depends="compile" description="Build distribution.">
+
+        <echo message="Generating EIS-Jason ${version}.${release}" />
+
+        <fixcrlf eol="crlf" includes="**/*.txt,**/*.bat" srcdir="${basedir}" />
+
+        <fixcrlf tab="remove" tablength="4" javafiles="true" includes="**/*.java" srcdir="${basedir}/src" />
+        <fixcrlf tab="remove" tablength="4" javafiles="true" includes="**/*.txt" srcdir="${basedir}" />
+
+        <delete failonerror="no" includeEmptyDirs="true">
+            <fileset dir="${dist-dir}" />
+        </delete>
+        <delete dir="${dist-dir}/.." />
+
+        <mkdir dir="${dist-dir}" />
+
+        <copy todir="${dist-dir}">
+            <fileset dir="${basedir}" includes="*.*" />
+            <fileset dir="${basedir}" includes="doc/**/*" />
+            <fileset dir="${basedir}" includes="examples/**/*" />
+            <fileset dir="${basedir}" includes="lib/**/*" />
+            <fileset dir="${basedir}" includes="src/**/*" />
+        </copy>
+
+    	<zip destfile="${dist-file}.zip">
+    		<fileset dir="${dist-dir}/..">
+                <include name="EIS-Jason-${version}.${release}/**/*" />
+            </fileset>
+    	</zip>
+    </target>
+	
+	
+    <target name="clean">
+        <delete dir="${basedir}/bin" />
+        <delete dir="${basedir}/doc/apidoc" />
+    </target>
+
+</project>

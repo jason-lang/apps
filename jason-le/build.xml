@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project basedir="." default="jar" name="Jason Logic Engine">
+
+    <property environment="env" />
+
+    <property name="jason-dir"    value="${basedir}/../../../svn-jason" />
+	
+    <property name="jar-file"   value="${basedir}/lib/jason-le.jar" />
+	
+    <property name="version"    value="0" />
+    <property name="release"    value="1" />
+    <property name="dist-dir"   value="${env.HOME}/tmp/x/Jason-LE-${version}.${release}" />
+    <property name="dist-file"  value="${env.HOME}/Jason-LE-${version}.${release}" />
+
+    <path id="project.classpath">
+        <pathelement location="${basedir}/lib/jason-le.jar" />
+    </path>
+
+    <target name="init" >
+    	<mkdir dir="bin"/>
+        <mkdir dir="lib"/>
+        <mkdir dir="doc"/>
+        <mkdir dir="doc/apidoc"/>
+        <ant antfile="${jason-dir}/build.xml" target="compile" dir="${jason-dir}"/>
+    </target>
+
+
+    <target name="jar" depends="init">
+        <jar jarfile="${jar-file}" >
+            <fileset dir="${jason-dir}/bin/classes">
+                <include name="jason/*.class" />
+                <include name="jason/architecture/*.class" />
+                <include name="jason/asSyntax/*.class" />
+                <include name="jason/asSyntax/parser/*.class" />
+                <include name="jason/asSyntax/directives/*.class" />
+                <include name="jason/asSemantics/*.class" />
+                <include name="jason/bb/*.class" />
+                <include name="jason/stdlib/*.class" />
+                <include name="jason/functions/*.class" />
+                <include name="jason/util/ToDOM.class" />
+                <include name="jason/jeditplugin/Config.class" />
+                <include name="jason/runtime/Settings.class" />
+            </fileset>
+        </jar>
+    </target>
+
+    <target name="compile" depends="jar">
+    	<javac srcdir="src" destdir="${basedir}/bin" debug="true" deprecation="true" optimize="true" nowarn="true" source="1.5" target="1.5"> 
+            <classpath refid="project.classpath" />
+    	</javac>
+    </target>
+
+    <target name="run1" depends="compile">
+        <java classname="examples.UnifierDemo1" > 
+            <classpath refid="project.classpath" />
+        	<classpath path="${basedir}/bin" />
+        </java>
+    </target>
+    <target name="run2" depends="compile">
+        <java classname="examples.UnifierDemo2" > 
+            <classpath refid="project.classpath" />
+            <classpath path="${basedir}/bin" />
+        </java>
+    </target>
+    <target name="run3" depends="compile">
+        <java classname="examples.EngineDemo1" > 
+            <classpath refid="project.classpath" />
+            <classpath path="${basedir}/bin" />
+        </java>
+    </target>
+    <target name="run4" depends="compile">
+        <java classname="examples.RulesDemo1" > 
+            <classpath refid="project.classpath" />
+            <classpath path="${basedir}/bin" />
+        </java>
+    </target>
+
+    <target name="apidoc" >
+        <javadoc 
+            destdir="${basedir}/doc/apidoc" 
+            packagenames="jason.asSyntax.*, jason.asSemantics.*" 
+            sourcepath="${jason-dir}/src" 
+            excludepackagenames="jason.asSyntax.parser,jason.mas2j.parser,jason.asSyntax.directives,jason.asSyntax.patterns.goal" 
+            use="true" 
+            version="true" 
+            author="true" 
+            windowtitle="Jason - AgentSpeak Java Interpreter - Logic Engine"
+            >
+                <classpath refid="project.classpath" />
+                <doclet name="org.umlgraph.doclet.UmlGraphDoc" path="${jason-dir}/lib/UmlGraph.jar">
+                                    <!--param name="-inferrel"/ -->
+                                    <!--param name="-inferdep"/-->
+                                    <!--param name="-hide" value="java.*"/-->
+                                    <param name="-enumconstants" />
+                                    <!--param name="-collpackages" value="java.util.*"/-->
+                                    <param name="-qualify"/>
+                                    <!--param name="-collapsible"/-->
+                                    <param name="-postfixpackage"/>
+                                    <param name="-nodefontsize" value="14"/>
+                                    <param name="-nodefontpackagesize" value="10"/>
+                                    <param name="-edgefontsize" value="12"/>
+                                    <!--param name="-link" value="http://java.sun.com/j2se/1.5.0/docs/guide/javadoc/doclet/spec"/>
+                                    <param name="-link" value="http://java.sun.com/j2se/1.5/docs/api"/-->
+                </doclet>           
+        </javadoc>
+    </target>
+	
+	
+    <target name="dist" depends="compile" description="Build distribution.">
+
+        <echo message="Generating Jason-LE ${version}.${release}" />
+
+        <fixcrlf eol="crlf" includes="**/*.txt,**/*.bat" srcdir="${basedir}" />
+
+        <fixcrlf tab="remove" tablength="4" javafiles="true" includes="**/*.java" srcdir="${basedir}/src" />
+
+        <delete failonerror="no" includeEmptyDirs="true">
+            <fileset dir="${dist-dir}" />
+        </delete>
+        <delete dir="${dist-dir}/.." />
+
+        <mkdir dir="${dist-dir}" />
+
+        <copy todir="${dist-dir}">
+            <fileset dir="${basedir}" includes="*.*" />
+            <fileset dir="${basedir}" includes="doc/**/*" />
+            <fileset dir="${basedir}" includes="examples/**/*" />
+            <fileset dir="${basedir}" includes="lib/**/*" />
+            <fileset dir="${basedir}" includes="src/**/*" />
+        </copy>
+
+    	<zip destfile="${dist-file}.zip">
+    		<fileset dir="${dist-dir}/..">
+                <include name="Jason-LE-${version}.${release}/**/*" />
+            </fileset>
+    	</zip>
+    </target>
+	
+	
+    <target name="clean">
+        <delete failonerror="no" includeEmptyDirs="true" verbose="true">
+            <fileset dir="${basedir}" includes="lib/jason*.jar" />
+        </delete>
+        <delete dir="${basedir}/bin" />
+        <delete dir="${basedir}/lib" />
+        <delete dir="${basedir}/doc/apidoc" />
+    </target>
+
+</project>

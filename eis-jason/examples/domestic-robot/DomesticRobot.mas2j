@@ -1,0 +1,25 @@
+/* Jason Project 
+
+   The environment is accessed by means of EIS
+   
+   Jason Agent -> EIS -> Jason Environment
+   
+*/
+
+MAS domestic_robot {
+    infrastructure: Centralised
+    
+    environment: jason.eis.EISAdapter(
+                       "eis-domestic-robot.jar", // jar file containing the environment implementation 
+                       // agent x entities relation: 
+                       agent_entity(robot,robot), agent_entity(owner,owner), agent_entity(supermarket,supermarket), 
+                       // environment parameters 
+                       map(arg1,gui(on)) // replace for gui(off) to disable the environment GUI  
+                )
+                
+    agents: robot;
+            owner;
+            supermarket;
+            
+}
+

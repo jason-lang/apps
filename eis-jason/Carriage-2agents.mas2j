@@ -1,0 +1,24 @@
+/*
+    Example of Jason EIS integration
+
+	In this example there is one agent for each entity and they have 
+	the same identities (agent is "robot1" and entity is "robot1")
+
+    -- created on September 08, 2009
+*/
+
+MAS demo2ag {
+   infrastructure: Centralised
+
+   environment: jason.eis.EISAdapter(
+                       "lib/eiscarriage-0.3.jar" // jar file containing the environment implementation 
+                       // agent x entities relation: 
+                       // agent_entity(robot1,robot1), agent_entity(robot2,robot2)) // the default relation: 
+                )
+
+   agents:
+       robot1;
+       robot2;
+
+   aslSourcePath: "src/asl"; 
+}

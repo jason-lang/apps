@@ -1,0 +1,14 @@
+/*
+    Jason Project
+
+    -- created on August 24, 2010
+*/
+
+MAS jason-team-2010 {
+   infrastructure: Centralised
+
+   agents:
+       sample;
+
+   aslSourcePath: "src/asl"; 
+}
