@@ -1,0 +1,6 @@
+MAS testNRCBP {
+   environment: nrcbpEnv
+
+   agents:
+       ag1 [nrcbp=10];
+}

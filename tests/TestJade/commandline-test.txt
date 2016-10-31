@@ -1,0 +1,64 @@
+* Steps to test Jason Jade integration from command line *
+
+1. set classpath:
+
+export CLASSPATH=~/Jason/svn-jason/lib/jason.jar:~/Jason/svn-jason/lib/jade.jar:bin/classes
+
+
+2. run environment
+
+java jade.Boot "environment:jason.infra.jade.JadeEnvironment(TestEnv)"
+
+should print
+   "demo"
+   
+stop and run again
+
+java jade.Boot "environment:jason.infra.jade.JadeEnvironment(TestEnv xxx)"
+
+should print
+   "xxx"
+
+stop and run again
+
+java jade.Boot "environment:jason.infra.jade.JadeEnvironment(j-project TestJade.mas2j)"
+
+should print
+   "begin"
+
+3. run agent a
+
+java jade.Boot -container "a:jason.infra.jade.JadeAgArch(a.asl)"
+
+should output:
+
+[bob] starting bob
+[bob] 5
+[bob] Ok perception begin
+[bob] 4
+[bob] 3
+[bob] 2
+[bob] 1
+[bob] end
+
+
+4. run agent c
+
+java jade.Boot -container "c:jason.infra.jade.JadeAgArch(c.asl)"
+
+
+5. run pure Jade Agent
+
+javac -d bin/classes JadeAgentTest.java 
+
+java jade.Boot -container j:JadeAgentTest
+
+
+5. run agent b
+
+java jade.Boot -container "b:jason.infra.jade.JadeAgArch(j-project TestJade.mas2j b)"
+
+all agents have to print received "Alo"
+agent a have to print received "hello"
+(including the jade agent)
+

@@ -1,0 +1,15 @@
+/* Jason Project */
+/* output
+
+[r] saying: 10
+[r] saying: removed a10
+
+*/
+
+MAS testuntell {
+	infrastructure: Centralised
+	agents:
+		sender;
+		r;
+}
+

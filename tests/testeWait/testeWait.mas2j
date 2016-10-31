@@ -1,0 +1,27 @@
+/* 
+Test: the output should be
+
+[a] saying: start
+[a] saying: Y=30
+[a] saying: ok t5
+[a] saying: a
+[a] saying: esperando c
+[a] saying: b
+[a] doing: do
+[env] executing: do
+[a] saying: ok,Z=18
+[a] saying: recebi c 18
+*/
+
+MAS testeWait {
+	infrastructure: Centralised
+	environment: env
+	agents:
+		a [verbose=1];
+		//b;
+		//c;
+}
+
+
+
+

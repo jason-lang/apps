@@ -1,0 +1,11 @@
+
+MAS custom_BB {
+    infrastructure: Centralised
+    agents:
+        c beliefBaseClass jason.bb.JDBCPersistentBB(
+            "com.mysql.jdbc.Driver", 
+            "jdbc:mysql://localhost/aamas1", // URL connection
+            "root", // user
+            "ezliderf",   // password
+            "[maillog(5,AAMAS09_maillog)]");
+}

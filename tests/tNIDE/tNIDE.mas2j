@@ -1,0 +1,14 @@
+/* Jason Project */
+// expected
+//      [a] intention(1,[im("l__1[source(self)]",{ .current_intention(_13); .print(_13); (_14 = q); +_14 },[])])
+//      [a] intention(2,[im("l__2[source(self)]",{ .current_intention(_15); .print(_15); .if_then_else((0 = 0),{ }) },[])])
+
+MAS tNIDE {
+
+    infrastructure: Centralised
+
+    agents:
+        a;
+
+}
+

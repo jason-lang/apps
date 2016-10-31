@@ -1,0 +1,18 @@
+/* Jason Project */
+
+/* output
+
+[a] Y=22
+[a] X=22
+
+*/
+
+MAS testTestGoal {
+
+    infrastructure: Centralised
+
+    agents:
+        a;
+
+}
+

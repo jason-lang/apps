@@ -1,0 +1,15 @@
+/* Test
+
+should print only
+
+Running project testWaitAndDrop
+[a] saying: init
+[a] saying: removed
+
+*/
+
+MAS testWaitAndDrop {
+    infrastructure: Centralised
+    agents: a;
+}
+

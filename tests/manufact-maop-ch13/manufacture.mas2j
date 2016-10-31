@@ -1,0 +1,17 @@
+/*
+    Jason Project for a manufacturing scenario
+*/
+
+MAS manufacturing {
+   infrastructure: JaCaMo
+
+   agents:
+   
+       cellmngr;
+       loader     controller.asl [goals="join_and_play(\"assembly_cell\",\"loader\")"];
+       joiner     controller.asl [goals="join_and_play(\"assembly_cell\",\"joiner\")"];
+       flipper    controller.asl [goals="join_and_play(\"assembly_cell\",\"flipper\")"];
+       rotator;
+
+	   aslSourcePath: "src/asl"; 
+}

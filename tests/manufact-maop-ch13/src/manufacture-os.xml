@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="http://moise.sourceforge.net/xml/os.xsl" type="text/xsl" ?>
+<organisational-specification 
+    id="manufacture"
+    os-version="0.7"
+  
+    xmlns='http://moise.sourceforge.net/os'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://moise.sourceforge.net/os
+                        http://moise.sourceforge.net/xml/os.xsd' >
+    
+<structural-specification>
+
+<role-definitions>
+ <role id="robot" />
+   <role id="loader" > <extends role="robot"/>  </role>
+   <role id="joiner" > <extends role="robot"/>  </role>
+ <role id="flipper" />
+ <role id="rotator" />
+</role-definitions>
+
+<group-specification id="assembly_cell_group">
+ <roles>
+  <role id="flipper"     min="1" max="1"/>
+  <role id="rotator"     min="1" max="1"/>
+  <role id="loader"      min="1" max="1"/>
+  <role id="joiner"      min="1" max="1"/>
+ </roles>
+ 
+ <!-- <links> -->
+ <!--  <link from="house_owner" to="building_company" type="authority" scope="intra-group"  -->
+ <!--        extends-sub-groups="false" bi-dir="false"/> -->
+ <!--  <link from="building_company" to="house_owner" type="communication" scope="intra-group"  -->
+ <!--        extends-sub-groups="false" bi-dir="false"/> -->
+ <!-- </links> -->
+
+ <!-- <formation-constraints> -->
+ <!--    <compatibility from="building_company" to="building_company" type="compatibility"  -->
+ <!--                   scope="intra-group" extends-sub-groups="false"  -->
+ <!--                   bi-dir="true"/> -->
+ <!-- </formation-constraints> -->
+ 
+</group-specification>
+</structural-specification>
+
+<functional-specification>
+ <scheme id="manufacture_schm">
+   <goal id="manufacture_ABC">
+     <plan operator="sequence">
+       <goal id="assemble_AB">
+	     <plan operator="sequence">
+		   <goal id="wait_for_empty_jig"  ttf="6 minutes" />
+		   <goal id="a_loaded"            ttf="4 minutes" />
+		   <goal id="b_loaded"            ttf="4 minutes" />
+		   <goal id="rotated_to_joiner_1" ttf="2 minutes" />
+		   <goal id="ab_joined"           ttf="5 minutes" />
+		 </plan>
+       </goal>
+       <goal id="assemble_ABC">
+	 <plan operator="sequence">
+	   <goal id="rotated_to_loader_1" ttf="2 minutes" />
+	   <goal id="ab_moved_to_flipper" ttf="3 minutes" />
+	   <goal id="load_while_flip">
+	     <plan operator="parallel">
+	       <goal id="flipped_to_ba"   ttf="3 minutes" />
+	       <goal id="c_loaded"        ttf="4 minutes" />
+	     </plan>
+	   </goal>
+	   <goal id="ba_loaded_ontopof_c" ttf="5 minutes" />
+	   <goal id="rotated_to_joiner_2" ttf="2 minutes" />
+	   <goal id="abc_joined"          ttf="6 minutes" />
+	 </plan>
+       </goal>
+       <goal id="finish">
+	 <plan operator="sequence">
+	   <goal id="rotated_to_loader_2" ttf="2 minutes" />	   
+	   <goal id="part_unloaded"       ttf="3 minutes" />	   
+	 </plan>
+       </goal>
+     </plan>
+   </goal>
+
+   <mission id="loading" min="1" max="1">
+     <goal  id="a_loaded"/>
+     <goal  id="b_loaded"/>
+     <goal  id="ab_moved_to_flipper"/>
+     <goal  id="c_loaded"/>
+     <goal  id="ba_loaded_ontopof_c"/>
+     <goal  id="part_unloaded"/>
+   </mission>
+   <mission id="joining" min="1" max="1">
+     <goal  id="ab_joined" />
+     <goal  id="abc_joined" />
+   </mission>
+   <mission id="rotating" min="1" max="1">
+     <goal  id="wait_for_empty_jig" />
+     <goal  id="rotated_to_joiner_1" />
+     <goal  id="rotated_to_loader_1" />
+     <goal  id="rotated_to_joiner_2" />
+     <goal  id="rotated_to_loader_2" />
+   </mission>
+   <mission id="flipping" min="1" max="1">
+     <goal  id="flipped_to_ba" />
+   </mission>
+
+ </scheme>
+</functional-specification>
+
+<normative-specification>
+<norm id="n1"   type="obligation"   role="loader"    mission="loading" />
+<norm id="n2"   type="obligation"   role="joiner"    mission="joining" />
+<norm id="n3"   type="obligation"   role="rotator"   mission="rotating" />
+<norm id="n4"   type="obligation"   role="flipper"   mission="flipping" />
+</normative-specification>
+
+</organisational-specification>
+

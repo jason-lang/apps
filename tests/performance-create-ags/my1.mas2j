@@ -1,0 +1,11 @@
+/* Jason Project */
+
+MAS my1 {
+
+    infrastructure: Centralised
+
+    agents:
+		test test.asl;
+}
+
+

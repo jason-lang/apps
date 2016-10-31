@@ -1,0 +1,11 @@
+/* Jason Project */
+
+MAS testEndGoal {
+
+    infrastructure: Centralised
+
+    agents:
+        //a;
+		b [verbose=0];
+}
+

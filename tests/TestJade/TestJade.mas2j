@@ -1,0 +1,43 @@
+/* 
+
+Should print (but see also commandline-test.txt)
+
+[a] starting a
+[c] starting c
+[b] starting b
+[a] saying: 5
+[a] doing: act(a,5)
+[a] Ok perception begin
+[TestEnv] executing: act(a,5), but not implemented!
+[c] saying: Received alo from b
+[a] saying: 4
+[a] saying: Received hello from b
+[a] saying: Received alo from b
+[a] doing: act(a,4)
+[TestEnv] executing: act(a,4), but not implemented!
+[a] saying: 3
+[a] doing: act(a,3)
+[TestEnv] executing: act(a,3), but not implemented!
+[a] saying: 2
+[a] doing: act(a,2)
+[TestEnv] executing: act(a,2), but not implemented!
+[a] saying: 1
+[a] doing: act(a,1)
+[TestEnv] executing: act(a,1), but not implemented!
+[a] saying: end
+
+*/
+
+MAS testJade {
+
+    infrastructure: Jade
+
+    environment: TestEnv(begin)
+
+    agents:
+        a;
+        b;
+        c;
+
+}
+

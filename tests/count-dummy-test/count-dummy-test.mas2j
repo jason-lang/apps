@@ -1,0 +1,11 @@
+/* Jason Project */
+
+MAS countdummytest {
+
+    infrastructure: Centralised
+
+    agents:
+        bob;
+
+}
+

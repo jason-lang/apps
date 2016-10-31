@@ -1,0 +1,17 @@
+/* Jason Project */
+/* output:
+
+[a] saying: Pat=games(any,any) PF=games,[any,any]
+[a] saying: What=games(a,b) F=games,[a,b]
+[a] saying: ok: games(a,b)
+
+*/
+MAS testloop {
+
+    infrastructure: Centralised
+
+    agents:
+        a;
+
+}
+

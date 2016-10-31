@@ -1,0 +1,18 @@
+/* Jason Project 
+
+this application should no consume 100% of the CPU
+(test it with all infrastructures: Centralised(pool), Jade)
+
+*/
+
+MAS t {
+
+    infrastructure: Centralised // Centralised(pool), Jade
+
+    environment: Envv
+
+    agents:
+        a;
+
+}
+

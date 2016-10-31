@@ -1,0 +1,13 @@
+[b] starting b
+[b] Error registering agent in DF
+jade.domain.FIPAException: ((action ( agent-identifier :name df@movel-10.das.ufsc.br:1099/JADE  :addresses (sequence http://movel-10.das.ufsc.br:7778/acc )) (register (df-agent-description :name ( agent-identifier :name b@movel-10.das.ufsc.br:1099/JADE  :addresses (sequence http://movel-10.das.ufsc.br:7778/acc )) :services (set (service-description :name j_agent :type jason))))) already-registered)
+	at jade.domain.FIPAService.doFipaRequestClient(FIPAService.java:157)
+	at jade.domain.FIPAService.doFipaRequestClient(FIPAService.java:101)
+	at jade.domain.DFService.register(DFService.java:159)
+	at jade.domain.DFService.register(DFService.java:173)
+	at jason.infra.jade.JadeAgArch.registerAgInDF(JadeAgArch.java:171)
+	at jason.infra.jade.JadeAgArch.setup(JadeAgArch.java:89)
+	at jade.core.Agent$ActiveLifeCycle.init(Agent.java:1519)
+	at jade.core.Agent.run(Agent.java:1465)
+	at java.lang.Thread.run(Thread.java:637)
+

@@ -1,0 +1,14 @@
+/* Jason Project */
+
+MAS cartago_jade {
+
+    infrastructure: Jade
+
+	environment: c4jason.CartagoEnvironment
+	
+    agents:
+        bob   agentArchClass c4jason.CAgentArch;
+        alice agentArchClass c4jason.CAgentArch;
+
+}
+

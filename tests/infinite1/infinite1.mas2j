@@ -1,0 +1,21 @@
+/* Jason Project */
+
+// expected:
+//  
+//       [s] Result of transaction between b and c for orange: ok for price 6
+
+MAS infinite1 {
+
+    infrastructure: Centralised
+
+    agents:
+        b;
+
+        c;
+
+        s;
+
+        monitor;
+
+}
+

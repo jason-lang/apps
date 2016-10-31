@@ -1,0 +1,35 @@
+MAS testDropGoal {
+    agents:  a;  b; c;
+}
+/* should print
+[a] saying: ini
+[a] saying: 0
+[a] saying: 1
+[a] saying: 2
+[a] saying: 3
+[a] saying: 4
+[a] saying: 5
+....
+[a] saying: *2
+[a] saying: *1
+[a] saying: *0
+[a] saying: end
+[b] saying: ini
+[b] saying: 0
+[b] saying: 1
+[b] saying: 2
+[b] saying: 3
+[b] saying: 4
+[b] saying: 5
+[b] saying: 6
+[b] saying: 7
+....
+[b] .fail_goal is generating goal deletion event -!start1(2[source(self)]
+[b] saying: failure handling for start1
+[b] saying: *1
+[b] saying: *0
+[b] saying: end
+[c] saying: ini
+[c] saying: end
+*/
+

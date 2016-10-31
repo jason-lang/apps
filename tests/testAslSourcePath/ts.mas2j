@@ -1,0 +1,21 @@
+/* Jason Project */
+
+
+/* output:
+
+[b] saying: hello world.
+[c] saying: hello world (inc).
+[a] saying: hello world (inc).
+[createddyn] hello world (inc).
+
+*/
+MAS ts {
+
+    infrastructure: Centralised
+
+    agents:
+        a; b; c;
+
+    aslSourcePath: "bal"; "."; "src/asl"; "kk";
+
+}

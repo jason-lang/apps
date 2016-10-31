@@ -1,0 +1,21 @@
+/* Jason Project */
+
+// to start MySQL
+//     cd /opt/local ; sudo /opt/local/lib/mysql5/bin/mysqld_safe &
+
+
+MAS testMySQL {
+
+    infrastructure: Centralised
+
+    agents:
+        a [verbose=1] beliefBaseClass jason.bb.JDBCPersistentBB(
+			"com.mysql.jdbc.Driver",
+			"jdbc:mysql://localhost:3306/bd_irrigation",
+			"root",
+			"ezliderf",
+			"[x(1),sector(6,sector,columns(reg0(integer),reg1(integer),reg2(integer),reg3(integer),reg4(integer),reg5(integer)))]"
+		);
+		
+}
+

@@ -1,0 +1,14 @@
+MAS tis {
+	agents: a;
+}
+/* should print:
+[a] saying: not ground structure. a(_3)
+[a] saying: string. oi
+[a] saying: number. 10
+[a] saying: ground structure. a(10)
+[a] saying: ground list. [a,b,c]
+[a] saying: unground list. [a,b,c(_4)]
+[a] saying: var
+[a] saying: atom. a
+*/
+

@@ -1,0 +1,45 @@
+/* 
+
+[a] ok
+[a] Goal s changed to state started
+[a] starts
+[a] Goal s changed to state suspended due to 3/+b
+[a] Goal s changed to state resumed
+[a] Goal s changed to state suspended due to action paint
+[testEnv] doing action paint
+[a] Goal s changed to state resumed
+[a] s
+[a] Goal s changed to state suspended due to 3/time100
+[a] Goal s changed to state resumed
+[a] s
+...
+[a] Goal s changed to state suspended due to suspended-3
+[a] Goal s changed to state resumed
+[a] s
+[a] Goal s changed to state suspended due to 3/time100
+[a] Goal s changed to state resumed
+[a] s
+[a] Goal s changed to state suspended due to 3/time100
+[a] Goal s changed to state resumed
+[a] s
+[a] Goal s changed to state suspended due to 3/time100
+[a] endstart
+[a] Goal s changed to state finished
+
+
+
+ */
+
+MAS a {
+
+    infrastructure: Centralised
+
+    environment: testEnv
+
+    agents:
+        a;
+
+        //b; is in demos
+
+}
+

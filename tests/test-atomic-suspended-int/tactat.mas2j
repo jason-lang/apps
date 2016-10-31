@@ -1,0 +1,40 @@
+/* 
+Test atomic intention begin suspended (for action, message, .wait, ....)
+
+Expected result:
+
+[a] hello world.
+[b] hello world.
+[a] hello world.
+[a] hello world.
+[a] doing a, nothing else must be done meanwhile
+[e] executing: a, but not implemented!
+[e] DONE!
+[a] hello world.
+[a] hello world.
+[a] hello world.
+[a] asking, nothing else must be done meanwhile
+[b] received ask
+[b] answered
+[a] Ans:vl(100)[source(b)]
+[a] hello world.
+[a] hello world.
+[a] hello world.
+[a] waiting, nothing else must be done meanwhile
+
+
+*/
+
+MAS testatomic {
+
+    infrastructure: Centralised
+
+    environment: e
+
+    agents:
+        a;
+
+        b;
+
+}
+

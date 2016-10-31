@@ -1,0 +1,8 @@
+MAS dummyTest { 
+     infrastructure: Centralised 
+ 
+	 executionControl: jason.control.ExecutionControl
+	 
+     agents:  controler [beliefs="nodes(20)"] #1;
+	          //sender #20;  // Synchronous code
+}

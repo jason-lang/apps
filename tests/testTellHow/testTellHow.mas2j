@@ -1,0 +1,34 @@
+/* 
+
+bug reported by B. Smilga.
+
+expected output
+
+[bob] 10 20
+[bob] @test[source(self)] +!test(X) <- (Y = 20); .print(X," ",Y); .list_plans; .puts("vals are #{X} and #{Y}.").
+[bob] @l__1[source(self)] +!start <- .create_agent(other,"empty_file.asl"); .plan_label(PlanT,test); .send(other,tellHow,PlanT); !test(10); .send(other,achieve,test(10)).
+[bob] vals are 10 and 20.
+[other] 10 20
+[other] @test[source(bob)] +!test(_25X) <- (_26Y = 20); .print(_25X," ",_26Y); .list_plans; .puts("vals are #{_25X} and #{_26Y}.").
+[other] vals are 10 and 20.
+
+[alice] foo(1,2,3)[bar] =.. [foo, [1,2,3], [bar]] exists
+[alice] baz(4,5,6)[quux] =.. [baz, [4, 5, 6], [quux]] exists
+[another] foo(1,2,3)[bar] =.. [foo, [1,2,3], [bar]] exists
+[another] baz(4,5,6)[quux] =.. [baz, [4, 5, 6], [quux]] exists
+
+*/
+
+
+
+MAS testTellHow {
+
+    infrastructure: Centralised
+
+    agents:
+        bob;
+
+        alice;
+
+}
+

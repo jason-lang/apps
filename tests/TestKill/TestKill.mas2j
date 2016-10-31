@@ -1,0 +1,11 @@
+/* Jason Project */
+
+MAS testKill {
+
+    infrastructure: Jade
+
+    agents:
+        creator;
+
+}
+

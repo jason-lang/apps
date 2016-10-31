@@ -1,0 +1,16 @@
+/* Jason Project */
+
+// expected:
+// seq(tell(s,b,item),
+//     choice([...seq(tell(b,c,offer),seq(tell(c,b,counter),
+//        choice([_14,fork(seq(tell(b,s,final),end),seq(tell(b,c,result),end))])))
+//     /_14,fork(seq(tell(b,s,final),end),seq(tell(b,c,result),end))]))
+MAS infinity {
+
+    infrastructure: Centralised
+
+    agents:
+        a;
+
+}
+

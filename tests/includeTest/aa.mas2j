@@ -1,0 +1,18 @@
+/* 
+
+Should print 
+
+[a] saying: hello world.
+
+*/
+
+
+MAS aa {
+
+    infrastructure: Centralised
+
+    agents:
+        a;
+
+}
+

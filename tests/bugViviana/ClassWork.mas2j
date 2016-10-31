@@ -1,0 +1,25 @@
+/* Jason Project */
+// output should be:
+/*
+
+[ag3] Using a plan whose triggering event unifies with source(self); the current sources for belief a are [percept,self]
+[ag3] source(self) removed, now the sources are [ag2,percept]
+[ag3] Using a plan whose triggering event unifies with source(percept); the current sources for belief a are [ag2,percept]
+[ag3] source(percept) removed, now the sources are [ag2]
+[ag3] Using a plan whose triggering event unifies with source(ag2); the current sources for belief a are [ag2]
+[ag3] source(ag2) removed, now the sources are []
+
+*/
+
+MAS classWork {
+
+    infrastructure: Centralised
+
+    environment: my_env
+
+    agents:
+        ag3 [verbose=1];
+        ag2;
+
+}
+

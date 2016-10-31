@@ -1,0 +1,15 @@
+/* Jason Project */
+/* output 
+
+[ag1] saying: this program should print 'in plan l1', 'in plan l2 *'
+[ag1] saying: in plan l1
+[ag1] saying: in plan l2 *
+
+*/
+MAS testRemPlan {
+	infrastructure: Centralised
+	agents:
+		ag1;
+		
+}
+

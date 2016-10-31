@@ -1,0 +1,18 @@
+/* should run for hours without any error */
+
+MAS sum_dummy_test {
+
+	//infrastructure: JaCaMo
+	//infrastructure: Centralised(pool,10)
+
+	agents:
+		agent sample_agent #100; 
+
+	aslSourcePath:
+		"src/asl";
+}
+
+// tried tro=false and it doesn't solve
+
+// centralised 5..50 ag, also fail
+// pool=10, fail, but takes time to fail
