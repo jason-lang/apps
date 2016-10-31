@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="file:/Users/jomi/programming/cvs/Jason/lib/saci/bin/applications.xsl" type="text/xsl" ?>
+<saci>
+<application id="heathrow">
+<script id="run">
+
+	<killSocietyAgents society.name="heathrow" />
+	<killFacilitator society.name="heathrow" />
+	<startSociety society.name="heathrow" />
+
+	<killSocietyAgents society.name="heathrow-env" />
+	<killFacilitator society.name="heathrow-env" />
+	<startSociety society.name="heathrow-env" />
+
+	<startAgent 
+		name="environment" 
+		society.name="heathrow-env" 
+		class="HeathrowEnv" />
+	<startAgent 
+		name="mds" 
+		society.name="heathrow" 
+		class="jason.architecture.CentralisedAgArch"
+		args="mds.MDSAgent '/Users/jomi/programming/agents/Jason-applications/HeathrowRobotsFor0.7/mds.asl' "
+		qty="5" />
+	<startAgent 
+		name="cph" 
+		society.name="heathrow" 
+		class="cph.CPHAgArch"
+		args="cph.CPHAgent '/Users/jomi/programming/agents/Jason-applications/HeathrowRobotsFor0.7/cph.asl' "
+		qty="10" />
+	<startAgent 
+		name="bd" 
+		society.name="heathrow" 
+		class="jason.architecture.CentralisedAgArch"
+		args="jason.asSemantics.Agent '/Users/jomi/programming/agents/Jason-applications/HeathrowRobotsFor0.7/bd.asl' "
+		qty="3" />
+
+</script>
+</application>
+</saci>

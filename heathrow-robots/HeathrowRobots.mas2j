@@ -1,0 +1,17 @@
+// Defines the Heathrow Robots MAS
+
+MAS heathrow {
+
+    environment: 
+         HeathrowEnv
+
+    agents: 
+         mds agentClass mds.MDSAgent 
+             #5;
+
+         cph agentArchClass cph.CPHAgArch 
+             agentClass cph.CPHAgent
+             #10; 
+
+         bd  #3;
+}
