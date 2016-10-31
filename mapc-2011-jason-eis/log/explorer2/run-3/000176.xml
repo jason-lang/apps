@@ -1,0 +1,2364 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet href='http://jason.sf.net/xml/agInspection.xsl' type='text/xsl' ?>
+
+<agent cycle="0" name="explorer2">
+<beliefs>
+<literal>
+<structure functor="probedVertex">
+<arguments>
+<structure functor="vertex10"/>
+<number-term>9</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="probedVertex">
+<arguments>
+<structure functor="vertex14"/>
+<number-term>9</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEntity">
+<arguments>
+<structure functor="b5"/>
+<structure functor="vertex11"/>
+<string-term>"B"</string-term>
+<structure functor="normal"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEntity">
+<arguments>
+<structure functor="a8"/>
+<structure functor="vertex11"/>
+<string-term>"A"</string-term>
+<structure functor="normal"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEntity">
+<arguments>
+<structure functor="a7"/>
+<structure functor="vertex11"/>
+<string-term>"A"</string-term>
+<structure functor="normal"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEntity">
+<arguments>
+<structure functor="b2"/>
+<structure functor="vertex10"/>
+<string-term>"B"</string-term>
+<structure functor="normal"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEntity">
+<arguments>
+<structure functor="b1"/>
+<structure functor="vertex0"/>
+<string-term>"B"</string-term>
+<structure functor="normal"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEntity">
+<arguments>
+<structure functor="a1"/>
+<structure functor="vertex14"/>
+<string-term>"A"</string-term>
+<structure functor="normal"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEntity">
+<arguments>
+<structure functor="a3"/>
+<structure functor="vertex8"/>
+<string-term>"A"</string-term>
+<structure functor="normal"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEntity">
+<arguments>
+<structure functor="b9"/>
+<structure functor="vertex8"/>
+<string-term>"B"</string-term>
+<structure functor="normal"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEntity">
+<arguments>
+<structure functor="a4"/>
+<structure functor="vertex0"/>
+<string-term>"A"</string-term>
+<structure functor="normal"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEntity">
+<arguments>
+<structure functor="b4"/>
+<structure functor="vertex19"/>
+<string-term>"B"</string-term>
+<structure functor="normal"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="timestamp">
+<arguments>
+<number-term>1300209674614</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="simStart">
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<rule>
+<head>
+<literal>
+<structure functor="is_buy_goal"/>
+</literal>
+</head>
+<context>
+<expression operator=" &amp; " type="logical">
+<left>
+<literal>
+<structure functor="money">
+<arguments>
+<var-term functor="M"/>
+</arguments>
+</structure>
+</literal>
+</left>
+<right>
+<expression operator=" &gt;= " type="relational">
+<left>
+<var-term functor="M"/>
+</left>
+<right>
+<number-term>10</number-term>
+</right>
+</expression>
+</right>
+</expression>
+</context>
+</rule>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex18"/>
+<structure functor="vertex11"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex11"/>
+<structure functor="vertex18"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex19"/>
+<structure functor="vertex11"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex11"/>
+<structure functor="vertex19"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex19"/>
+<structure functor="vertex18"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex18"/>
+<structure functor="vertex19"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex18"/>
+<structure functor="vertex8"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex8"/>
+<structure functor="vertex18"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex18"/>
+<structure functor="vertex3"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex3"/>
+<structure functor="vertex18"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex17"/>
+<structure functor="vertex14"/>
+<number-term>4</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex14"/>
+<structure functor="vertex17"/>
+<number-term>4</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex14"/>
+<structure functor="vertex1"/>
+<number-term>5</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex1"/>
+<structure functor="vertex14"/>
+<number-term>5</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex14"/>
+<structure functor="vertex0"/>
+<number-term>2</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex0"/>
+<structure functor="vertex14"/>
+<number-term>2</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex14"/>
+<structure functor="vertex10"/>
+<number-term>4</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex10"/>
+<structure functor="vertex14"/>
+<number-term>4</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex17"/>
+<structure functor="vertex2"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex2"/>
+<structure functor="vertex17"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex18"/>
+<structure functor="vertex1"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex1"/>
+<structure functor="vertex18"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex18"/>
+<structure functor="vertex10"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex10"/>
+<structure functor="vertex18"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex10"/>
+<structure functor="vertex1"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex1"/>
+<structure functor="vertex10"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex19"/>
+<structure functor="vertex10"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex10"/>
+<structure functor="vertex19"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex8"/>
+<structure functor="vertex1"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex1"/>
+<structure functor="vertex8"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex16"/>
+<structure functor="vertex0"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex0"/>
+<structure functor="vertex16"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex17"/>
+<structure functor="vertex0"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex0"/>
+<structure functor="vertex17"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex15"/>
+<structure functor="vertex0"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex0"/>
+<structure functor="vertex15"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex1"/>
+<structure functor="vertex0"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex0"/>
+<structure functor="vertex1"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex2"/>
+<structure functor="vertex0"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex0"/>
+<structure functor="vertex2"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex8"/>
+<structure functor="vertex0"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edge">
+<arguments>
+<structure functor="vertex0"/>
+<structure functor="vertex8"/>
+<structure functor="unknown"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="lastActionResult">
+<arguments>
+<structure functor="successful"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="achievement">
+<arguments>
+<structure functor="area10"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="energy">
+<arguments>
+<number-term>5</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="maxEnergyDisabled">
+<arguments>
+<number-term>12</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="steps">
+<arguments>
+<number-term>1000</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="lastStepScore">
+<arguments>
+<number-term>33</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="requestAction">
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="strength">
+<arguments>
+<number-term>0</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="zoneScore">
+<arguments>
+<number-term>11</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="money">
+<arguments>
+<number-term>20</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="zonesScore">
+<arguments>
+<number-term>13</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="vertices">
+<arguments>
+<number-term>20</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="score">
+<arguments>
+<number-term>52</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<rule>
+<head>
+<literal>
+<structure functor="is_probe_goal"/>
+</literal>
+</head>
+<context>
+<expression operator=" &amp; " type="logical">
+<left>
+<literal>
+<structure functor="position">
+<arguments>
+<var-term functor="MyV"/>
+</arguments>
+</structure>
+</literal>
+</left>
+<right>
+<expression operator="not " type="logical">
+<right>
+<literal>
+<structure functor="probedVertex">
+<arguments>
+<var-term functor="MyV"/>
+<var-term functor="_22"/>
+</arguments>
+</structure>
+</literal>
+</right>
+</expression>
+</right>
+</expression>
+</context>
+</rule>
+<literal>
+<structure functor="visRange">
+<arguments>
+<number-term>2</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="maxHealth">
+<arguments>
+<number-term>4</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEdge">
+<arguments>
+<structure functor="vertex11"/>
+<structure functor="vertex18"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEdge">
+<arguments>
+<structure functor="vertex11"/>
+<structure functor="vertex19"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEdge">
+<arguments>
+<structure functor="vertex18"/>
+<structure functor="vertex19"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEdge">
+<arguments>
+<structure functor="vertex8"/>
+<structure functor="vertex18"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEdge">
+<arguments>
+<structure functor="vertex3"/>
+<structure functor="vertex18"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEdge">
+<arguments>
+<structure functor="vertex1"/>
+<structure functor="vertex18"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEdge">
+<arguments>
+<structure functor="vertex10"/>
+<structure functor="vertex18"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEdge">
+<arguments>
+<structure functor="vertex1"/>
+<structure functor="vertex10"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEdge">
+<arguments>
+<structure functor="vertex14"/>
+<structure functor="vertex17"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEdge">
+<arguments>
+<structure functor="vertex10"/>
+<structure functor="vertex19"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEdge">
+<arguments>
+<structure functor="vertex1"/>
+<structure functor="vertex14"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEdge">
+<arguments>
+<structure functor="vertex1"/>
+<structure functor="vertex8"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEdge">
+<arguments>
+<structure functor="vertex10"/>
+<structure functor="vertex14"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEdge">
+<arguments>
+<structure functor="vertex0"/>
+<structure functor="vertex14"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleEdge">
+<arguments>
+<structure functor="vertex0"/>
+<structure functor="vertex1"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<rule>
+<head>
+<literal>
+<structure functor="is_survey_goal"/>
+</literal>
+</head>
+<context>
+<expression operator=" &amp; " type="logical">
+<left>
+<literal>
+<structure functor="position">
+<arguments>
+<var-term functor="MyV"/>
+</arguments>
+</structure>
+</literal>
+</left>
+<right>
+<literal>
+<structure functor="edge">
+<arguments>
+<var-term functor="MyV"/>
+<var-term functor="_23"/>
+<structure functor="unknown"/>
+</arguments>
+</structure>
+</literal>
+</right>
+</expression>
+</context>
+</rule>
+<rule>
+<head>
+<literal>
+<structure functor="is_energy_goal"/>
+</literal>
+</head>
+<context>
+<expression operator=" &amp; " type="logical">
+<left>
+<literal>
+<structure functor="energy">
+<arguments>
+<var-term functor="MyE"/>
+</arguments>
+</structure>
+</literal>
+</left>
+<right>
+<expression operator=" &amp; " type="logical">
+<left>
+<literal>
+<structure functor="maxEnergy">
+<arguments>
+<var-term functor="Max"/>
+</arguments>
+</structure>
+</literal>
+</left>
+<right>
+<expression operator=" &lt; " type="relational">
+<left>
+<var-term functor="MyE"/>
+</left>
+<right>
+<expression operator="/" type="arithmetic">
+<left>
+<var-term functor="Max"/>
+</left>
+<right>
+<number-term>3</number-term>
+</right>
+</expression>
+</right>
+</expression>
+</right>
+</expression>
+</right>
+</expression>
+</context>
+</rule>
+<literal>
+<structure functor="step">
+<arguments>
+<number-term>4</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="health">
+<arguments>
+<number-term>4</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="id">
+<arguments>
+<number-term>0</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleVertex">
+<arguments>
+<structure functor="vertex11"/>
+<string-term>"A"</string-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleVertex">
+<arguments>
+<structure functor="vertex10"/>
+<string-term>"B"</string-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleVertex">
+<arguments>
+<structure functor="vertex14"/>
+<string-term>"A"</string-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleVertex">
+<arguments>
+<structure functor="vertex18"/>
+<string-term>"B"</string-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleVertex">
+<arguments>
+<structure functor="vertex3"/>
+<string-term>"A"</string-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleVertex">
+<arguments>
+<structure functor="vertex19"/>
+<string-term>"B"</string-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleVertex">
+<arguments>
+<structure functor="vertex17"/>
+<structure functor="none"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleVertex">
+<arguments>
+<structure functor="vertex1"/>
+<structure functor="none"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleVertex">
+<arguments>
+<structure functor="vertex0"/>
+<structure functor="none"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="visibleVertex">
+<arguments>
+<structure functor="vertex8"/>
+<structure functor="none"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="maxEnergy">
+<arguments>
+<number-term>12</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edges">
+<arguments>
+<number-term>47</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="deadline">
+<arguments>
+<number-term>1300209676614</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="lastAction">
+<arguments>
+<structure functor="probe"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="position">
+<arguments>
+<structure functor="vertex10"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+</beliefs>
+<circumstance>
+<events>
+<event intention="103">
+<trigger operator="+" type="!">
+<literal>
+<structure functor="do_and_wait_next_step">
+<arguments>
+<structure functor="survey"/>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+</trigger>
+</event>
+</events>
+<intentions>
+<intention id="103" selected="true">
+<intended-means trigger="+!survey[source(self)]">
+<body>
+<body-literal type="!">
+<literal>
+<structure functor="do_and_wait_next_step">
+<arguments>
+<structure functor="survey"/>
+</arguments>
+</structure>
+</literal>
+</body-literal>
+</body>
+</intended-means>
+<intended-means trigger="+!init_goal(survey)[source(self)]">
+<body>
+<body-literal type="!">
+<var-term functor="G"/>
+</body-literal>
+</body>
+<unifier>
+<map>
+<var-term functor="E"/>
+<value>
+<number-term>5</number-term>
+</value>
+</map>
+<map>
+<var-term functor="V"/>
+<value>
+<structure functor="vertex10"/>
+</value>
+</map>
+<map>
+<var-term functor="G"/>
+<value>
+<structure functor="survey"/>
+</value>
+</map>
+<map>
+<var-term functor="S"/>
+<value>
+<number-term>4</number-term>
+</value>
+</map>
+<map>
+<var-term functor="Max"/>
+<value>
+<number-term>12</number-term>
+</value>
+</map>
+</unifier>
+</intended-means>
+<intended-means trigger="+!select_goal[source(self)]">
+<body>
+<body-literal type="!">
+<literal>
+<structure functor="init_goal">
+<arguments>
+<structure functor="survey"/>
+</arguments>
+</structure>
+</literal>
+</body-literal>
+<body-literal type="!!">
+<literal>
+<structure functor="select_goal"/>
+</literal>
+</body-literal>
+</body>
+</intended-means>
+</intention>
+</intentions>
+</circumstance>
+</agent>

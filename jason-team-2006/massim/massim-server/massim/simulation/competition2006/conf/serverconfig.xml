@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="ascii"?>
+<conf tournamentname="GridSimulation" tournamentmode="1" launch-sync-type="key" reportpath=".">
+	<network-agent port="12300" backlog="10"/>
+	<match>
+		<simulation
+			id="Simulation1"
+			simulationclass="GridSimulation"
+			configurationclass="GridSimulationConfiguration"
+			rmiobserver="GridSimulationRMIObserver"
+			xmlobserver="GridSimulationXMLObserver"
+			xmlobserverpath="."
+			xmlstatisticsobserver="GridSimulationXMLStatisticsObserver"
+			file-simulationlog="."
+		>
+			<configuration
+				sizex="25"
+				sizey="25"
+				numberOfObstacles = "20"
+				numberOfGoldItems = "100"
+				maxnumberOfSteps = "20"
+				actionSuccessProbability = "95"
+				goldGenerationProbability = "80"
+				goldGenerationFrequency = "10"
+				goldGenerationNumber = "2"
+				informationDistortionProbability = "5"
+				numberOfAgents = "8"
+			/>
+			<agents>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="red"><configuration/></agent>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="red"><configuration/></agent>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="red"><configuration/></agent>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="red"><configuration/></agent>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="blue"><configuration/></agent>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="blue"><configuration/></agent>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="blue"><configuration/></agent>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="blue"><configuration/></agent>
+			</agents>
+		</simulation>
+		<simulation
+			id="Simulation2"
+			simulationclass="GridSimulation"
+			configurationclass="GridSimulationConfigurationHandCrafted"
+			rmiobserver="GridSimulationRMIObserver"
+			xmlobserver="GridSimulationXMLObserver"
+			xmlobserverpath="."
+			xmlstatisticsobserver="GridSimulationXMLStatisticsObserver"
+			file-simulationlog="."
+		>
+			<configuration
+				xmlns:meta="http://www.tu-clausthal.de/"
+				actionSuccessProbability="100"
+				depotx="0"
+				depoty="1"
+				goldGenerationFrequency="2"
+				goldGenerationNumber="2"
+				goldGenerationProbability="2"
+				informationDistortionProbability="0"
+				maxnumberOfSteps="20"
+				numberOfAgents="8"
+				numberOfGoldItems="2"
+				numberOfObstacles="3"
+				sizex="25"
+				sizey="25"
+			>
+				<array item0="0" item1="1" item2="2" item3="3" item4="4" item5="5" item6="6" item7="7" meta:length="8" meta:name="agentPositionX"/>
+				<array item0="3" item1="1" item2="2" item3="3" item4="4" item5="5" item6="6" item7="7" meta:length="8" meta:name="agentPositionY"/>
+				<array item0="0" item1="11" meta:length="2" meta:name="GoldPositionX"/>
+				<array item0="2" item1="11" meta:length="2" meta:name="GoldPositionY"/>
+				<array item0="20" item1="21" item2="22" meta:length="3" meta:name="obstaclePositionX"/>
+				<array item0="20" item1="21" item2="22" meta:length="3" meta:name="obstaclePositionY"/>
+			</configuration>
+			<agents>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="red"><configuration/></agent>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="red"><configuration/></agent>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="red"><configuration/></agent>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="red"><configuration/></agent>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="blue"><configuration/></agent>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="blue"><configuration/></agent>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="blue"><configuration/></agent>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="blue"><configuration/></agent>
+			</agents>
+		</simulation>
+		<simulation
+			id="Simulation3"
+			simulationclass="GridSimulation"
+			configurationclass="GridSimulationConfiguration"
+			rmiobserver="GridSimulationRMIObserver"
+			xmlobserver="GridSimulationXMLObserver"
+			xmlobserverpath="."
+			xmlstatisticsobserver="GridSimulationXMLStatisticsObserver"
+			file-simulationlog="."
+		>
+			<configuration
+				sizex="25"
+				sizey="25"
+				numberOfObstacles = "40"
+				numberOfGoldItems = "20"
+				maxnumberOfSteps = "20"
+				actionSuccessProbability = "90"
+				goldGenerationProbaility = "80"
+				goldGenerationFrequency = "2"
+				goldGenerationNumber = "2"
+				informationDistortionProbability = "10"
+				numberOfAgents = "8"
+			/>
+			<agents>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="red"><configuration/></agent>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="red"><configuration/></agent>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="red"><configuration/></agent>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="red"><configuration/></agent>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="blue"><configuration/></agent>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="blue"><configuration/></agent>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="blue"><configuration/></agent>
+				<agent agentclass="GridSimulationAgent" agentcreationclass="GridSimulationAgentParameter" team="blue"><configuration/></agent>
+			</agents>
+		</simulation>
+
+	</match>
+	
+	<accounts>
+		<actionclassmap name="Grid">
+			<actionclass id="action" class="GridSimulationAgentAction"/>
+			<actionclass id="invalid" class="massim.InvalidAction"/>
+		</actionclassmap>
+		<account actionclassmap="Grid" defaultactionclass="GridSimulationAgentAction" timeout="4000" auxtimeout="500" maxpacketlength="65536" username="china1" password="1" team="bot" />
+		<account actionclassmap="Grid" defaultactionclass="GridSimulationAgentAction" timeout="4000" auxtimeout="500" maxpacketlength="65536" username="china2" password="2" team="bot" />
+		<account actionclassmap="Grid" defaultactionclass="GridSimulationAgentAction" timeout="4000" auxtimeout="500" maxpacketlength="65536" username="china3" password="3" team="bot" />
+		<account actionclassmap="Grid" defaultactionclass="GridSimulationAgentAction" timeout="4000" auxtimeout="500" maxpacketlength="65536" username="china4" password="4" team="bot" />
+		<account actionclassmap="Grid" defaultactionclass="GridSimulationAgentAction" timeout="4000" auxtimeout="500" maxpacketlength="65536" username="portuguese1" password="1" team="portuguese" />
+		<account actionclassmap="Grid" defaultactionclass="GridSimulationAgentAction" timeout="4000" auxtimeout="500" maxpacketlength="65536" username="portuguese2" password="2" team="portuguese" />
+		<account actionclassmap="Grid" defaultactionclass="GridSimulationAgentAction" timeout="4000" auxtimeout="500" maxpacketlength="65536" username="portuguese3" password="3" team="portuguese" />
+		<account actionclassmap="Grid" defaultactionclass="GridSimulationAgentAction" timeout="4000" auxtimeout="500" maxpacketlength="65536" username="portuguese4" password="4" team="portuguese" />
+		<account actionclassmap="Grid" defaultactionclass="GridSimulationAgentAction" timeout="4000" auxtimeout="500" maxpacketlength="65536" username="germany1" password="1" team="germany" />
+		<account actionclassmap="Grid" defaultactionclass="GridSimulationAgentAction" timeout="4000" auxtimeout="500" maxpacketlength="65536" username="germany2" password="2" team="germany" />
+		<account actionclassmap="Grid" defaultactionclass="GridSimulationAgentAction" timeout="4000" auxtimeout="500" maxpacketlength="65536" username="germany3" password="3" team="germany" />
+		<account actionclassmap="Grid" defaultactionclass="GridSimulationAgentAction" timeout="4000" auxtimeout="500" maxpacketlength="65536" username="germany4" password="4" team="germany" />
+		<account actionclassmap="Grid" defaultactionclass="GridSimulationAgentAction" timeout="4000" auxtimeout="500" maxpacketlength="65536" username="england1" password="1" team="england" />
+		<account actionclassmap="Grid" defaultactionclass="GridSimulationAgentAction" timeout="4000" auxtimeout="500" maxpacketlength="65536" username="england2" password="2" team="england" />
+		<account actionclassmap="Grid" defaultactionclass="GridSimulationAgentAction" timeout="4000" auxtimeout="500" maxpacketlength="65536" username="england3" password="3" team="england" />
+		<account actionclassmap="Grid" defaultactionclass="GridSimulationAgentAction" timeout="4000" auxtimeout="500" maxpacketlength="65536" username="england4" password="4" team="england" />		
+	</accounts>
+</conf>

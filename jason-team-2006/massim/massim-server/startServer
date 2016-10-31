@@ -1,0 +1,22 @@
+#!/bin/sh
+######################################################################
+#edit this to your hostname                                          #
+######################################################################
+name=localhost
+
+clear
+export CLASSPATH=./massim/simulation/competition2006/bin\:massim/framework/bin\:massim/agent/bin\:massim/visualization/davidmainzer/bin\:massim/visualization/davidmainzer/batik/lib/batik-svg-dom.jar:massim/visualization/davidmainzer/batik/lib/batik-xml.jar:massim/visualization/davidmainzer/batik/lib/batik-css.jar:massim/visualization/davidmainzer/batik/lib/batik-dom.jar:massim/visualization/davidmainzer/batik/lib/batik-ext.jar:massim/visualization/davidmainzer/batik/lib/batik-util.jar:
+
+echo $CLASSPATH
+
+echo "Launching RMI Registry"
+rmiregistry 1099 &
+sleep 5
+
+echo "Please run the agents"
+
+echo "Launching Server"
+java -Djava.rmi.server.hostname=$name massim.server.Server --conf serverconfig.xml
+
+echo "Killall RMI Registry"
+killall rmiregistry -w

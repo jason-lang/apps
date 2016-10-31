@@ -1,0 +1,49 @@
+/* Jason Team for the
+ * Multi-Agent Programming Contest 2007
+ * (http://cig.in.tu-clausthal.de/AgentContest)
+ * 
+ * Configuration for contest simulator running local
+ *
+ * By Jomi & Rafael
+ */
+
+MAS miners {
+    infrastructure: Centralised
+	
+	agents:
+        leader ./asl/leader.asl
+		      beliefBaseClass agent.DiscardBelsBB("my_status","picked","committed_to","cell");
+			  
+ 		miner1 ./asl/miner.asl
+		      [verbose=1,host="localhost", port=12300, username=participant1, password="1",gui=yes,write_model=yes] 
+              agentArchClass arch.ACArchitecture
+		      agentClass     agent.SelectEvent 
+		      beliefBaseClass agent.UniqueBelsBB("gsize(_,_,_)","depot(_,_,_)","steps(_,_)");
+ 		miner2 ./asl/miner.asl
+		      [verbose=1,host="localhost", port=12300, username=participant2, password="2"] 
+              agentArchClass arch.ACArchitecture
+		      agentClass     agent.SelectEvent 
+		      beliefBaseClass agent.UniqueBelsBB("gsize(_,_,_)","depot(_,_,_)","steps(_,_)");
+ 		miner3 ./asl/miner.asl
+		      [verbose=1,host="localhost", port=12300, username=participant3, password="3"] 
+              agentArchClass arch.ACArchitecture
+		      agentClass     agent.SelectEvent 
+		      beliefBaseClass agent.UniqueBelsBB("gsize(_,_,_)","depot(_,_,_)","steps(_,_)");
+ 		miner4 ./asl/miner.asl
+		      [verbose=1,host="localhost", port=12300, username=participant4, password="4"] 
+              agentArchClass arch.ACArchitecture
+		      agentClass     agent.SelectEvent 
+		      beliefBaseClass agent.UniqueBelsBB("gsize(_,_,_)","depot(_,_,_)","steps(_,_)");
+ 		miner5 ./asl/miner.asl
+		      [verbose=1,host="localhost", port=12300, username=participant5, password="5"] 
+              agentArchClass arch.ACArchitecture
+		      agentClass     agent.SelectEvent 
+		      beliefBaseClass agent.UniqueBelsBB("gsize(_,_,_)","depot(_,_,_)","steps(_,_)");
+ 		miner6 ./asl/miner.asl
+		      [verbose=1,host="localhost", port=12300, username=participant6, password="6"] 
+              agentArchClass arch.ACArchitecture
+		      agentClass     agent.SelectEvent 
+		      beliefBaseClass agent.UniqueBelsBB("gsize(_,_,_)","depot(_,_,_)","steps(_,_)");
+              
+}
+

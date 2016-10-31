@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="massim-demoAgent-v0_1_beta_1"/>
+	<classpathentry kind="lib" path="massim-serverMonitor-v0_1_beta_1/serverMonitor.jar"/>
+	<classpathentry kind="lib" path="massim-server-v0_1_beta_1/massim/visualization/davidmainzer/batik/lib/batik-css.jar"/>
+	<classpathentry kind="lib" path="massim-server-v0_1_beta_1/massim/visualization/davidmainzer/batik/lib/batik-dom.jar"/>
+	<classpathentry kind="lib" path="massim-server-v0_1_beta_1/massim/visualization/davidmainzer/batik/lib/batik-ext.jar"/>
+	<classpathentry kind="lib" path="massim-server-v0_1_beta_1/massim/visualization/davidmainzer/batik/lib/batik-svg-dom.jar"/>
+	<classpathentry kind="lib" path="massim-server-v0_1_beta_1/massim/visualization/davidmainzer/batik/lib/batik-util.jar"/>
+	<classpathentry kind="lib" path="massim-server-v0_1_beta_1/massim/visualization/davidmainzer/batik/lib/batik-xml.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="massim-server-v0_1_beta_1/massim/simulation/competition2006/bin"/>
+</classpath>

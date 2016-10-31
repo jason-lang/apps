@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   revision="431"
+   url="https://svn.sourceforge.net/svnroot/jason/trunk/applications/Jason-ClimaContest/jia"
+   last-author="jomifred"
+   uuid="7ad00f97-b80e-0410-96fd-85ba2fd1e1ac"
+   committed-date="2006-04-26T14:11:10.084702Z"
+   name=""
+   kind="dir"
+   committed-rev="430"/>
+<entry
+   checksum="49c9f154436feed17d2c09f863f80fe8"
+   last-author="jomifred"
+   text-time="2006-04-14T19:32:45.000000Z"
+   committed-date="2006-04-14T23:39:08.150000Z"
+   kind="file"
+   name="dist.java"
+   committed-rev="407"/>
+<entry
+   revision="434"
+   checksum="b417866a822b0b79c4d9862a57383c5e"
+   last-author="jomifred"
+   prop-time="2006-03-30T00:04:53.000000Z"
+   text-time="2006-04-26T21:40:26.000000Z"
+   committed-date="2006-04-27T01:14:58.743000Z"
+   name="getDirection.java"
+   kind="file"
+   committed-rev="434"/>
+<entry
+   checksum="2e03d2b9383b06edf34bf5116e3b0d43"
+   last-author="jomifred"
+   text-time="2006-04-14T19:32:14.000000Z"
+   committed-date="2006-04-14T23:39:08.150000Z"
+   kind="file"
+   name="neighbour.java"
+   committed-rev="407"/>
+</wc-entries>

@@ -1,0 +1,12 @@
+/* output should be:
+
+Running project a
+[a] saying: Test = test_right_value
+[a] saying: Test = test_right_value
+
+*/
+
+MAS a {
+    agents: a;
+}
+

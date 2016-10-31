@@ -1,0 +1,13 @@
+#!/bin/sh
+clear
+
+echo "Lauching agents"
+
+java -jar demoAgent.jar china1 1 &
+java -jar demoAgent.jar china2 2 &
+java -jar demoAgent.jar china3 3 &
+java -jar demoAgent.jar china4 4 &
+#java -jar demoAgent.jar portuguese1 1 &
+#java -jar demoAgent.jar portuguese2 2 &
+#java -jar demoAgent.jar portuguese3 3 &
+#java -jar demoAgent.jar portuguese4 4 &

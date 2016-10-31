@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tournament tournament-name="GridSimulation">
+<team name="bot"/>
+<team name="participant"/>
+<match blue="bot" red="participant">
+<simulation endtime="1178231703630" name="GridSimulation_participantbot_Lost1" starttime="1178231507620">
+<result bot="12" participant="15" svgFolder=""/>
+</simulation>
+<simulation endtime="1178231734410" name="GridSimulation_participantbot_size1" starttime="1178231703988">
+<result bot="3" participant="8" svgFolder=""/>
+</simulation>
+<simulation endtime="1178231982096" name="GridSimulation_participantbot_TheExplorers1" starttime="1178231734990">
+<result bot="6" participant="34" svgFolder=""/>
+</simulation>
+</match>
+</tournament>

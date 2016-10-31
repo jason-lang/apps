@@ -1,0 +1,19 @@
+
+/*
+
+starts a jade container (called jason-container) that connects to the 
+main container located at 127.0.0.1:4456
+
+in this jason container, only the agent alice is included
+
+*/
+
+MAS jason_agents {
+
+    infrastructure: Jade(main_container_host("127.0.0.1:4456"))
+
+    agents:
+        alice at "jason-container";
+
+}
+

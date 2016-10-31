@@ -1,0 +1,33 @@
+/* Jason Team for the
+ * Multi-Agent Programming Contest 2007
+ * (http://cig.in.tu-clausthal.de/AgentContest)
+ * 
+ * Configuration for local simulator
+ *
+ * By Jomi & Rafael
+ */
+
+MAS miners {
+    infrastructure: Centralised
+	
+    environment: env.MiningEnvironment(10, 0, yes)
+        // parameters: 1. environment configuration id (from 1 to 10)
+        //             2. sleep time (in ms) after each action
+        //             3. whether display the gui
+	    
+	agents:
+        leader ./asl/leader.asl  
+		      beliefBaseClass agent.DiscardBelsBB("my_status","picked","committed_to","cell");
+ 		miner ./asl/miner.asl
+		      agentClass agent.SelectEvent 
+		      beliefBaseClass agent.UniqueBelsBB("gsize(_,_,_)","depot(_,_,_)","steps(_,_)")
+              agentArchClass arch.LocalMinerArch 
+              #5;
+ 		miner6 ./asl/miner.asl
+		      [verbose=1,gui=no] 
+		      agentClass agent.SelectEvent 
+		      beliefBaseClass agent.UniqueBelsBB("gsize(_,_,_)","depot(_,_,_)","steps(_,_)")
+              agentArchClass arch.LocalMinerArch 
+              #1;
+}
+

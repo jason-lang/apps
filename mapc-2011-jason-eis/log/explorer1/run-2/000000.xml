@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet href='http://jason.sf.net/xml/agInspection.xsl' type='text/xsl' ?>
+
+<agent cycle="0" name="explorer1">
+<beliefs>
+<rule>
+<head>
+<literal>
+<structure functor="is_buy_goal"/>
+</literal>
+</head>
+<context>
+<expression operator=" &amp; " type="logical">
+<left>
+<literal>
+<structure functor="money">
+<arguments>
+<var-term functor="M"/>
+</arguments>
+</structure>
+</literal>
+</left>
+<right>
+<expression operator=" &gt;= " type="relational">
+<left>
+<var-term functor="M"/>
+</left>
+<right>
+<number-term>10</number-term>
+</right>
+</expression>
+</right>
+</expression>
+</context>
+</rule>
+<rule>
+<head>
+<literal>
+<structure functor="is_probe_goal"/>
+</literal>
+</head>
+<context>
+<expression operator=" &amp; " type="logical">
+<left>
+<literal>
+<structure functor="position">
+<arguments>
+<var-term functor="MyV"/>
+</arguments>
+</structure>
+</literal>
+</left>
+<right>
+<expression operator="not " type="logical">
+<right>
+<literal>
+<structure functor="probedVertex">
+<arguments>
+<var-term functor="MyV"/>
+<var-term functor="_1"/>
+</arguments>
+</structure>
+</literal>
+</right>
+</expression>
+</right>
+</expression>
+</context>
+</rule>
+<rule>
+<head>
+<literal>
+<structure functor="is_survey_goal"/>
+</literal>
+</head>
+<context>
+<expression operator=" &amp; " type="logical">
+<left>
+<literal>
+<structure functor="position">
+<arguments>
+<var-term functor="MyV"/>
+</arguments>
+</structure>
+</literal>
+</left>
+<right>
+<literal>
+<structure functor="edge">
+<arguments>
+<var-term functor="MyV"/>
+<var-term functor="_2"/>
+<structure functor="unknown"/>
+</arguments>
+</structure>
+</literal>
+</right>
+</expression>
+</context>
+</rule>
+<rule>
+<head>
+<literal>
+<structure functor="is_energy_goal"/>
+</literal>
+</head>
+<context>
+<expression operator=" &amp; " type="logical">
+<left>
+<literal>
+<structure functor="energy">
+<arguments>
+<var-term functor="MyE"/>
+</arguments>
+</structure>
+</literal>
+</left>
+<right>
+<expression operator=" &amp; " type="logical">
+<left>
+<literal>
+<structure functor="maxEnergy">
+<arguments>
+<var-term functor="Max"/>
+</arguments>
+</structure>
+</literal>
+</left>
+<right>
+<expression operator=" &lt; " type="relational">
+<left>
+<var-term functor="MyE"/>
+</left>
+<right>
+<expression operator="/" type="arithmetic">
+<left>
+<var-term functor="Max"/>
+</left>
+<right>
+<number-term>3</number-term>
+</right>
+</expression>
+</right>
+</expression>
+</right>
+</expression>
+</right>
+</expression>
+</context>
+</rule>
+</beliefs>
+<circumstance/>
+</agent>

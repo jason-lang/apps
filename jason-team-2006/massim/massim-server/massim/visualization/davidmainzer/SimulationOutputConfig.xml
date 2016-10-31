@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ascii"?>
+<conf>
+	<!-- ################# Path configuration for UNIX ################# -->
+	<!--	On UNIX platforms, the prefix of an absolute pathname is always "/".
+			Relative pathnames have no prefix. 
+			The root directory has the prefix "/" and an empty name sequence. -->
+		    
+	<!-- ################# Path configuration for MS Windows ############ --> 
+	<!--	For Win32 platforms, the prefix of a pathname that contains a drive 
+			specifier consists of the drive letter followed by ":" and possibly 
+			followed by "\" if the pathname is absolute. -->
+
+	<!-- MS Windows Example -->
+	<!-- <simulation-output path="C:\\workspace\\output\\" /> -->
+	
+	
+	<!-- UNIX platforms Example -->
+	<simulation-output path="output/" />
+</conf>

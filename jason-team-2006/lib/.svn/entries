@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   revision="431"
+   url="https://svn.sourceforge.net/svnroot/jason/trunk/applications/Jason-ClimaContest/lib"
+   last-author="jomifred"
+   uuid="7ad00f97-b80e-0410-96fd-85ba2fd1e1ac"
+   committed-date="2006-04-20T01:16:10.411813Z"
+   name=""
+   kind="dir"
+   committed-rev="415"/>
+<entry
+   revision="434"
+   checksum="f5c0d6bd05f04126104f1ae464cea15d"
+   last-author="jomifred"
+   prop-time="2006-03-30T00:04:54.000000Z"
+   text-time="2006-04-26T21:16:59.000000Z"
+   committed-date="2006-04-27T01:14:58.743000Z"
+   name="search.jar"
+   kind="file"
+   committed-rev="434"/>
+</wc-entries>

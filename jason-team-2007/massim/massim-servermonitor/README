@@ -1,0 +1,58 @@
+###############################################################
+# Multi-Agent Programming Contest 2007                        #
+#                                                             #
+# Support package MASSim servermonitor                        #
+#   README file for the MASSim servermonitor package          #
+#                                                             #
+# For the details on the contest, check the Contest website:  #
+#   http://cig.in.tu-clausthal.de/AgentContest2007/           #
+#                                                             #
+# Organizers:                                                 #
+#    J. Dix, M. Dastani, P. Novak                             #
+###############################################################
+
+MASSim servermonitor package.
+
+1. Prerequisites.
+
+You only need the sun-java5 (jre and jdk) installed to run the server.
+
+2. Installing and running.
+
+·Unpack the file anywhere:
+	tar xzvf massim-ServerMonitor-version.tag.gz -C output_dir
+
+·Switch to the new directory:
+	cd output_dir/massim-ServerMonitor
+
+·Run the script provided in the package:
+	./startMonitor.sh
+
+3. Options.
+You can pass to startMonitor.sh script any of the following parameters:
+	--help  			Displays the help
+	--host <RMI hostname> 		Hostname of the computer where the massim-server is running
+	--port <RMI port> 		Port of the rmiregistry
+	--service <RMI servicename> 	See 4 for details
+	--sleeptime <time>		Thread sleeptime in ms
+	--disable-stylesheets  		Disables reading of configfile and stylesheet use
+	--conf <configfile>
+
+If no parameters are given default values will be used.
+Default values:
+	host = localhost
+	port = 1099
+	service = xmlsimulation
+	sleeptime = 10000ms
+	conf = configfile contained in servermonitor.jar
+
+4. RMI servicesnames
+	xmlsimulation	Simulation dependend statistics (number of steps, agentscores, ...)
+	statistics	Statistics for the tournament (ranking, results of simulations, ...)
+	server2		Statistics of connected agents (name, port, ip)
+
+5. Questions, problems, suggestions, ...
+
+please, ask to the Agent Contest 2007 mail-list agentcontest2007 [at] in.tu-clausthal.de 
+or for more fast communication: qx [at] tu-clausthal.de or slawomir.deren [at] tu-clausthal.de
+

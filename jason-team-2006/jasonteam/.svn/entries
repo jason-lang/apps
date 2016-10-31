@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   revision="431"
+   url="https://svn.sourceforge.net/svnroot/jason/trunk/applications/Jason-ClimaContest/jasonteam"
+   last-author="jomifred"
+   uuid="7ad00f97-b80e-0410-96fd-85ba2fd1e1ac"
+   committed-date="2006-04-26T14:11:10.084702Z"
+   name=""
+   kind="dir"
+   committed-rev="430"/>
+<entry
+   checksum="98292843165f74af9d6c7b3ee0a4deec"
+   last-author="jomifred"
+   prop-time="2006-03-30T00:04:51.000000Z"
+   text-time="2006-04-24T23:41:15.000000Z"
+   committed-date="2006-04-25T01:31:43.238000Z"
+   kind="file"
+   name="ClimaAgent.java"
+   committed-rev="422"/>
+<entry
+   revision="436"
+   checksum="b4ab72e506ee1069bf8625e2729c3f6c"
+   last-author="jomifred"
+   prop-time="2006-03-30T00:04:51.000000Z"
+   text-time="2006-04-27T01:37:06.000000Z"
+   committed-date="2006-04-27T01:36:57.017000Z"
+   name="ClimaArchitecture.java"
+   kind="file"
+   committed-rev="436"/>
+<entry
+   revision="436"
+   checksum="2d07ef1c35cd5ba16398e73dec195b80"
+   last-author="jomifred"
+   prop-time="2006-03-30T00:04:52.000000Z"
+   text-time="2006-04-27T01:21:54.000000Z"
+   committed-date="2006-04-27T01:36:57.017000Z"
+   name="ClimaProxy.java"
+   kind="file"
+   committed-rev="436"/>
+<entry
+   checksum="444bc56513dc9ece9e01538c32a9f260"
+   last-author="jomifred"
+   prop-time="2006-04-14T23:40:19.000000Z"
+   text-time="2006-04-26T14:11:10.000000Z"
+   committed-date="2006-04-26T14:11:10.084702Z"
+   name="Location.java"
+   kind="file"
+   committed-rev="430"/>
+<entry
+   checksum="79a14b1bfe9491be6e192a494ee88239"
+   last-author="jomifred"
+   prop-time="2006-03-30T00:04:52.000000Z"
+   text-time="2006-04-26T14:11:10.000000Z"
+   committed-date="2006-04-26T14:11:10.084702Z"
+   name="WorldModel.java"
+   kind="file"
+   committed-rev="430"/>
+<entry
+   checksum="2e6b0e5358f1007cd103a87cd4e7c3f5"
+   last-author="jomifred"
+   prop-time="2006-03-30T00:04:52.000000Z"
+   text-time="2006-04-20T01:16:10.000000Z"
+   committed-date="2006-04-20T01:16:10.411813Z"
+   kind="file"
+   name="WorldView.java"
+   committed-rev="415"/>
+</wc-entries>

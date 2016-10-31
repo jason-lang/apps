@@ -1,0 +1,28 @@
+requirements:
+serverMonitor: sun-java5 jre and jdk
+
+install:
+1. be root
+2. unpack file
+3. switch to the directory
+4. edit startServerMonitor to your config
+
+run:
+1. ./startServerMonitor
+
+
+Commandline Arguments for serverMonitor.jar  
+-------------------------------------------- 
+--help  displays help  
+--host <RMI hostname>  
+--port <RMI port>  
+--service <RMI servicename>  
+--sleeptime <threadsleeptime in ms>  
+  
+If no parameters are given default values will be used.  
+Default values:  
+  
+host = localhost, port = 1099, service = simulation, sleeptime = 10000ms  
+  
+  
+RMI servicesnames can be found in the Massim Server README.

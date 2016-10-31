@@ -1,0 +1,10 @@
+#!/bin/sh
+#####################################
+#edit host                          #
+#####################################
+name=192.168.123.100
+
+clear
+
+echo "Lauching ServerMonitor"
+java -jar serverMonitor.jar --host $name --sleeptime 1000

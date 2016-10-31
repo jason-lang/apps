@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>JSP &amp; JADE &amp; Jason</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2014"/>
+<meta name="author" content="Jomi F. Hubner"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+
+<h1 class="title">JSP &amp; JADE &amp; Jason</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Introduction </a></li>
+<li><a href="#sec-2">2 The web application </a></li>
+<li><a href="#sec-3">3 The Jason application </a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introduction </h2>
+<div class="outline-text-2" id="text-1">
+
+
+<p>
+This example shows how to run a JADE agent inside a JSP web page and how this agent/page can exchange FIPA ACL messages with a Jason agent.
+</p>
+<p>
+We have two JADE containers:
+</p><ul>
+<li>
+the main container that will run on the web server;
+</li>
+<li>
+an agent container will run Jason agents, possibly on another host.
+
+</li>
+</ul>
+
+<p>Two (very simple) agents are code:
+</p>
+<ul>
+<li>
+<b>snooper</b> is a JADE agent that has a web page (coded in JSP) that simply shows received messages and, sometimes, sends messages the alice. It run on the main container.
+
+</li>
+<li>
+<b>alice</b>: a Jason agent that simply sends hello messages to snooper. It run in the agent container.
+
+</li>
+</ul>
+
+<p>There are many ways to develop web applications, in the sequel I report my path.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> The web application </h2>
+<div class="outline-text-2" id="text-2">
+
+
+<ol>
+<li>
+Install the Geronimo web server as described at
+<a href="http://geronimo.apache.org/GMOxDOC30/installing-geronimo-eclipse-plugin.html">http://geronimo.apache.org/GMOxDOC30/installing-geronimo-eclipse-plugin.html</a>
+
+</li>
+<li>
+Import the web application into your eclipse workspace: File -&gt; Import and select the <code>webapp</code> directory available in this example.
+
+</li>
+<li>
+The agent snooper is coded in the file <code>WebContent/WEB-INF/hello.jsp</code>. See comments there for more information.
+
+</li>
+<li>
+Run the application (open hello.jsp, select "Run-As", run on server). This web application will start the JADE main container in the web server host at port 4456.
+
+</li>
+<li>
+Eclipse will open the page at <a href="http://localhost:8080/tweb/hello.jsp">http://localhost:8080/tweb/hello.jsp</a> (supposing the web server is running on localhost). You will see:
+
+
+</li>
+</ol>
+
+
+<pre class="example">starting jade container at 127.0.0.1 and port 4456
+received messages:
+(press reload to see new messages)
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> The Jason application </h2>
+<div class="outline-text-2" id="text-3">
+
+
+<p>
+The Jason application is in the directory <code>jason</code> and is very simple. See files <code>jason-project.mas2j</code> and <code>alice.asl</code> for more information.
+</p>
+<p>
+To run this application:
+</p>
+<ol>
+<li>
+If you are using Jason &lt; 1.4.1, replace the <code>jason.jar</code> of your distribution by the one available at <code>jason/lib</code>. 
+
+</li>
+<li>
+Open the project <code>jason-project.mas2j</code> in eclipse or jEdit and run it.
+
+</li>
+<li>
+You will see on Jason MAS Console (reload the JSP page to see the messages arriving at snooper):
+
+
+</li>
+</ol>
+
+
+<pre class="example">[RunJadeMAS] Creating agent alice (1/1)
+[alice] starting alice
+Jason Http Server running on http://localhost:3272
+[alice] sent 0
+[alice] sent 1
+[alice] sent 2
+[alice] sent 3
+[alice] sent 4
+[alice] sent 5
+[alice] sent 6
+[alice] sent 7
+[alice] sent 8
+[alice] I received a hello fromJSP from snooper
+[alice] sent 9
+[alice] sent 10
+[alice] sent 11
+[alice] sent 12
+[alice] sent 13
+[alice] sent 14
+</pre>
+
+
+
+
+</div>
+</div>
+<div id="postamble">
+<p class="author"> Author: Jomi F. Hubner
+<a href="mailto:jomi.hubner@ufsc.br">&lt;jomi.hubner@ufsc.br&gt;</a>
+</p>
+<p class="date"> Date: 2014</p>
+<p class="creator">HTML generated by org-mode 6.33x in emacs 23</p>
+</div>
+</div>
+</body>
+</html>

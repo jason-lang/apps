@@ -1,0 +1,24 @@
+requirements:
+servert: sun-java5 jre and jdk
+visual-output: Internet Explorer 6, Adobe SVG Plugin
+http://www.adobe.com/svg/viewer/install/main.html
+
+install:
+1. be root
+2. unpack file
+3. switch to directory
+4. edit massim/visualization/davidmainzer/SimulationOutputConfig.xml (change path to visual-output)
+5. edit serverconfig.xml (if you want to change the steps etc.)
+
+run:
+1. edit startServer
+	(change hostname to your config)
+2. edit /etc/hosts
+	127.0.0.1 localhost 
+	IP            name
+	(example: 192.168.123.100 agentmaster)
+   and restart network-device
+3. ./startServer
+4. startAgents
+5. startServerMonitor (optional)
+6. switch back to startServer and press Enter

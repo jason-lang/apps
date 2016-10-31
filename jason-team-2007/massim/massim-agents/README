@@ -1,0 +1,78 @@
+###############################################################
+# Multi-Agent Programming Contest 2007                        #
+#                                                             # 
+# Support package massim-demoAgents                           #
+#   README file for tha massim-demoAgents pakage              #
+#                                                             #
+# For the details on the contest, check the Contest website:  #
+#   http://cig.in.tu-clausthal.de/AgentContest2007/           #
+#                                                             #
+# Organizers:                                                 #
+#    J. Dix, M. Dastani, P. Novak                             #
+###############################################################
+
+1. Prerequisites.
+
+You only need at least the sun-java5 or higer installed to run the agents.
+
+2. Installing and running.
+
+·Unpack the file anywhere:
+	tar xzvf massim-demoAgents-version.tag.gz -C output_dir
+
+·Switch to the new directory:
+	cd output_dir/massim-agents
+
+·Run the script provided in the package:
+	./startAgents
+
+3. Options.
+
+You can edit the startAgents script for changing the username and password 
+of the agents, the location of their main class or the ip where the server 
+is running.
+Examples:
+	java -classpath <your_classpath> yourAgent username password &
+or
+	java -jar yourJarFile username password &
+or 
+	java -jar yourJarFile username password <server_ip> &
+
+4. Creating your agents.
+4.1 Obtaining the demostration sources
+
+Inside the demoAgents.jar file there are the sources of the demostration
+agents. You can decompress it with the command:
+	$ jar xf demoAgents.jar
+
+Three directories will be created:
+	META-INF: Contains the MANIFEST.MF of the jar file.
+	massim:   Contains all the compiled classes of demoAgents.
+	src:      Contains the demoAgent's sources.
+
+4.2 Writting agents.
+
+All agents must inherit from the abstract class massim.AbstractAgent. 
+Some agent examples are contained in the massim.demoAgents package.
+
+For more information about the methods of massim.AbstractAgent class, 
+please read the java-doc.
+
+4.3 Packing your agent.
+
+You can package your agent inside a jar file. First of all you need a 
+manifest file. You can take the example from the demoAgent and edit 
+the "Main-Class:" field. There you must point to your class containing 
+the main method.
+
+Then the packaging step is as so easy as:
+	$ jar cfm yourPackage.jar yourManifest <yourClasses or directories>
+
+5. Questions, problems, suggestions, ...
+
+please, ask to the Agent Contest 2007 mail-list 
+	agentcontest2007 [at] in.tu-clausthal.de 
+and for more fast communication: 
+	slawomir.deren [at] tu-clausthal.de
+	qx [at] tu-clausthal.de or 
+

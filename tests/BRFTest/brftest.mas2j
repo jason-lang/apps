@@ -1,0 +1,20 @@
+/* Jason Project */
+
+
+/* output:
+
+[agent] saying: I have retained belief from a second source when my percepts were cleared.
+[agent] saying: Sam is very sorry for doubting Jason, and promises never to do it again.
+*/
+
+MAS brftest
+{
+	
+    infrastructure: Centralised
+	
+    environment: BRFTestEnv
+	
+	agents:
+		agent;
+	
+}

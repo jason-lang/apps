@@ -1,0 +1,14 @@
+requirements:
+agent: sun-java5 jre and jdk
+
+install:
+1. be root
+2. unpack file
+3. switch to the directory
+
+run:
+1. ./startAgents
+	(edit it, if you want to run the agents from another host (i.e. 192.168.123.100) change
+	 java -jar demoAgent.jar england4 4 &
+	 to
+	 java -jar demoAgent.jar england4 4 192.168.123.100 &

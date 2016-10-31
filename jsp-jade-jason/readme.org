@@ -1,0 +1,74 @@
+#+TITLE: JSP & JADE & Jason
+#+AUTHOR:   Jomi F. Hubner
+#+EMAIL:    jomi.hubner@ufsc.br
+#+DATE:     2014
+
+* Introduction
+
+This example shows how to run a JADE agent inside a JSP web page and how this agent/page can exchange FIPA ACL messages with a Jason agent.
+
+We have two JADE containers:
+- the main container that will run on the web server;
+- an agent container will run Jason agents, possibly on another host.
+
+Two (very simple) agents are code:
+
+- *snooper* is a JADE agent that has a web page (coded in JSP) that simply shows received messages and, sometimes, sends messages the alice. It run on the main container.
+
+- *alice*: a Jason agent that simply sends hello messages to snooper. It run in the agent container.
+
+There are many ways to develop web applications, in the sequel I report my path.
+
+* The web application
+
+1. Install the Geronimo web server as described at
+	http://geronimo.apache.org/GMOxDOC30/installing-geronimo-eclipse-plugin.html
+
+2. Import the web application into your eclipse workspace: File -> Import and select the ~webapp~ directory available in this example.
+
+3. The agent snooper is coded in the file ~WebContent/WEB-INF/hello.jsp~. See comments there for more information.
+
+4. Run the application (open hello.jsp, select "Run-As", run on server). This web application will start the JADE main container in the web server host at port 4456.
+
+5. Eclipse will open the page at http://localhost:8080/tweb/hello.jsp (supposing the web server is running on localhost). You will see:
+
+#+BEGIN_EXAMPLE
+starting jade container at 127.0.0.1 and port 4456
+received messages:
+(press reload to see new messages)
+#+END_EXAMPLE
+
+* The Jason application
+
+The Jason application is in the directory =jason= and is very simple. See files =jason-project.mas2j= and =alice.asl= for more information.
+
+To run this application:
+
+1. If you are using Jason < 1.4.1, replace the =jason.jar= of your distribution by the one available at =jason/lib=. 
+
+2. Open the project =jason-project.mas2j= in eclipse or jEdit and run it.
+
+3. You will see on Jason MAS Console (reload the JSP page to see the messages arriving at snooper):
+
+#+BEGIN_EXAMPLE
+[RunJadeMAS] Creating agent alice (1/1)
+[alice] starting alice
+Jason Http Server running on http://localhost:3272
+[alice] sent 0
+[alice] sent 1
+[alice] sent 2
+[alice] sent 3
+[alice] sent 4
+[alice] sent 5
+[alice] sent 6
+[alice] sent 7
+[alice] sent 8
+[alice] I received a hello fromJSP from snooper
+[alice] sent 9
+[alice] sent 10
+[alice] sent 11
+[alice] sent 12
+[alice] sent 13
+[alice] sent 14
+#+END_EXAMPLE
+

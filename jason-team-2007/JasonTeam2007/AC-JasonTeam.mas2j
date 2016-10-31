@@ -1,0 +1,50 @@
+/* Jason Team for the
+ * Multi-Agent Programming Contest 2007
+ * (http://cig.in.tu-clausthal.de/AgentContest)
+ * 
+ * Configuration for contest simulator
+ *
+ * By Jomi & Rafael
+ */
+
+MAS miners {
+    infrastructure: Centralised
+	
+	agents:
+        leader ./asl/leader.asl
+		      beliefBaseClass agent.DiscardBelsBB("my_status","picked","committed_to","cell");
+			  
+ 		miner1 ./asl/miner.asl
+		      [verbose=1,host="agentmaster.in.tu-clausthal.de", port=12300, 
+		       username="Jasonteam1", password="hLjN5ncb",gui=no,write_model=yes] 
+              agentArchClass  arch.ACArchitecture
+		      agentClass      agent.SelectEvent 
+		      beliefBaseClass agent.UniqueBelsBB("gsize(_,_,_)","depot(_,_,_)","steps(_,_)");
+ 		miner2 ./asl/miner.asl
+		      [host="agentmaster.in.tu-clausthal.de", port=12300, username="Jasonteam2", password="BUe80yCy"] 
+              agentArchClass  arch.ACArchitecture
+		      agentClass      agent.SelectEvent 
+		      beliefBaseClass agent.UniqueBelsBB("gsize(_,_,_)","depot(_,_,_)","steps(_,_)");
+ 		miner3 ./asl/miner.asl
+		      [host="agentmaster.in.tu-clausthal.de", port=12300, username="Jasonteam3", password="IJmbj67T"] 
+              agentArchClass  arch.ACArchitecture
+		      agentClass      agent.SelectEvent 
+		      beliefBaseClass agent.UniqueBelsBB("gsize(_,_,_)","depot(_,_,_)","steps(_,_)");
+ 		miner4 ./asl/miner.asl
+		      [host="agentmaster.in.tu-clausthal.de", port=12300, username="Jasonteam4", password="Hxbp3ODE"] 
+              agentArchClass  arch.ACArchitecture
+		      agentClass      agent.SelectEvent 
+		      beliefBaseClass agent.UniqueBelsBB("gsize(_,_,_)","depot(_,_,_)","steps(_,_)");
+ 		miner5 ./asl/miner.asl
+		      [host="agentmaster.in.tu-clausthal.de", port=12300, username="Jasonteam5", password="dn0ygWNg"] 
+              agentArchClass  arch.ACArchitecture
+		      agentClass      agent.SelectEvent 
+		      beliefBaseClass agent.UniqueBelsBB("gsize(_,_,_)","depot(_,_,_)","steps(_,_)");
+ 		miner6 ./asl/miner.asl
+		      [host="agentmaster.in.tu-clausthal.de", port=12300, username="Jasonteam6", password="vOi095n2"] 
+              agentArchClass  arch.ACArchitecture
+		      agentClass      agent.SelectEvent 
+		      beliefBaseClass agent.UniqueBelsBB("gsize(_,_,_)","depot(_,_,_)","steps(_,_)");
+              
+}
+

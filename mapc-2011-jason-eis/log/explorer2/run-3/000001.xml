@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet href='http://jason.sf.net/xml/agInspection.xsl' type='text/xsl' ?>
+
+<agent cycle="0" name="explorer2">
+<beliefs>
+<literal>
+<structure functor="simStart">
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<rule>
+<head>
+<literal>
+<structure functor="is_buy_goal"/>
+</literal>
+</head>
+<context>
+<expression operator=" &amp; " type="logical">
+<left>
+<literal>
+<structure functor="money">
+<arguments>
+<var-term functor="M"/>
+</arguments>
+</structure>
+</literal>
+</left>
+<right>
+<expression operator=" &gt;= " type="relational">
+<left>
+<var-term functor="M"/>
+</left>
+<right>
+<number-term>10</number-term>
+</right>
+</expression>
+</right>
+</expression>
+</context>
+</rule>
+<literal>
+<structure functor="steps">
+<arguments>
+<number-term>1000</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="vertices">
+<arguments>
+<number-term>20</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<rule>
+<head>
+<literal>
+<structure functor="is_probe_goal"/>
+</literal>
+</head>
+<context>
+<expression operator=" &amp; " type="logical">
+<left>
+<literal>
+<structure functor="position">
+<arguments>
+<var-term functor="MyV"/>
+</arguments>
+</structure>
+</literal>
+</left>
+<right>
+<expression operator="not " type="logical">
+<right>
+<literal>
+<structure functor="probedVertex">
+<arguments>
+<var-term functor="MyV"/>
+<var-term functor="_22"/>
+</arguments>
+</structure>
+</literal>
+</right>
+</expression>
+</right>
+</expression>
+</context>
+</rule>
+<rule>
+<head>
+<literal>
+<structure functor="is_survey_goal"/>
+</literal>
+</head>
+<context>
+<expression operator=" &amp; " type="logical">
+<left>
+<literal>
+<structure functor="position">
+<arguments>
+<var-term functor="MyV"/>
+</arguments>
+</structure>
+</literal>
+</left>
+<right>
+<literal>
+<structure functor="edge">
+<arguments>
+<var-term functor="MyV"/>
+<var-term functor="_23"/>
+<structure functor="unknown"/>
+</arguments>
+</structure>
+</literal>
+</right>
+</expression>
+</context>
+</rule>
+<rule>
+<head>
+<literal>
+<structure functor="is_energy_goal"/>
+</literal>
+</head>
+<context>
+<expression operator=" &amp; " type="logical">
+<left>
+<literal>
+<structure functor="energy">
+<arguments>
+<var-term functor="MyE"/>
+</arguments>
+</structure>
+</literal>
+</left>
+<right>
+<expression operator=" &amp; " type="logical">
+<left>
+<literal>
+<structure functor="maxEnergy">
+<arguments>
+<var-term functor="Max"/>
+</arguments>
+</structure>
+</literal>
+</left>
+<right>
+<expression operator=" &lt; " type="relational">
+<left>
+<var-term functor="MyE"/>
+</left>
+<right>
+<expression operator="/" type="arithmetic">
+<left>
+<var-term functor="Max"/>
+</left>
+<right>
+<number-term>3</number-term>
+</right>
+</expression>
+</right>
+</expression>
+</right>
+</expression>
+</right>
+</expression>
+</context>
+</rule>
+<literal>
+<structure functor="id">
+<arguments>
+<number-term>0</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+<literal>
+<structure functor="edges">
+<arguments>
+<number-term>47</number-term>
+</arguments>
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+</beliefs>
+<circumstance>
+<events>
+<event intention="10">
+<trigger operator="+" type="!">
+<literal>
+<structure functor="select_goal">
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+</trigger>
+</event>
+<event selected="true">
+<trigger operator="+" type="">
+<literal>
+<structure functor="simStart">
+<annotations>
+<list-term>
+<structure functor="entity" sep="">
+<arguments>
+<structure functor="connectionB2"/>
+</arguments>
+</structure>
+<structure functor="source" sep=",">
+<arguments>
+<structure functor="percept"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+</trigger>
+</event>
+</events>
+<options>
+<option applicable="true" relevant="true" selected="true">
+<plan>
+<label>
+<literal>
+<structure functor="l__20">
+<annotations>
+<list-term>
+<structure functor="source" sep="">
+<arguments>
+<structure functor="self"/>
+</arguments>
+</structure>
+</list-term>
+</annotations>
+</structure>
+</literal>
+</label>
+<trigger operator="+" type="">
+<literal>
+<structure functor="simStart"/>
+</literal>
+</trigger>
+<body>
+<body-literal type="!">
+<literal>
+<structure functor="select_goal"/>
+</literal>
+</body-literal>
+</body>
+</plan>
+<unifier/>
+</option>
+</options>
+<intentions>
+<intention id="10" selected="true">
+<intended-means trigger="+simStart[entity(connectionB2),source(percept)]">
+<body>
+<body-literal type="!">
+<literal>
+<structure functor="select_goal"/>
+</literal>
+</body-literal>
+</body>
+</intended-means>
+</intention>
+</intentions>
+</circumstance>
+</agent>

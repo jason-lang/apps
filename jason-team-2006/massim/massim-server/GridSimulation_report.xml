@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tournament tournament-name="GridSimulation">
+<team name="portuguese"/>
+<team name="china"/>
+<match blue="china" red="portuguese">
+<simulation endtime="1142368431261" name="GridSimulation_portuguesechina_Simulation1" starttime="1142368220913">
+<result china-Score="0" portuguese-Score="9"/>
+</simulation>
+<simulation endtime="1142368485893" name="GridSimulation_portuguesechina_Simulation2" starttime="1142368431419">
+<result china-Score="0" portuguese-Score="0"/>
+</simulation>
+<simulation endtime="1142368574335" name="GridSimulation_portuguesechina_Simulation3" starttime="1142368485995">
+<result china-Score="0" portuguese-Score="0"/>
+</simulation>
+</match>
+</tournament>

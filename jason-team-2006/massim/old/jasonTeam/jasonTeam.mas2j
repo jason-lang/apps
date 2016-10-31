@@ -1,0 +1,22 @@
+/* Jason Team for Clima Contest VII
+ * (http://cig.in.tu-clausthal.de/CLIMAContest)
+ *
+ */
+
+MAS jasonTeam {
+	infrastructure: Centralised
+	agents:
+	    // official host agentslave.in.tu-clausthal.de
+		miner1 miner.asl
+		        [host="localhost", port=12300, username=blumenau1, password=bu43] 
+		        agentArchClass jasonteam.ClimaArchitecture;
+		miner2 miner.asl
+		        [host="localhost", port=12300, username=blumenau2, password=bu43] 
+		        agentArchClass jasonteam.ClimaArchitecture;
+		miner3 miner.asl
+		        [host="localhost", port=12300, username=blumenau3, password=bu43] 
+   		        agentArchClass jasonteam.ClimaArchitecture;
+		miner4 miner.asl
+		        [host="localhost", port=12300, username=blumenau4, password=bu43, verbose=0] 
+		        agentArchClass jasonteam.ClimaArchitecture;
+}
