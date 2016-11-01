@@ -1,4 +1,4 @@
-Implementation of Asynchronous Backtraking algorithm (ABT) from Makoto 
+Implementation of Asynchronous Backtraking Algorithm (ABT) from Makoto 
 Yokoo's book (Distributed Constraint Satisfaction, Springer, 2000), Fig. 3.4,
 p.59, with a simplification in the backtrack procedure: all nogoods are not 
 computed and sent: only the agent's view is considered as a nogood 
