@@ -1,0 +1,12 @@
+// Copyright (C) Gauthier Picard, 2010
+// Use and distribution, without any warranties, under the terms of the
+// GNU Library General Public License, readable in http://www.fsf.org/copyleft/lgpl.html
+
+// ABT DisCSP Solver
+MAS abt {
+	infrastructure: Centralised
+	agents:
+		q1_4; q2_4; q3_4; q4_4; 
+
+	//classpath: "/Applications/Jason-1.3.2/lib/jason.jar"; 
+}

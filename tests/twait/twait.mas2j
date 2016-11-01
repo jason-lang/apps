@@ -1,0 +1,10 @@
+MAS twait {
+
+	infrastructure: Centralised
+
+	agents:
+		agent1 sample_agent [verbose=0];
+
+	aslSourcePath:
+		"src/asl";
+}
