@@ -1,0 +1,75 @@
+<!ENTITY teamAB SYSTEM "accounts-AB.xml">
+<!ENTITY teamMAS1 SYSTEM "accounts-MAS1.xml">
+<!ENTITY teamA SYSTEM "accounts-A.xml">
+<!ENTITY teamB SYSTEM "accounts-B.xml">
+<!ENTITY teamUFSC SYSTEM "accounts-UFSC.xml">
+<!ENTITY teamUSP SYSTEM "accounts-USP.xml">
+<!ENTITY teamPGIM SYSTEM "accounts-PGIM.xml">
+<!ENTITY teamPython-DTU SYSTEM "accounts-Python-DTU.xml">
+<!ENTITY teamAiWYX SYSTEM "accounts-AiWYX.xml">
+<!ENTITY teamTUB SYSTEM "accounts-TUB.xml">
+<!ENTITY teamUCD SYSTEM "accounts-UCD.xml">
+<!ENTITY teamStreett SYSTEM "accounts-Streett.xml">
+<!ENTITY teamTargaryen SYSTEM "accounts-Targaryen.xml">
+<!ENTITY TUCBOT SYSTEM "accounts-TUCBOT.xml">
+
+<!ENTITY simulation1 SYSTEM "sim1.xml">
+<!ENTITY simulation2 SYSTEM "sim2.xml">
+<!ENTITY simulation3 SYSTEM "sim3.xml">
+<!ENTITY simulation4 SYSTEM "sim4.xml">
+<!ENTITY simulation5 SYSTEM "sim5.xml">
+<!ENTITY simulation6 SYSTEM "sim6.xml">
+<!ENTITY simulation7 SYSTEM "sim7.xml">
+
+<!ENTITY actionclassmap SYSTEM "actionclassmap.xml">
+<!ENTITY sim-server SYSTEM "sim-server.xml">
+
+<!ENTITY actions SYSTEM "sim-actions.xml">
+<!ENTITY roles SYSTEM "sim-roles.xml">
+<!ENTITY achievements SYSTEM "sim-achievements.xml">
+<!ENTITY agents SYSTEM "sim-agents.xml">
+
+<!ATTLIST conf
+	backuppath CDATA "backup"
+	launch-sync-type CDATA "key"
+	reportpath CDATA "./backup/"
+	time CDATA "14:05"
+	time-to-launch CDATA "10000"
+	tournamentmode CDATA "0"
+	tournamentname CDATA "Mars2013-contest"
+	debug-level CDATA "normal"
+>
+	
+<!ATTLIST simulation 
+	configurationclass CDATA "massim.competition2013.GraphSimulationConfiguration"
+	rmixmlobsserverhost CDATA "localhost"
+	rmixmlobsserverport CDATA "1099"
+	simulationclass CDATA "massim.competition2013.GraphSimulation"
+	xmlstatisticsobserver CDATA ""
+	visualisationobserver CDATA ""
+	visualisationobserver-outputpath CDATA "./output"
+	rmixmlobserverweb CDATA "massim.competition2013.GraphSimulationRMIXMLDocumentObserverWebInterface"
+	xmlobserver CDATA ""
+	xmlobserverpath CDATA "./backup/xmls"
+	
+	statisticsobserver CDATA "massim.competition2013.GraphSimulationStatisticsObserver"
+	statisticsobserverpath CDATA "statistics"
+	rmixmlobserver CDATA "massim.competition2013.GraphSimulationRMIXMLDocumentObserver"
+>
+	
+<!ATTLIST configuration
+	xmlns:meta CDATA "http://www.tu-clausthal.de/"
+	maxNumberOfSteps CDATA "750"
+	numberOfAgents CDATA "56"
+	numberOfTeams CDATA "2"
+	gridWidth CDATA "21"
+	gridHeight CDATA "21"
+	cellWidth CDATA "100"
+	minNodeWeight CDATA "1"
+	maxNodeWeight CDATA "10"
+	minEdgeCost CDATA "1"
+	maxEdgeCost CDATA "10"
+	mapGenerator CDATA "GraphGenerator2013"
+
+	randomSeed CDATA "1378558673004"
+>

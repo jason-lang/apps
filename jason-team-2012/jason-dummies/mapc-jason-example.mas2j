@@ -1,0 +1,65 @@
+/*
+    Example of Jason agents for 
+	Multiagent Programming Contest 2011-2012
+	http://www.multiagentcontest.org/
+	
+	These agents use the EIS interface, see the Sec 4
+	of eismassim.pdf for available actions and
+	perception. Note that the scheduling is managed by the
+	agents and not by EIS.
+	
+	The (very simple) strategy is based on the java 
+	agents provided by MASSIM. Only the explorer is 
+	programmed, but it can inspire you for the other 
+	agents.
+	
+	See mas.log for the output of the execution once
+	the MASConsole has too much debug information.
+	
+	Steps to run
+	1. startServer
+	2. startAgents (teamA)
+	3. run this application
+	
+    -- by Jomi
+*/
+
+MAS demo1ag {
+   infrastructure: Centralised
+
+   // Environment initialisation
+   environment:  massim.CustomEISEnv (
+                       "lib/eismassim-1.0.3a.jar",   // jar file containing the environment implementation 
+                       //agent_entity(explorer, connectionB1)
+                       agent_entity(explorer1, connectionB1), // agent x entities relation
+					   agent_entity(explorer2, connectionB2), // password and more details in eismassimconfig.xml
+					   agent_entity(repairer1, connectionB3),
+					   agent_entity(repairer2, connectionB4),
+					   agent_entity(saboteur1, connectionB5),
+					   agent_entity(saboteur2, connectionB6),
+					   agent_entity(sentinel1, connectionB7),
+					   agent_entity(sentinel2, connectionB8),
+					   agent_entity(inspector1,connectionB9),
+					   agent_entity(inspector2,connectionB10),
+                       agent_entity(explorer3, connectionB11),
+					   agent_entity(explorer4, connectionB12),
+					   agent_entity(repairer3, connectionB13),
+					   agent_entity(repairer4, connectionB14),
+					   agent_entity(saboteur3, connectionB15),
+					   agent_entity(saboteur4, connectionB16),
+					   agent_entity(sentinel3, connectionB17),
+					   agent_entity(sentinel4, connectionB18),
+					   agent_entity(inspector3,connectionB19),
+					   agent_entity(inspector4,connectionB20)
+                )
+
+   agents:  explorer [mindinspector="file(cycle,xml,log)"]   // the mindinspector option store all mind states in the log directory, useful for debug but quite expensive (remove during contest)
+			          #4;                                     // is is available in Jason 1.3.5
+            repairer  #4;
+			saboteur  #4;
+			sentinel  #4;
+			inspector #4;
+   
+   aslSourcePath: "src/asl";       
+  
+}

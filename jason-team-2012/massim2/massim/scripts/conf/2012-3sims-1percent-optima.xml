@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE conf SYSTEM "helpers/2012/config.dtd">
+
+<conf>
+	&sim-server;
+	randomWeight = "0";
+	gradientWeight = "0";
+	optimaWeight = "1";
+	optimaPercentage = "1";
+	blurIterations = "3";
+	<match>
+		&simulation1;
+		&simulation2;
+		&simulation3;
+	</match>
+	
+	<accounts>
+		&actionclassmap;
+		
+		&teamA;
+		&teamB;
+	</accounts>
+</conf>
+

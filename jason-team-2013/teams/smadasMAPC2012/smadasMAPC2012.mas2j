@@ -1,0 +1,54 @@
+MAS smadasMAPC2013 {
+
+	infrastructure: Centralised
+
+   // Environment initialisation
+   environment: env.CustomEISEnv (
+                       //"lib/eismassim-1.0.3.jar",   // jar file containing the environment implementation 
+                       "lib/eismassim-1.0.3.jar",   // jar file containing the environment implementation
+						agent_entity(explorer1, connectionA1, a1), // agent x entities relation
+						agent_entity(explorer2, connectionA2, a2), // password and more details in eismassimconfig.xml
+						agent_entity(explorer3, connectionA3, a3),
+						agent_entity(explorer4, connectionA4, a4),
+						agent_entity(explorer5, connectionA5, a5),
+						agent_entity(explorer6, connectionA6, a6),
+						
+						agent_entity(repairer1, connectionA7, a7),
+						agent_entity(repairer2, connectionA8, a8),
+						agent_entity(repairer3, connectionA9, a9),
+						agent_entity(repairer4, connectionA10, a10),
+						agent_entity(repairer5, connectionA11, a11),
+						agent_entity(repairer6, connectionA12, a12),
+						
+						agent_entity(saboteur1, connectionA13, a13),
+						agent_entity(saboteur2, connectionA14, a14),
+						agent_entity(saboteur3, connectionA15, a15),
+						agent_entity(saboteur4, connectionA16, a16),
+						
+						agent_entity(sentinel1, connectionA17, a17),
+						agent_entity(sentinel2, connectionA18, a18),
+						agent_entity(sentinel3, connectionA19, a19),
+						agent_entity(sentinel4, connectionA20, a20),
+						agent_entity(sentinel5, connectionA21, a21),
+						agent_entity(sentinel6, connectionA22, a22),
+						
+						agent_entity(inspector1,connectionA23, a23),
+						agent_entity(inspector2,connectionA24, a24),
+						agent_entity(inspector3,connectionA25, a25),
+						agent_entity(inspector4,connectionA26, a26),
+						agent_entity(inspector5,connectionA27, a27),
+						agent_entity(inspector6,connectionA28, a28)
+                )
+
+   agents:
+		    coach;
+		    angel;
+			explorer agentClass env.CustomBUF agentArchClass env.MixedAgentArch #6;
+            repairer agentClass env.CustomBUF agentArchClass env.MixedAgentArch #6;
+			saboteur agentClass env.CustomBUF agentArchClass env.MixedAgentArch #4;
+			sentinel agentClass env.CustomBUF agentArchClass env.MixedAgentArch #6;
+			inspector agentClass env.CustomBUF agentArchClass env.MixedAgentArch #6; 
+
+	aslSourcePath:
+		"src/asl";
+}

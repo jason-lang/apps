@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organisational-specification 
+
+    id="joj"
+    os-version="0.6"
+  
+    xmlns='http://moise.sourceforge.net/os'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://moise.sourceforge.net/os http://moise.sourceforge.net/xml/os.xsd'>
+    
+    <structural-specification>
+        <role-definitions>
+            <role id="leader" />
+            <role id="explorer" />
+            <role id="explorerLeader"><extends role="explorer"/></role>
+            <role id="saboteur" />
+            <role id="saboteurLeader"></role>
+            <role id="repairer" />
+            <role id="repairerLeader"></role>
+            <role id="inspector" />
+            <role id="inspectorLeader"><extends role="inspector"/></role>
+            <role id="sentinel" />
+            <role id="sentinelLeader"><extends role="sentinel"/></role>
+            <role id="pivot" />
+        </role-definitions>
+
+         <group-specification id="team">
+            <roles>
+                <role id="leader" min="1" max="1"/>
+                
+                <role id="explorerLeader" min="1" max="1"/>
+                <role id="saboteurLeader" min="1" max="1"/>
+                <role id="repairerLeader" min="1" max="1"/>
+                <role id="inspectorLeader" min="1" max="1"/>
+                <role id="sentinelLeader" min="1" max="1"/>
+            </roles>
+            <subgroups>
+                <group-specification id="subTeam" min="2" max="2">
+                    <roles>
+		                <role id="explorer" min="3" max="3"/>
+		                <role id="inspector" min="3" max="3"/>
+		                <role id="sentinel" min="3" max="3"/>
+		                <role id="saboteur" min="2" max="2"/>
+		                <role id="repairer" min="3" max="3"/>
+                    </roles>
+                </group-specification>
+                
+                <group-specification id="pivotsGroup" min="1" max="1">
+                    <roles>
+		                <role id="pivot" min="24" max="24"/>
+                    </roles>
+                </group-specification>
+            </subgroups>
+         </group-specification> 
+            
+            
+    </structural-specification>
+    
+    <functional-specification>
+        <scheme id="domainMars" >
+            <goal id="domainMars" min="1">
+              <plan operator="parallel">
+                  <goal id="discoverZones" ds="ataque">
+		              <plan operator="sequence">
+			              <goal id="exploration" ds="ataque">
+				              <plan operator="parallel">
+				                    <goal id="probeAll" min="1" ds="probe all vertices" />
+				                    <goal id="surveyAll" min="1" ds="survey all edges" />             
+				              </plan>
+			              </goal>
+		              	  <goal id="occupyPivotVertices" ds="occupy pivot vertices" type="maintenance"/>
+		              </plan>
+              	  </goal>
+              	  <goal id="discoverAllSaboteurs" min="1" ds="discover all saboteurs" />
+              </plan>               
+            </goal>
+            
+            <mission id="m1" min="0" >
+                <goal id="probeAll" />
+            </mission>
+            
+            <mission id="m2" min="0" >
+                <goal id="surveyAll" />
+                <goal id="occupyPivotVertices" />
+            </mission>
+            
+            <mission id="m3" min="0" >
+                <goal id="discoverAllSaboteurs" />
+            </mission>
+        </scheme>
+    </functional-specification>
+     <normative-specification>
+        <norm id="n1" type="obligation" role="explorer"     mission="m1" />
+        <norm id="n2" type="obligation" role="sentinel"   mission="m2" />
+        <norm id="n3" type="obligation" role="inspector" mission="m3" />
+    </normative-specification>
+</organisational-specification>
+

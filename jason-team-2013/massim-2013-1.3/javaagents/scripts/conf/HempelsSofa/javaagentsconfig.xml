@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<javaAgentsConfig verbose="no">
+  <agents>
+    <agent name="agentA1" entity="connectionA1" class="mas.agentsHempelsSofa.StrategyBasedExplorerAgent" team="A"/>
+    <agent name="agentA2" entity="connectionA2" class="mas.agentsHempelsSofa.StrategyBasedExplorerAgent" team="A"/>
+    <agent name="agentA3" entity="connectionA3" class="mas.agentsHempelsSofa.StrategyBasedRepairerAgent" team="A"/>
+    <agent name="agentA4" entity="connectionA4" class="mas.agentsHempelsSofa.StrategyBasedRepairerAgent" team="A"/>
+    <agent name="agentA5" entity="connectionA5" class="mas.agentsHempelsSofa.StrategyBasedSaboteurAgent" team="A"/>
+    <agent name="agentA6" entity="connectionA6" class="mas.agentsHempelsSofa.StrategyBasedSaboteurAgent" team="A"/>
+    <agent name="agentA7" entity="connectionA7" class="mas.agentsHempelsSofa.StrategyBasedSentinelAgent" team="A"/>
+    <agent name="agentA8" entity="connectionA8" class="mas.agentsHempelsSofa.StrategyBasedSentinelAgent" team="A"/>
+    <agent name="agentA9" entity="connectionA9" class="mas.agentsHempelsSofa.StrategyBasedInspectorAgent" team="A"/>
+    <agent name="agentA10" entity="connectionA10" class="mas.agentsHempelsSofa.StrategyBasedInspectorAgent" team="A"/>
+    <agent name="agentA11" entity="connectionA11" class="mas.agentsHempelsSofa.StrategyBasedExplorerAgent" team="A"/>
+    <agent name="agentA12" entity="connectionA12" class="mas.agentsHempelsSofa.StrategyBasedExplorerAgent" team="A"/>
+    <agent name="agentA13" entity="connectionA13" class="mas.agentsHempelsSofa.StrategyBasedRepairerAgent" team="A"/>
+    <agent name="agentA14" entity="connectionA14" class="mas.agentsHempelsSofa.StrategyBasedRepairerAgent" team="A"/>
+    <agent name="agentA15" entity="connectionA15" class="mas.agentsHempelsSofa.StrategyBasedSaboteurAgent" team="A"/>
+    <agent name="agentA16" entity="connectionA16" class="mas.agentsHempelsSofa.StrategyBasedSaboteurAgent" team="A"/>
+    <agent name="agentA17" entity="connectionA17" class="mas.agentsHempelsSofa.StrategyBasedSentinelAgent" team="A"/>
+    <agent name="agentA18" entity="connectionA18" class="mas.agentsHempelsSofa.StrategyBasedSentinelAgent" team="A"/>
+    <agent name="agentA19" entity="connectionA19" class="mas.agentsHempelsSofa.StrategyBasedInspectorAgent" team="A"/>
+    <agent name="agentA20" entity="connectionA20" class="mas.agentsHempelsSofa.StrategyBasedInspectorAgent" team="A"/>
+  </agents>
+</javaAgentsConfig>

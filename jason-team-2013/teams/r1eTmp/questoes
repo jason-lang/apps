@@ -1,0 +1,3 @@
+Depois de dar .abolish / stopFocus / lookupArtifact / focus não aparecem no debug as crenças, porém elas existem.
+
+Quando recebe dados do EISMassim todas as percepções do cartago são apagadas e dá erro de null caso alguma propriedade observável é atualizada.

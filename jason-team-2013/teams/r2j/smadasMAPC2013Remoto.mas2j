@@ -1,0 +1,58 @@
+MAS smadasMAPC2013 {
+
+	infrastructure: Centralised
+
+   // Environment initialisation
+   environment: env.CustomEISEnv (
+                       //"lib/eismassim-1.0.3.jar",   // jar file containing the environment implementation 
+                       "lib/eismassim-1.0.3.jar",   // jar file containing the environment implementation
+						agent_entity(explorer1, connectionB1, "UFSC1"), // agent x entities relation
+						agent_entity(explorer2, connectionB2, "UFSC2"), // password and more details in eismassimconfig.xml
+						agent_entity(explorer3, connectionB3, "UFSC3"),
+						agent_entity(explorer4, connectionB4, "UFSC4"),
+						agent_entity(explorer5, connectionB5, "UFSC5"),
+						agent_entity(explorer6, connectionB6, "UFSC6"),
+						
+						agent_entity(repairer1, connectionB7, "UFSC7"),
+						agent_entity(repairer2, connectionB8, "UFSC8"),
+						agent_entity(repairer3, connectionB9, "UFSC9"),
+						agent_entity(repairer4, connectionB10, "UFSC10"),
+						agent_entity(repairer5, connectionB11, "UFSC11"),
+						agent_entity(repairer6, connectionB12, "UFSC12"),
+						
+						agent_entity(saboteur1, connectionB13, "UFSC13"),
+						agent_entity(saboteur2, connectionB14, "UFSC14"),
+						agent_entity(saboteur3, connectionB15, "UFSC15"),
+						agent_entity(saboteur4, connectionB16, "UFSC16"),
+						
+						agent_entity(sentinel1, connectionB17, "UFSC17"),
+						agent_entity(sentinel2, connectionB18, "UFSC18"),
+						agent_entity(sentinel3, connectionB19, "UFSC19"),
+						agent_entity(sentinel4, connectionB20, "UFSC20"),
+						agent_entity(sentinel5, connectionB21, "UFSC21"),
+						agent_entity(sentinel6, connectionB22, "UFSC22"),
+						
+						agent_entity(inspector1,connectionB23, "UFSC23"),
+						agent_entity(inspector2,connectionB24, "UFSC24"),
+						agent_entity(inspector3,connectionB25, "UFSC25"),
+						agent_entity(inspector4,connectionB26, "UFSC26"),
+						agent_entity(inspector5,connectionB27, "UFSC27"),
+						agent_entity(inspector6,connectionB28, "UFSC28")
+                )
+
+   agents:
+		    coach agentArchClass c4jason.CAgentArch;
+			explorer agentClass env.CustomBUF agentArchClass env.MixedAgentArch agentArchClass c4jason.CAgentArch #6;
+            repairer agentClass env.CustomBUF agentArchClass env.MixedAgentArch agentArchClass c4jason.CAgentArch #6;
+			saboteur agentClass env.CustomBUF agentArchClass env.MixedAgentArch agentArchClass c4jason.CAgentArch #4;
+			sentinel agentClass env.CustomBUF agentArchClass env.MixedAgentArch agentArchClass c4jason.CAgentArch #6;
+			inspector agentClass env.CustomBUF agentArchClass env.MixedAgentArch agentArchClass c4jason.CAgentArch #6; 
+		
+	classpath:
+		"../lib/moise.jar";
+		"../lib/cartago.jar";
+		"../lib/c4jason.jar";
+
+	aslSourcePath:
+		"src/asl";
+}

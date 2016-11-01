@@ -1,0 +1,60 @@
+<!ENTITY teamAB SYSTEM "accounts-AB.xml">
+<!ENTITY teamMAS1 SYSTEM "accounts-MAS1.xml">
+<!ENTITY teamA SYSTEM "accounts-A.xml">
+<!ENTITY teamB SYSTEM "accounts-B.xml">
+
+<!ENTITY simulation1 SYSTEM "sim1.xml">
+<!ENTITY simulation2 SYSTEM "sim2.xml">
+<!ENTITY simulation3 SYSTEM "sim3.xml">
+
+<!ENTITY actionclassmap SYSTEM "actionclassmap.xml">
+<!ENTITY sim-server SYSTEM "sim-server.xml">
+
+<!ENTITY actions SYSTEM "sim-actions.xml">
+<!ENTITY roles SYSTEM "sim-roles.xml">
+<!ENTITY achievements SYSTEM "sim-achievements.xml">
+<!ENTITY agents SYSTEM "sim-agents.xml">
+
+<!ATTLIST conf
+	backuppath CDATA "backup"
+	launch-sync-type CDATA "key"
+	reportpath CDATA "./backup/"
+	time CDATA "18:06"
+	time-to-launch CDATA "10000"
+	tournamentmode CDATA "0"
+	tournamentname CDATA "Mars2012"
+	debug-level CDATA "normal"
+	>
+	
+<!ATTLIST simulation 
+	configurationclass CDATA "massim.competition2012.GraphSimulationConfiguration"
+	rmixmlobsserverhost CDATA "localhost"
+	rmixmlobsserverport CDATA "1099"
+	rmixmlobserver CDATA "massim.competition2012.GraphSimulationRMIXMLDocumentObserver"
+	simulationclass CDATA "massim.competition2012.GraphSimulation"
+	xmlstatisticsobserver CDATA "massim.competition2012.GraphSimulationXMLStatisticsObserver"
+	
+	visualisationobserver CDATA "massim.competition2012.GraphSimulationVisualizationObserver"
+	visualisationobserver-outputpath CDATA "output"
+	rmixmlobserverweb CDATA "massim.competition2012.GraphSimulationRMIXMLDocumentObserverWebInterface"
+	xmlobserver CDATA "massim.competition2012.GraphSimulationXMLObserver"
+	xmlobserverpath CDATA "./backup/xmls"
+	
+	statisticsobserver CDATA "massim.competition2012.GraphSimulationStatisticsObserver"
+	statisticsobserverpath CDATA "statistics"
+	>
+	
+<!ATTLIST configuration
+	xmlns:meta CDATA "http://www.tu-clausthal.de/"
+	maxNumberOfSteps CDATA "750"
+	numberOfAgents CDATA "40"
+	numberOfTeams CDATA "2"
+	gridWidth CDATA "21"
+	gridHeight CDATA "21"
+	cellWidth CDATA "100"
+	minNodeWeight CDATA "1"
+	maxNodeWeight CDATA "10"
+	minEdgeCost CDATA "1"
+	maxEdgeCost CDATA "10"
+	mapGenerator CDATA "GraphGeneratorTriangBalOpt"
+	>

@@ -1,0 +1,133 @@
+2013-1.3:
+- SVG visualization: Bug fixes and arrows added.
+- Statistics observer: Functionality for creating a table for the buying transactions added.
+- Bugs in the scenario fixed:
+    - The ranged probe action was returning the wrong node.
+    - The ranged inspect did not return a result.
+    - The map generation was not fully symmetric.
+
+2013-1.2:
+
+- SVG visualization adapted.
+- New map generation algorithm.
+
+
+2013-1.1:
+
+MARSMONITOR:
+- Dropdown agents’ list:
+    - Items ordered
+    - Added “empty” selection.
+    - Fixed responsiveness (update instantly at selection, not at next refresh).
+- Selected agent marked in map.
+- New visualization including
+	-different agent polygons
+	-lines to the targets of ranged actions (excluding survey)
+	-a status field displaying lastAction and lastActionResult
+
+
+2013-1.0:
+
+MASSIM
+- changed node-name-prefix from vertex to v
+- bugfixes
+- changed behavior of the actions inspect, probe, survey, attack and repair
+- statistics: scaled charts to have the same range per simulation
+- adapted configuration files for 2013
+- added new return-codes for 'lastActionResult'
+	-failed_unreachable: target of the goto-action exists, but is not reachable
+	-failed_in_range: ranged action failed, because the effective range did not suffice
+	-failed_out_of_range: ranged action failed, because the target was outside the visibility range
+
+EISMASSIM
+- added entity for 2013 scenario
+
+JAVAAGENTS
+- added simple agents for debugging
+- added new actions to MarsUtil
+- changed some configurations for 28 agents, added debugconfig
+
+2012-2.0:
+
+MARSMONITOR:
+- make background disableable
+
+MASSIM
+- new statistics observer
+- bugfixes
+- improved action-failed messages
+- improved map-generation algorithm
+
+EISMASSIM:
+- reflect agent-type
+
+GENERAL:
+- team HempelsSofa team included
+- team Targaryen included
+- improved shell-scripts
+
+2012-1.0.0:
+
+MASSIM:
+- new scenario based on the 2012 one
+- scaled up (more agents, bigger maps)
+- improved outcome of actions (lastActionResult)
+- increased max-energy of all agents to reduce recharges
+
+EISMASSIM:
+- added lastActionParam
+
+JAVAAGENTS:
+- scripts for two teams a 20 agents
+
+DOCUMENTS:
+- updated to reflect the 2012 adaptations
+
+
+2011-1.0.2:
+
+MASSIM:
+- server generates SVGs and a proper results-file
+
+EISMASSIM:
+- now sends anonymous statistics
+
+JAVAAGENTS
+- step() now catches exceptions
+- 0815 agents team is included
+
+MARSMONITOR
+- minor fixes
+
+DOCUMENTS
+- updated
+
+
+
+2011-1.0.1:
+
+MASSIM:
+- added symmetrical graph generation
+- added config-parameter nodeWeighting. nodeWeight will now be computed of a random and a gradient component
+- added config-parameter randomSeed
+- added config-parameter mapGenerator
+- added four new server-configuration files
+- added role to the agent's initial perception
+- Bugfixes.
+- Flash finally removed.
+- Debugger improved.
+- Modified the start scripts to only use bash (Ubuntu Bug)
+- Default debug level set to normal.
+- GridSimulation Report was renamed to Mars2011 Report but the config file was not changed (Bugfix)
+- Scripts are now executable again.
+
+EISMASSIM:
+- improved scheduling of EISMASSim
+- made iilang-output of EISMASSim deactivatable
+- New statistic function for EISMASSim
+- Modified the start script to only use bash (Ubuntu Bug)
+- improved performance
+- Scripts are now executable again.
+
+DOCUMENTS:
+- improved version of the documents

@@ -1,0 +1,86 @@
+FUTURE RELEASE(S)
+
+MARSMONITOR:
+- make background disableable
+
+2012-2.0:
+
+MASSIM
+- new statistics observer
+- bugfixes
+- improved action-failed messages
+- improved map-generation algorithm
+
+EISMASSIM:
+- reflect agent-type
+
+GENERAL:
+- team HempelsSofa team included
+- team Targaryen included
+- improved shell-scripts
+
+2012-1.0.0:
+
+MASSIM:
+- new scenario based on the 2012 one
+- scaled up (more agents, bigger maps)
+- improved outcome of actions (lastActionResult)
+- increased max-energy of all agents to reduce recharges
+
+EISMASSIM:
+- added lastActionParam
+
+JAVAAGENTS:
+- scripts for two teams a 20 agents
+
+DOCUMENTS:
+- updated to reflect the 2012 adaptations
+
+
+2011-1.0.2:
+
+MASSIM:
+- server generates SVGs and a proper results-file
+
+EISMASSIM:
+- now sends anonymous statistics
+
+JAVAAGENTS
+- step() now catches exceptions
+- 0815 agents team is included
+
+MARSMONITOR
+- minor fixes
+
+DOCUMENTS
+- updated
+
+
+
+2011-1.0.1:
+
+MASSIM:
+- added symmetrical graph generation
+- added config-parameter nodeWeighting. nodeWeight will now be computed of a random and a gradient component
+- added config-parameter randomSeed
+- added config-parameter mapGenerator
+- added four new server-configuration files
+- added role to the agent's initial perception
+- Bugfixes.
+- Flash finally removed.
+- Debugger improved.
+- Modified the start scripts to only use bash (Ubuntu Bug)
+- Default debug level set to normal.
+- GridSimulation Report was renamed to Mars2011 Report but the config file was not changed (Bugfix)
+- Scripts are now executable again.
+
+EISMASSIM:
+- improved scheduling of EISMASSim
+- made iilang-output of EISMASSim deactivatable
+- New statistic function for EISMASSim
+- Modified the start script to only use bash (Ubuntu Bug)
+- improved performance
+- Scripts are now executable again.
+
+DOCUMENTS:
+- improved version of the documents

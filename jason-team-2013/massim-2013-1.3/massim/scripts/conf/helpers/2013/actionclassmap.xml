@@ -1,0 +1,4 @@
+<actionclassmap name="Graph">
+		<actionclass class="massim.competition2013.GraphSimulationAgentAction" id="action"/>
+		<actionclass class="massim.framework.InvalidAction" id="invalid"/>
+</actionclassmap>

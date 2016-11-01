@@ -1,0 +1,20 @@
+<simulation
+        id="2012-tournament-sim1"
+		>
+			<configuration 
+				numberOfNodes="300"
+				randomWeight = "0"
+				gradientWeight = "0"
+				optimaWeight = "100"
+				blurIterations = "8"
+				optimaPercentage = "5">
+			
+			&actions;
+			&roles;	
+			&achievements;
+				
+			</configuration>
+			
+			&agents;
+			
+</simulation>

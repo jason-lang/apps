@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interfaceConfig scenario="mars2012" host="localhost" port="12300" scheduling="yes" times="no" notifications="no" queued="no" statisticsFile="no" statisticsShell="no" submitStatistic="no">
+  <entities>
+    <entity name="connectionA1" username="a1" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA2" username="a2" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA3" username="a3" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA4" username="a4" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA5" username="a5" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA6" username="a6" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA7" username="a7" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA8" username="a8" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA9" username="a9" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA10" username="a10" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA11" username="a11" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA12" username="a12" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA13" username="a13" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA14" username="a14" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA15" username="a15" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA16" username="a16" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA17" username="a17" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA18" username="a18" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA19" username="a19" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA20" username="a20" password="1" iilang="no" xml="no"/>
+  </entities>
+</interfaceConfig>

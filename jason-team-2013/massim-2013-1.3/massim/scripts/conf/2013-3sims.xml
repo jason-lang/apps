@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE conf SYSTEM "helpers/2013/config.dtd">
+
+<conf>
+	&sim-server;
+	<match>
+
+		&simulation2;
+		&simulation5;
+		&simulation6;
+		&simulation3;
+		&simulation1;
+		&simulation4;
+		&simulation7;
+
+		&simulation5;
+		&simulation2;
+		&simulation3;
+		&simulation6;
+		&simulation7;
+		&simulation1;
+		&simulation4;
+
+		&simulation1;
+		&simulation6;
+		&simulation2;
+		&simulation7;
+		&simulation5;
+		&simulation4;
+		&simulation3;
+
+		&simulation1;
+		&simulation7;
+		&simulation3;
+		&simulation5;
+		&simulation2;
+		&simulation4;
+		&simulation6;
+
+	</match>
+	
+	<accounts>
+		&actionclassmap;
+		
+		&teamA;
+		&teamB;
+	</accounts>
+</conf>
+

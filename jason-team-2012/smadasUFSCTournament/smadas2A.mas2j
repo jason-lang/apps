@@ -1,0 +1,39 @@
+MAS smadasMAPC2012 {
+   infrastructure: Centralised
+
+   // Environment initialisation
+   environment: env.CustomEISEnv (
+                       "lib/eismassim-1.0.3a.jar",   // jar file containing the environment implementation
+                        agent_entity(explorer1, connectionA1, a1), // agent x entities relation
+                        agent_entity(explorer2, connectionA2, a2), // password and more details in eismassimconfig.xml
+                        agent_entity(repairer1, connectionA3, a3),
+                        agent_entity(repairer2, connectionA4, a4),
+                        agent_entity(saboteur1, connectionA5, a5),
+                        agent_entity(saboteur2, connectionA6, a6),
+                        agent_entity(sentinel1, connectionA7, a7),
+                        agent_entity(sentinel2, connectionA8, a8),
+                        agent_entity(inspector1,connectionA9, a9),
+                        agent_entity(inspector2,connectionA10, a10),
+                        agent_entity(explorer3, connectionA11, a11),
+                        agent_entity(explorer4, connectionA12, a12),
+                        agent_entity(repairer3, connectionA13, a13),
+                        agent_entity(repairer4, connectionA14, a14),
+                        agent_entity(saboteur3, connectionA15, a15),
+                        agent_entity(saboteur4, connectionA16, a16),
+                        agent_entity(sentinel3, connectionA17, a17),
+                        agent_entity(sentinel4, connectionA18, a18),
+                        agent_entity(inspector3,connectionA19, a19),
+                        agent_entity(inspector4,connectionA20, a20)
+                )
+
+   agents:
+            angel;
+            coach;
+            explorer  agentArchClass env.MixedAgentArch #4;
+            repairer  agentArchClass env.MixedAgentArch #4;
+            saboteur  agentArchClass env.MixedAgentArch #4;
+            sentinel  agentArchClass env.MixedAgentArch #4;
+            inspector agentArchClass env.MixedAgentArch #4;
+
+   aslSourcePath: "src/asl";
+}

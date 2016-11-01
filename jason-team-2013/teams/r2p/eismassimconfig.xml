@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interfaceConfig scenario="mars2013" host="localhost" port="12300" 
+        scheduling="no"      times="no" notifications="yes" queued="no" 
+        statisticsFile="no" statisticsShell="no" submitStatistic="no">
+		<!-- the schedule must be no to work with eis-jason -->
+  <entities>
+    <entity name="connectionA1" username="UFSCOther1" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA2" username="UFSCOther2" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA3" username="UFSCOther3" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA4" username="UFSCOther4" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA5" username="UFSCOther5" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA6" username="UFSCOther6" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA7" username="UFSCOther7" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA8" username="UFSCOther8" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA9" username="UFSCOther9" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA10" username="UFSCOther10" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA11" username="UFSCOther11" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA12" username="UFSCOther12" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA13" username="UFSCOther13" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA14" username="UFSCOther14" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA15" username="UFSCOther15" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA16" username="UFSCOther16" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA17" username="UFSCOther17" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA18" username="UFSCOther18" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA19" username="UFSCOther19" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA20" username="UFSCOther20" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA21" username="UFSCOther21" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA22" username="UFSCOther22" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA23" username="UFSCOther23" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA24" username="UFSCOther24" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA25" username="UFSCOther25" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA26" username="UFSCOther26" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA27" username="UFSCOther27" password="1" iilang="no" xml="no"/>
+    <entity name="connectionA28" username="UFSCOther28" password="1" iilang="no" xml="no"/>
+    
+    <entity name="connectionB1" username="UFSCOther1" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB2" username="UFSCOther2" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB3" username="UFSCOther3" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB4" username="UFSCOther4" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB5" username="UFSCOther5" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB6" username="UFSCOther6" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB7" username="UFSCOther7" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB8" username="UFSCOther8" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB9" username="UFSCOther9" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB10" username="UFSCOther10" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB11" username="UFSCOther11" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB12" username="UFSCOther12" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB13" username="UFSCOther13" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB14" username="UFSCOther14" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB15" username="UFSCOther15" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB16" username="UFSCOther16" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB17" username="UFSCOther17" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB18" username="UFSCOther18" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB19" username="UFSCOther19" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB20" username="UFSCOther20" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB21" username="UFSCOther21" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB22" username="UFSCOther22" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB23" username="UFSCOther23" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB24" username="UFSCOther24" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB25" username="UFSCOther25" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB26" username="UFSCOther26" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB27" username="UFSCOther27" password="1" iilang="no" xml="no"/>
+    <entity name="connectionB28" username="UFSCOther28" password="1" iilang="no" xml="no"/>
+  </entities>
+</interfaceConfig>
+
+

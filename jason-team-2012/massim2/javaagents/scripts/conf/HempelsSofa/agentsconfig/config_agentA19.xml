@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strategyConfig role="Inspector">
+	<strategies>
+		<strategy name="offensive" preference="0.2">
+			<focus name="destroyZones" preference="0.5" />
+			<focus name="destroyAgents" preference="0.0" />
+			<focus name="drawback" preference="0.5" />
+		</strategy>
+		
+		<strategy name="defensive" preference="0.2">
+			<focus name="parry" preference="0.5" />
+			<focus name="runAway" preference="0.5" />
+			<focus name="defensiveRepair" preference="0.0" />
+		</strategy>
+		
+		<strategy name="zone" preference="0.2">
+			<focus name="expand" preference="0.5" />
+			<focus name="stability" preference="0.3" />
+			<focus name="drawback" preference="0.2" />
+		</strategy>
+		
+		<strategy name="buy" preference="0.3">
+			<focus name="battery" preference="0.2" />
+			<focus name="sensor" preference="0.2" />
+			<focus name="shield" preference="0.3" />
+			<focus name="sabotageDevice" preference="0.0" />
+		</strategy>
+		
+		<strategy name="achievements" preference="0.1">
+			<focus name="probedVertices" preference="0.2" goal="5" />
+			<focus name="surveyedEdges" preference="0.2" goal="10" />
+			<focus name="inspectedAgents" preference="0.2" goal="5" />
+			<focus name="successfulAttacks" preference="0.0" goal="5" />
+			<focus name="successfulParries" preference="0" goal="0" />
+			<focus name="areaValue" preference="0.2" goal="20" />
+		</strategy>
+		<strategy name="buyLimits">
+			<limit name="maxEnergy" value="16"/>
+			<limit name="maxHealth" value="12"/>
+			<limit name="visRange"  value="4"/>
+			<limit name="sabotageDevice" value="0"/>
+		</strategy>
+	</strategies>
+</strategyConfig>

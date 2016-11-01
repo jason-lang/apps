@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interfaceConfig scenario="mars2013" host="rb02.in.tu-clausthal.de" port="12300" 
+        scheduling="no"      times="no" notifications="yes" queued="no" 
+        statisticsFile="no" statisticsShell="no" submitStatistic="no">
+		<!-- the schedule must be no to work with eis-jason -->
+  <entities>
+    <entity name="connectionA1" username="a1" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA2" username="a2" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA3" username="a3" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA4" username="a4" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA5" username="a5" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA6" username="a6" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA7" username="a7" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA8" username="a8" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA9" username="a9" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA10" username="a10" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA11" username="a11" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA12" username="a12" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA13" username="a13" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA14" username="a14" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA15" username="a15" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA16" username="a16" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA17" username="a17" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA18" username="a18" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA19" username="a19" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA20" username="a20" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA21" username="a21" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA22" username="a22" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA23" username="a23" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA24" username="a24" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA25" username="a25" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA26" username="a26" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA27" username="a27" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionA28" username="a28" password="ARhEVb" iilang="no" xml="no"/>
+    
+    <entity name="connectionB1" username="UFSC1" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB2" username="UFSC2" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB3" username="UFSC3" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB4" username="UFSC4" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB5" username="UFSC5" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB6" username="UFSC6" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB7" username="UFSC7" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB8" username="UFSC8" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB9" username="UFSC9" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB10" username="UFSC10" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB11" username="UFSC11" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB12" username="UFSC12" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB13" username="UFSC13" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB14" username="UFSC14" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB15" username="UFSC15" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB16" username="UFSC16" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB17" username="UFSC17" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB18" username="UFSC18" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB19" username="UFSC19" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB20" username="UFSC20" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB21" username="UFSC21" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB22" username="UFSC22" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB23" username="UFSC23" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB24" username="UFSC24" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB25" username="UFSC25" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB26" username="UFSC26" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB27" username="UFSC27" password="ARhEVb" iilang="no" xml="no"/>
+    <entity name="connectionB28" username="UFSC28" password="ARhEVb" iilang="no" xml="no"/>
+  </entities>
+</interfaceConfig>
+
+
