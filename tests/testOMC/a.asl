@@ -1,21 +1,3 @@
-/* output
-
-[a] g1
-[a] g1
-[a] no maintenance condition
-[a] Finish g
-[a] g1
-[a] g1
-[a] goal achieved by other means
-[a] Finish g
-[a] g1
-[a] g1
-[a] fail condition
-[a] g failed!
-[a] end test
-
-*/
-
 
 mb.
 
@@ -47,7 +29,7 @@ mb.
    .print("fail condition");
    +fb;
 
-   .wait(500);
+   .wait(2000);
    .print("end test");
-   .stopMAS;
+   //.stopMAS;
 .

@@ -1,8 +1,4 @@
-/* Jason Project */
-
 MAS testeAtomic {
-
-    infrastructure: Centralised
 
     agents:
         a [verbose=1];
@@ -16,403 +12,48 @@ MAS testeAtomic {
 [a] saying: b
 [a] saying: a
 [a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
-[a] saying: b
-[a] saying: a
+...
 [a] saying: 1
-[a] saying: b
-[a] saying: a
-[a] saying: 2
-[a] saying: b
-[a] saying: a
-[a] saying: 3
-[a] saying: b
-[a] saying: a
-[a] saying: 4
-[a] saying: b
-[a] saying: a
-[a] saying: 5
-[a] saying: b
-[a] saying: a
-[a] saying: 6
-[a] saying: b
-[a] saying: a
-[a] saying: 7
-[a] saying: b
-[a] saying: a
-[a] saying: 8
-[a] saying: b
-[a] saying: a
-[a] saying: 9
-[a] saying: b
-[a] saying: a
-[a] saying: 10
-[a] saying: b
-[a] saying: a
-[a] saying: 11
-[a] saying: b
-[a] saying: a
-[a] saying: 12
-[a] saying: b
-[a] saying: a
-[a] saying: 13
-[a] saying: b
-[a] saying: a
-[a] saying: 14
-[a] saying: b
-[a] saying: a
-[a] saying: 15
-[a] saying: b
-[a] saying: a
-[a] saying: 16
-[a] saying: b
-[a] saying: a
-[a] saying: 17
-[a] saying: b
-[a] saying: a
-[a] saying: 18
-[a] saying: b
-[a] saying: a
-[a] saying: 19
-[a] saying: b
-[a] saying: a
-[a] saying: 20
-[a] saying: b
-[a] saying: a
-[a] saying: 21
-[a] saying: b
-[a] saying: a
-[a] saying: 22
-[a] saying: b
-[a] saying: a
-[a] saying: 23
-[a] saying: b
-[a] saying: a
-[a] saying: 24
-[a] saying: b
-[a] saying: a
-[a] saying: 25
-[a] saying: b
-[a] saying: a
-[a] saying: 26
-[a] saying: b
-[a] saying: a
-[a] saying: 27
-[a] saying: b
-[a] saying: a
-[a] saying: 28
-[a] saying: b
-[a] saying: a
-[a] saying: 29
-[a] saying: b
-[a] saying: a
-[a] saying: 30
-[a] saying: b
-[a] saying: a
-[a] saying: 31
-[a] saying: b
-[a] saying: a
-[a] saying: 32
-[a] saying: b
-[a] saying: a
-[a] saying: 33
-[a] saying: b
-[a] saying: a
-[a] saying: 34
-[a] saying: b
-[a] saying: a
-[a] saying: 35
-[a] saying: b
-[a] saying: a
-[a] saying: 36
-[a] saying: b
-[a] saying: a
-[a] saying: 37
-[a] saying: b
-[a] saying: a
-[a] saying: 38
-[a] saying: b
-[a] saying: a
-[a] saying: 39
-[a] saying: b
-[a] saying: a
-[a] saying: 40
-[a] saying: b
-[a] saying: a
-[a] saying: 41
-[a] saying: b
-[a] saying: a
-[a] saying: 42
-[a] saying: b
-[a] saying: a
-[a] saying: 43
-[a] saying: b
-[a] saying: a
-[a] saying: 44
-[a] saying: b
-[a] saying: a
-[a] saying: 45
-[a] saying: b
-[a] saying: a
-[a] saying: 46
-[a] saying: b
-[a] saying: a
-[a] saying: 47
-[a] saying: b
-[a] saying: a
-[a] saying: 48
 [a] saying: b
 [a] saying: a
 [a] saying: 49
 [a] saying: b
 [a] saying: -50
-[a] saying: -51
-[a] saying: -52
-[a] saying: -53
-[a] saying: -54
-[a] saying: -55
-[a] saying: -56
-[a] saying: -57
-[a] saying: -58
-[a] saying: -59
-[a] saying: -60
-[a] saying: -61
-[a] saying: -62
-[a] saying: -63
-[a] saying: -64
-[a] saying: -65
-[a] saying: -66
-[a] saying: -67
-[a] saying: -68
-[a] saying: -69
-[a] saying: -70
-[a] saying: -71
-[a] saying: -72
-[a] saying: -73
-[a] saying: -74
-[a] saying: -75
-[a] saying: -76
-[a] saying: -77
-[a] saying: -78
-[a] saying: -79
-[a] saying: -80
-[a] saying: -81
-[a] saying: -82
-[a] saying: -83
-[a] saying: -84
-[a] saying: -85
-[a] saying: -86
-[a] saying: -87
-[a] saying: -88
-[a] saying: -89
-[a] saying: -90
-[a] saying: -91
-[a] saying: -92
-[a] saying: -93
-[a] saying: -94
-[a] saying: -95
-[a] saying: -96
-[a] saying: -97
-[a] saying: -98
-[a] saying: -99
-[a] saying: a
-[a] saying: =101
-[a] saying: b
-[a] saying: a
-[a] saying: =102
-[a] saying: b
-[a] saying: a
-[a] saying: =103
-[a] saying: b
-[a] saying: a
-[a] saying: =104
-[a] saying: b
-[a] saying: a
-[a] saying: =105
-[a] saying: b
-[a] saying: a
-[a] saying: =106
-[a] saying: b
-[a] saying: a
-[a] saying: =107
-[a] saying: b
-[a] saying: a
-[a] saying: =108
-[a] saying: b
-[a] saying: a
-[a] saying: =109
-[a] saying: b
-[a] saying: a
-[a] saying: =110
-[a] saying: b
-[a] saying: a
-[a] saying: =111
-[a] saying: b
-[a] saying: a
-[a] saying: =112
-[a] saying: b
-[a] saying: a
-[a] saying: =113
-[a] saying: b
-[a] saying: a
-[a] saying: =114
-[a] saying: b
-[a] saying: a
-[a] saying: =115
-[a] saying: b
-[a] saying: a
-[a] saying: =116
-[a] saying: b
-[a] saying: a
-[a] saying: =117
-[a] saying: b
-[a] saying: a
-[a] saying: =118
-[a] saying: b
-[a] saying: a
-[a] saying: =119
-[a] saying: b
-[a] saying: a
-[a] saying: =120
-[a] saying: b
-[a] saying: a
-[a] saying: =121
-[a] saying: b
-[a] saying: a
-[a] saying: =122
-[a] saying: b
-[a] saying: a
-[a] saying: =123
-[a] saying: b
-[a] saying: a
-[a] saying: =124
-[a] saying: b
-[a] saying: a
-[a] saying: =125
-[a] saying: b
-[a] saying: a
-[a] saying: =126
-[a] saying: b
-[a] saying: a
-[a] saying: =127
-[a] saying: b
-[a] saying: a
-[a] saying: =128
-[a] saying: b
-[a] saying: a
-[a] saying: =129
-[a] saying: b
-[a] saying: a
-[a] saying: =130
-[a] saying: b
-[a] saying: a
-[a] saying: =131
-[a] saying: b
-[a] saying: a
-[a] saying: =132
-[a] saying: b
-[a] saying: a
-[a] saying: =133
-[a] saying: b
-[a] saying: a
-[a] saying: =134
-[a] saying: b
-[a] saying: a
-[a] saying: =135
-[a] saying: b
-[a] saying: a
-[a] saying: =136
-[a] saying: b
-[a] saying: a
-[a] saying: =137
-[a] saying: b
-[a] saying: a
-[a] saying: =138
-[a] saying: b
-[a] saying: a
-[a] saying: =139
-[a] saying: b
-[a] saying: a
-[a] saying: =140
-[a] saying: b
-[a] saying: a
-[a] saying: =141
-[a] saying: b
-[a] saying: a
-[a] saying: =142
-[a] saying: b
-[a] saying: a
-[a] saying: =143
-[a] saying: b
-[a] saying: a
-[a] saying: =144
-[a] saying: b
-[a] saying: a
-[a] saying: =145
-[a] saying: b
-[a] saying: a
-[a] saying: =146
-[a] saying: b
-[a] saying: a
-[a] saying: =147
-[a] saying: b
-[a] saying: a
-[a] saying: =148
-[a] saying: b
+[a]    :0
+[a]    :1
+[a]    :2
+[a]    :3
+[a]    :4
+[a]    :5
+[a]    :6
+[a]    :7
+[a]    :8
+[a]    :9
+...
+[a] -98
+[a]    :0
+[a]    :1
+[a]    :2
+[a]    :3
+[a]    :4
+[a]    :5
+[a]    :6
+[a]    :7
+[a]    :8
+[a]    :9
+[a] -99
+[a] b
+[a] a
+[a] =101
+[a] b
+[a] a
+[a] =102
+[a] b
+[a] a
+[a] =103
+...
 [a] saying: a
 [a] saying: =149
 [a] saying: b
 [a] saying: a
 */
-
-

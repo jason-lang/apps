@@ -1,6 +1,19 @@
-MAS twait {
+/*
 
-	infrastructure: Centralised
+1
+resumed
+2
+resumed
+
+-- change code ag in line 7 and
+
+1
+resumed
+resumed
+
+*/
+
+MAS twait {
 
 	agents:
 		agent1 sample_agent [verbose=0];

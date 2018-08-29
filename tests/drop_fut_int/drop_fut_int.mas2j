@@ -1,0 +1,10 @@
+/*
+    output:
+
+    [sample_agent] a
+
+*/
+
+MAS drop_fut_int {
+    agents: sample_agent;
+}

@@ -1,4 +1,4 @@
-/* 
+/*
 Test: the output should be
 
 [a] saying: start
@@ -14,14 +14,9 @@ Test: the output should be
 */
 
 MAS testeWait {
-	infrastructure: Centralised
 	environment: env
 	agents:
 		a [verbose=1];
 		//b;
 		//c;
 }
-
-
-
-

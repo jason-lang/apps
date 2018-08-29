@@ -1,4 +1,4 @@
-/* 
+/*
 Test atomic intention begin suspended (for action, message, .wait, ....)
 
 Expected result:
@@ -21,20 +21,20 @@ Expected result:
 [a] hello world.
 [a] hello world.
 [a] waiting, nothing else must be done meanwhile
-
+[a] end wait
+[a] hello world.
+[a] hello world.
+[a] hello world.
+...
 
 */
 
 MAS testatomic {
 
-    infrastructure: Centralised
-
     environment: e
 
     agents:
         a;
-
         b;
 
 }
-

@@ -1,3 +1,21 @@
+/* output
+
+[a] g1
+[a] g1
+[a] no maintenance condition
+[a] Finish g
+[a] g1
+[a] g1
+[a] goal achieved by other means
+[a] Finish g
+[a] g1
+[a] g1
+[a] fail condition
+[a] g failed!
+[a] end test
+
+*/
+
 
 MAS test {
 
