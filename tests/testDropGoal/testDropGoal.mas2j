@@ -1,5 +1,5 @@
 MAS testDropGoal {
-    agents:  a;  b; c;
+    agents:  a;  b; c; d; e;
 }
 /* should print (see tabbed agent output)
 [a] saying: ini
@@ -29,6 +29,12 @@ MAS testDropGoal {
 [b] saying: *1
 [b] saying: *0
 [b] saying: end
+
 [c] saying: ini
 [c] saying: end
+
+[d] ini
+
+[e] ini
+
 */
