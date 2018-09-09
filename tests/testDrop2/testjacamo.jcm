@@ -1,0 +1,24 @@
+/*
+
+[sample_agent] Doing banana at 0
+[sample_agent] Success 1
+[sample_agent] Doing banana at 1
+[sample_agent] Yes I do action commit(banana)
+[sample_agent] Doing maca at 2
+[sample_agent] Success 3
+
+*/
+mas testjacamo {
+
+    agent sample_agent:sample_agent.asl{
+    	join: work
+    	focus: work.team
+        verbose: 1
+    }
+
+    workspace work{
+    	artifact team: testjacamo.Team(0)
+    }
+
+	platform: cartago("infrastructure")
+}
